@@ -1,0 +1,11 @@
+978-84-376-0494-7,Cien años de soledad,Gabriel García Márquez,Sudamericana
+978-84-670-5192-3,La sombra del viento,Carlos Ruiz Zafón,Planeta
+978-84-204-6832-9,Don Quijote de la Mancha,Miguel de Cervantes,Alfaguara
+978-84-233-5115-8,El amor en los tiempos del cólera,Gabriel García Márquez,Debolsillo
+978-84-663-6155-4,Rayuela,Julio Cortázar,Cátedra
+978-84-206-9132-2,Pedro Páramo,Juan Rulfo,Fondo de Cultura Económica
+978-84-376-0492-3,La ciudad y los perros,Mario Vargas Llosa,Seix Barral
+978-84-233-5117-2,Los detectives salvajes,Roberto Bolaño,Anagrama
+978-84-204-5418-6,Ficciones,Jorge Luis Borges,Alianza
+978-84-663-4174-8,La tregua,Mario Benedetti,Alfaguara
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libros>
+  <libro>
+    <isbn>978-84-376-0494-7</isbn>
+    <titulo>Cien años de soledad</titulo>
+    <autor>Gabriel García Márquez</autor>
+    <editorial>Sudamericana</editorial>
+  </libro>
+  <libro>
+    <isbn>978-84-670-5192-3</isbn>
+    <titulo>La sombra del viento</titulo>
+    <autor>Carlos Ruiz Zafón</autor>
+    <editorial>Planeta</editorial>
+  </libro>
+  <libro>
+    <isbn>978-84-204-6832-9</isbn>
+    <titulo>Don Quijote de la Mancha</titulo>
+    <autor>Miguel de Cervantes</autor>
+    <editorial>Alfaguara</editorial>
+  </libro>
+  <libro>
+    <isbn>978-84-233-5115-8</isbn>
+    <titulo>El amor en los tiempos del cólera</titulo>
+    <autor>Gabriel García Márquez</autor>
+    <editorial>Debolsillo</editorial>
+  </libro>
+  <libro>
+    <isbn>978-84-663-6155-4</isbn>
+    <titulo>Rayuela</titulo>
+    <autor>Julio Cortázar</autor>
+    <editorial>Cátedra</editorial>
+  </libro>
+  <libro>
+    <isbn>978-84-206-9132-2</isbn>
+    <titulo>Pedro Páramo</titulo>
+    <autor>Juan Rulfo</autor>
+    <editorial>Fondo de Cultura Económica</editorial>
+  </libro>
+  <libro>
+    <isbn>978-84-376-0492-3</isbn>
+    <titulo>La ciudad y los perros</titulo>
+    <autor>Mario Vargas Llosa</autor>
+    <editorial>Seix Barral</editorial>
+  </libro>
+  <libro>
+    <isbn>978-84-233-5117-2</isbn>
+    <titulo>Los detectives salvajes</titulo>
+    <autor>Roberto Bolaño</autor>
+    <editorial>Anagrama</editorial>
+  </libro>
+  <libro>
+    <isbn>978-84-204-5418-6</isbn>
+    <titulo>Ficciones</titulo>
+    <autor>Jorge Luis Borges</autor>
+    <editorial>Alianza</editorial>
+  </libro>
+  <libro>
+    <isbn>978-84-663-4174-8</isbn>
+    <titulo>La tregua</titulo>
+    <autor>Mario Benedetti</autor>
+    <editorial>Alfaguara</editorial>
+  </libro>
+</libros>

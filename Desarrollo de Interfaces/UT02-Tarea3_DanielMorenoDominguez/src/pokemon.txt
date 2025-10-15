@@ -1,0 +1,151 @@
+Bulbasaur,Planta/Veneno,Placaje,Latigazo,Dormir
+Ivysaur,Planta/Veneno,Placaje,Latigazo,Hoja Afilada
+Venusaur,Planta/Veneno,Hoja Afilada,Bomba Germen,Latigazo
+Charmander,Fuego,Ascuas,Gruñido,Arañazo
+Charmeleon,Fuego,Lanzallamas,Ascuas,Arañazo
+Charizard,Fuego/Volador,Lanzallamas,Giro Fuego,Golpe Aéreo
+Squirtle,Agua,Pistola Agua,Caparazonazo,Burbuja
+Wartortle,Agua,Pistola Agua,Caparazonazo,Hidropulso
+Blastoise,Agua,Hidrobomba,Pistola Agua,Caparazonazo
+Caterpie,Bicho,Gusano,Placaje,Mudar
+Metapod,Bicho,Caparazon,Defensa,Mudar
+Butterfree,Bicho/Volador,Psicorrayo,Confusión,Polvo Veneno
+Weedle,Bicho/Veneno,Picotazo,Lanzarroca,Envenenar
+Kakuna,Bicho/Veneno,Caparazon,Defensa,Envenenar
+Beedrill,Bicho/Veneno,Doble Aguijón,Picotazo,Ataque Rápido
+Pidgey,Normal/Volador,Picotazo,Ataque Ala,Giro
+Pidgeotto,Normal/Volador,Ataque Ala,Picotazo,Giro
+Pidgeot,Normal/Volador,Ataque Ala,Ala de Acero,Picotazo
+Rattata,Normal,Placaje,Mordisco,Ataque Rápido
+Raticate,Normal,Mordisco,Placaje,Colmillo Ígneo
+Spearow,Normal/Volador,Picotazo,Ataque Ala,Giro
+Fearow,Normal/Volador,Picotazo,Ataque Ala,Pico Taladro
+Ekans,Veneno,Mordisco,Envenenar,Latigazo
+Arbok,Veneno,Mordisco,Envenenar,Hidropulso
+Pikachu,Eléctrico,Impactrueno,Onda Trueno,Placaje
+Raichu,Eléctrico,Rayo,Impactrueno,Cola Férrea
+Sandshrew,Tierra,Arañazo,Caja Arena,Golpe Roca
+Sandslash,Tierra,Guillotina,Caja Arena,Golpe Roca
+Nidoran♀,Veneno,Placaje,Cornada,Doble Patada
+Nidorina,Veneno,Cornada,Doble Patada,Placaje
+Nidoqueen,Veneno/Tierra,Terremoto,Bomba Lodo,Cornada
+Nidoran♂,Veneno,Placaje,Cornada,Doble Patada
+Nidorino,Veneno,Cornada,Doble Patada,Amenaza
+Nidoking,Veneno/Tierra,Bomba Lodo,Terremoto,Cornada
+Clefairy,Hada,Danza Curativa,Placaje,Dulce Mirada
+Clefable,Hada,Dulce Beso,Psíquico,Placaje
+Vulpix,Fuego,Lanzallamas,Ascuas,Cola Férrea
+Ninetales,Fuego,Llamarada,Lanzallamas,Encanto
+Jigglypuff,Normal/Hada,Canto,Placaje,Doble Bofetón
+Wigglytuff,Normal/Hada,Canto,Psíquico,Placaje
+Zubat,Veneno/Volador,Chupavidas,Giro,Bombeo
+Golbat,Veneno/Volador,Mordisco,Pulso Veneno,Ala Ígnea
+Oddish,Planta/Veneno,Latigazo,Drenadoras,Dormir
+Gloom,Planta/Veneno,Bomba Germen,Latigazo,Drenadoras
+Vileplume,Planta/Veneno,Bomba Germen,Polvo Veneno,Hoja Afilada
+Paras,Bicho/Planta,Picotazo,Espora,Arañazo
+Parasect,Bicho/Planta,Espora,Picotazo,Lanzarroca
+Venonat,Bicho/Veneno,Psíquico,Espacio,Picotazo
+Venomoth,Bicho/Veneno,Polvo Veneno,Psicorrayo,Confusión
+Diglett,Tierra,Excavar,Placaje,Deslizar
+Dugtrio,Tierra,Terremoto,Excavar,Placaje
+Meowth,Normal,Arañazo,Bofetón,Golpe
+Persian,Normal,Arañazo,Giro,Bofetón
+Psyduck,Agua,Confusión,Pistola Agua,Gruñido
+Golduck,Agua,Psíquico,Hidropulso,Pistola Agua
+Mankey,Lucha,Puño Fuego,Arañazo,Patada Baja
+Primeape,Lucha,Puño Trueno,Patada Baja,Ataque
+Growlithe,Fuego,Lanzallamas,Mordisco,Gruñido
+Arcanine,Fuego,Llamarada,Mordisco,Velocidad
+Poliwag,Agua,Pistola Agua,Placaje,Remolino
+Poliwhirl,Agua,Fuerza,Pistola Agua,Remolino
+Poliwrath,Agua/Lucha,Hidrobomba,Puño Fuego,Terremoto
+Abra,Psíquico,Confusión,Teletransporte,Paz Mental
+Kadabra,Psíquico,Psíquico,Confusión,Teletransporte
+Alakazam,Psíquico,Psíquico,Psico Corte,Recuperación
+Machop,Lucha,Puño Fuego,Golpe Cuerpo,Patada Alta
+Machoke,Lucha,Puño Fuego,Golpe Cuerpo,Atadura
+Machamp,Lucha,Mega Puño,Golpe Cuerpo,Puño Dinámico
+Bellsprout,Planta/Veneno,Latigazo,Hoja Afilada,Somnífero
+Weepinbell,Planta/Veneno,Látigo Cepa,Hoja Afilada,Somnífero
+Victreebel,Planta/Veneno,Drenadoras,Hoja Afilada,Somnífero
+Tentacool,Agua/Veneno,Pistola Agua,Pulso Veneno,Gel Lip
+Tentacruel,Agua/Veneno,Pulso Veneno,Pistola Agua,Hidro Bomba
+Geodude,Roca/Tierra,Roca Afilada,Terremoto,Placaje
+Graveler,Roca/Tierra,Roca Afilada,Terremoto,Avalancha
+Golem,Roca/Tierra,Terremoto,Roca Afilada,Explosión
+Ponyta,Fuego,Llamarada,Placaje,Zancada
+Rapidash,Fuego,Lanzallamas,Velocidad,Golpe
+Slowpoke,Agua/Psíquico,Confusión,Pistola Agua,Rayo Hielo
+Slowbro,Agua/Psíquico,Psíquico,Pistola Agua,Confusión
+Magnemite,Eléctrico/Acero,Impactrueno,Rayo,Imán
+Magneton,Eléctrico/Acero,Impactrueno,Rayo,Campo Magnético
+Farfetch'd,Normal/Volador,Picotazo,Ataque Ala,Hoja Afilada
+Doduo,Normal/Volador,Picotazo,Patada,Ataque Rápido
+Dodrio,Normal/Volador,Pico Taladro,Ataque Rápido,Patada
+Seel,Agua,Cola Férrea,Pistola Agua,Placaje
+Dewgong,Agua/Hielo,Rayo Hielo,Pistola Agua,Cola Férrea
+Grimer,Veneno,Moco Ácido,Placaje,Lanzarroca
+Muk,Veneno,Moco Ácido,Bomba Fango,Placaje
+Shellder,Agua,Caparazonazo,Pistola Agua,Placaje
+Cloyster,Agua/Hielo,Rayo Hielo,Hidrobomba,Caparazonazo
+Gastly,Fantasma/Veneno,Lengüetazo,Sombra,Hipnosis
+Haunter,Fantasma/Veneno,Sombra,Lengüetazo,Hipnosis
+Gengar,Fantasma/Veneno,Sombra,Psíquico,Leyenda
+Onix,Roca/Tierra,Roca Afilada,Terremoto,Giro
+Drowzee,Psíquico,Confusión,Psíquico,Sueño
+Hypno,Psíquico,Psíquico,Hipnosis,Confusión
+Krabby,Agua,Picadura,Caparazonazo,Placaje
+Kingler,Agua,Pin Misil,Caparazonazo,Placaje
+Voltorb,Eléctrico,Impactrueno,Autodestrucción,Rayo
+Electrode,Eléctrico,Rayo,Autodestrucción,Impactrueno
+Exeggcute,Planta/Psíquico,Psíquico,Hoja Afilada,Confusión
+Exeggutor,Planta/Psíquico,Psíquico,Bomba Germen,Hoja Afilada
+Cubone,Tierra,Placaje,Golpe Cabeza,Patada
+Marowak,Tierra,Terremoto,Golpe Cabeza,Hueso
+Hitmonlee,Lucha,Patada Alta,Patada Baja,Patada Giratoria
+Hitmonchan,Lucha,Puño Fuego,Puño Trueno,Puño Hielo
+Lickitung,Normal,Lamedor,Placaje,Gruñido
+Koffing,Veneno,Explosión,Moco Ácido,Lanzarroca
+Weezing,Veneno,Explosión,Moco Ácido,Gas Venenoso
+Rhyhorn,Tierra/Roca,Cornada,Terremoto,Placaje
+Rhydon,Tierra/Roca,Terremoto,Cornada,Roca Afilada
+Chansey,Normal,Dulce Beso,Curación,Placaje
+Tangela,Planta,Latigazo,Enredadera,Hoja Afilada
+Kangaskhan,Normal,Golpe Cuerpo,Placaje,Puño
+Horsea,Agua,Pistola Agua,Placaje,Hidropulso
+Seadra,Agua,Hidrobomba,Pistola Agua,Pulso
+Goldeen,Agua,Placaje,Pico Taladro,Pistola Agua
+Seaking,Agua,Pistola Agua,Pico Taladro,Placaje
+Staryu,Agua,Hidropulso,Rayo,Placaje
+Starmie,Agua/Psíquico,Psíquico,Hidropulso,Rayo
+Mr. Mime,Psíquico/Hada,Psíquico,Barrera,Confusión
+Scyther,Bicho/Volador,Tijera X,Picotazo,Velocidad
+Jynx,Hielo/Psíquico,Psíquico,Rayo Hielo,Besuqueo
+Electabuzz,Eléctrico,Rayo,Impactrueno,Puño
+Magmar,Fuego,Lanzallamas,Llamarada,Puño
+Pinsir,Bicho,Hipercuerno,A Bocajarro,Tijera X
+Tauros,Normal,Cornada,Placaje,Fuerza
+Magikarp,Agua,Salpicadura,Placaje,Golpe
+Gyarados,Agua/Volador,Hidrobomba,Hiper Furia,Ataque Ala
+Lapras,Agua/Hielo,Rayo Hielo,Pistola Agua,Canto
+Ditto,Normal,Transformación,Placaje,Duplicar
+Eevee,Normal,Placaje,Mordisco,Doble Patada
+Vaporeon,Agua,Pistola Agua,Hidrobomba,Cola Férrea
+Jolteon,Eléctrico,Impactrueno,Rayo,Ataque Rápido
+Flareon,Fuego,Lanzallamas,Fuego Fatuo,Placaje
+Porygon,Normal,Rayo,Recuperación,Placaje
+Omanyte,Roca/Agua,Roca Afilada,Pistola Agua,Caparazonazo
+Omastar,Roca/Agua,Hidrobomba,Roca Afilada,Caparazonazo
+Kabuto,Roca/Agua,Roca Afilada,Pistola Agua,Placaje
+Kabutops,Roca/Agua,Roca Afilada,Cuchillada,Pistola Agua
+Aerodactyl,Roca/Volador,Giro Rápido,Pico Taladro,Roca Afilada
+Snorlax,Normal,Golpe Cuerpo,Placaje,Descanso
+Articuno,Hielo/Volador,Rayo Hielo,Viento Hielo,Pico Taladro
+Zapdos,Eléctrico/Volador,Rayo,Impactrueno,Pico Taladro
+Moltres,Fuego/Volador,Llamarada,Lanzallamas,Pico Taladro
+Dratini,Dragón,Giro,Placaje,Cola Férrea
+Dragonair,Dragón,Rayo Hielo,Lanzallamas,Giro
+Dragonite,Dragón/Volador,Enfado,Puño Trueno,Terremoto
+Mewtwo,Psíquico,Psíquico,Confusión,Recuperación
+Mew,Psíquico,Transformación,Psíquico,Placaje

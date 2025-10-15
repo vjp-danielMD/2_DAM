@@ -1,0 +1,20 @@
+<libros>
+  <libro>
+    <titulo>Cien Años de Soledad</titulo>
+    <autor>Gabriel García Márquez</autor>
+    <anio>1967</anio>
+    <isbn>978-84-376-0494-7</isbn>
+  </libro>
+  <libro>
+    <titulo>Don Quijote de la Mancha</titulo>
+    <autor>Miguel de Cervantes</autor>
+    <anio>1605</anio>
+    <isbn>978-84-376-0495-4</isbn>
+  </libro>
+  <libro>
+    <titulo>El Principito</titulo>
+    <autor>Antoine de Saint-Exupéry</autor>
+    <anio>1943</anio>
+    <isbn>978-84-376-0496-1</isbn>
+  </libro>
+</libros>
