@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CicloDeVidaApp</string>
+    <string name="texto_inicial">Bienvenido a CicloDeVidaApp</string>
+    <string name="texto_onstart">La aplicación está visible</string>
+    <string name="texto_onresume">La aplicación está activa</string>
+    <string name="texto_onpause">La aplicación está en pausa</string>
+    <string name="texto_onstop">La aplicación se ha detenido</string>
+    <string name="texto_ondestroy">La aplicación se ha destruido</string>
+</resources>
