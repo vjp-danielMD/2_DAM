@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ejercicio12T5</string>
+    <string name="news">NOTICIAS</string>
+    <string name="results">RESULTADOS</string>
+    <string name="selection">SELECCIÓN ESPAÑOLA</string>
+    <string name="calendar">CALENDARIO</string>
+    <string name="phase">FASE FINAL</string>
+    <string name="stats">ESTADÍSTICAS</string>
+</resources>

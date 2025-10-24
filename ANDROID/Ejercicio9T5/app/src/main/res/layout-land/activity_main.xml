@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="728dp"
+        android:layout_height="113dp"
+        android:background="@color/indigo"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEXTO"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="208dp"
+        android:layout_height="270dp"
+        android:background="@color/blue"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="117dp">
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="135dp"
+            android:layout_height="103dp"
+            android:text="Button"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="30dp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="143dp"
+            android:layout_height="93dp"
+            android:text="Button"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="157dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="309dp"
+        android:layout_height="269dp"
+        android:background="@color/yellow"
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="116dp">
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="207dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="76dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="209dp"
+            android:layout_height="42dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button10"
+            app:layout_constraintVertical_bias="0.114" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="217dp"
+        android:layout_height="112dp"
+        android:background="@color/wine"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="516dp"
+        tools:layout_editor_absoluteY="114dp">
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:layout_weight="1"
+            android:text="Button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="215dp"
+        android:layout_height="163dp"
+        android:background="@color/orange"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="517dp"
+        tools:layout_editor_absoluteY="224dp">
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Button" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".top"
+    android:backgroundTint="@color/black">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:background="#F44336">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="21dp"
+            android:gravity="right"
+            android:text="Ejercicio 11"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="315dp"
+            tools:layout_editor_absoluteY="42dp" />
+
+        <TextView
+            android:layout_width="63dp"
+            android:layout_height="23dp"
+            android:text="Fragment"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="42dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
