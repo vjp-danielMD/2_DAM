@@ -1,1 +1,0 @@
-Hamburguesa: Ternera, Pan: Centeno, Patatas: Caseras, Bebida: Cola, Doble: true, Queso: false, Extra Patatas: false, Salsas(K/B/M/T): 1/1/1/0, Domicilio: true, Precio: 12,50€, IVA: 2,62€, PVP: 15,12€

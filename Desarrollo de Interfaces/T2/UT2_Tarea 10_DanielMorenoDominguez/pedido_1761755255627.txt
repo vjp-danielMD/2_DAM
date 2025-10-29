@@ -1,0 +1,21 @@
+=============================
+        TICKET DE PEDIDO
+=============================
+Hamburguesa: Pollo
+Pan: Centeno
+Patatas: Caseras
+Bebida: Agua
+Doble: Sí
+Queso: No
+Extra Patatas: No
+Salsas:
+  - Ketchup: 1
+  - Barbacoa: 0
+  - Mostaza: 0
+  - Thai: 0
+Entrega: Recogida en local
+-----------------------------
+Precio sin IVA: 8,40€
+IVA (21%): 1,76€
+PVP Total: 10,16€
+=============================

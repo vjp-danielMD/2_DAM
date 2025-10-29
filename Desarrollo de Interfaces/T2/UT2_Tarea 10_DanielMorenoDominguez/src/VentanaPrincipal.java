@@ -514,14 +514,72 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         // Guardar en archivo
+// Crear nombre único para el archivo
+        String nombreArchivo = "pedido_" + System.currentTimeMillis() + ".txt";
+
+// Convertir booleanos a texto
+        String textoDoble;
+        if (doble) {
+            textoDoble = "Sí";
+        } else {
+            textoDoble = "No";
+        }
+
+        String textoQueso;
+        if (queso) {
+            textoQueso = "Sí";
+        } else {
+            textoQueso = "No";
+        }
+
+        String textoExtraPatatas;
+        if (extraPatatas) {
+            textoExtraPatatas = "Sí";
+        } else {
+            textoExtraPatatas = "No";
+        }
+
+        String textoEntrega;
+        if (domicilio) {
+            textoEntrega = "Domicilio";
+        } else {
+            textoEntrega = "Recogida en local";
+        }
+
+// Formatear el contenido como ticket
+        String contenidoTicket = """
+                   =============================
+                        TICKET DE PEDIDO
+                   =============================
+                   Hamburguesa: """ + hamburguesa + "\n"
+                + "Pan: " + pan + "\n"
+                + "Patatas: " + patatas + "\n"
+                + "Bebida: " + bebida + "\n"
+                + "Doble: " + textoDoble + "\n"
+                + "Queso: " + textoQueso + "\n"
+                + "Extra Patatas: " + textoExtraPatatas + "\n"
+                + "Salsas:\n"
+                + "  - Ketchup: " + ketchup + "\n"
+                + "  - Barbacoa: " + barbacoa + "\n"
+                + "  - Mostaza: " + mostaza + "\n"
+                + "  - Thai: " + thai + "\n"
+                + "Entrega: " + textoEntrega + "\n"
+                + "-----------------------------\n"
+                + String.format("Precio sin IVA: %.2f€\n", precioSinIVA)
+                + String.format("IVA (21%%): %.2f€\n", iva)
+                + String.format("PVP Total: %.2f€\n", pvp)
+                + "=============================\n";
+
         try {
-            java.io.FileWriter fw = new java.io.FileWriter("src/pedidos.txt", true);
-            fw.write(pedido.toString() + System.lineSeparator());
+            java.io.FileWriter fw = new java.io.FileWriter(nombreArchivo);
+            fw.write(contenidoTicket);
             fw.close();
-            javax.swing.JOptionPane.showMessageDialog(this, "Pedido guardado correctamente.", "Éxito", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            javax.swing.JOptionPane.showMessageDialog(this, "Pedido guardado como " + nombreArchivo, "Éxito", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         } catch (java.io.IOException e) {
             javax.swing.JOptionPane.showMessageDialog(this, "Error al guardar el pedido: " + e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
         }
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

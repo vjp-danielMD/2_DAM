@@ -1,0 +1,21 @@
+=============================
+        TICKET DE PEDIDO
+=============================
+Hamburguesa: Cerdo
+Pan: Integral
+Patatas: Gajo
+Bebida: Cola
+Doble: Sí
+Queso: Sí
+Extra Patatas: No
+Salsas:
+  - Ketchup: 2
+  - Barbacoa: 0
+  - Mostaza: 0
+  - Thai: 0
+Entrega: Domicilio
+-----------------------------
+Precio sin IVA: 9,20€
+IVA (21%): 1,93€
+PVP Total: 11,13€
+=============================
