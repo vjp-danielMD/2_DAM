@@ -7,19 +7,14 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_perro" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_gato" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-
-        <item
-            android:id="@+id/nav_acercaDe"
-            android:title="@string/menu_acercaDe"
-            android:icon="@drawable/abaout"/>
+            android:title="@string/menu_leon" />
     </group>
 </menu>
