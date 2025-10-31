@@ -178,7 +178,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     public void anadirAlumno(Alumno a) {
         logicaNegocio.listaAlumnos.add(a);
-         jTable1.updateUI(); 
+        jTable1.updateUI(); 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
