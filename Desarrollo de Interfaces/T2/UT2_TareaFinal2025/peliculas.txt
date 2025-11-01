@@ -1,0 +1,20 @@
+El Padrino;1972;175
+Titanic;1997;195
+Inception;2010;148
+Avatar;2009;162
+Gladiator;2000;155
+Pulp Fiction;1994;154
+Forrest Gump;1994;142
+Matrix;1999;136
+El Señor de los Anillos;2001;178
+Interstellar;2014;169
+El Caballero Oscuro;2008;152
+Toy Story;1995;81
+Los Vengadores;2012;143
+Jurassic Park;1993;127
+Regreso al Futuro;1985;116
+Star Wars;1977;121
+Casablanca;1942;102
+La Lista de Schindler;1993;195
+El Rey León;1994;88
+Shrek;2001;90

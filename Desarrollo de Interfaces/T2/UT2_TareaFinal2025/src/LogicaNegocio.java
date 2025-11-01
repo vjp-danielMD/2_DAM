@@ -65,4 +65,24 @@ public class LogicaNegocio {
         }
         return lista;
     }
+
+    public void eliminarPelicula(int index) {
+        if (index >= 0 && index < listaPeliculas.size()) {
+            listaPeliculas.remove(index);
+            reescribirFichero();
+        }
+    }
+
+    private void reescribirFichero() {
+        String nombreArchivo = "peliculas.txt";
+
+        try (PrintWriter pw = new PrintWriter(new FileWriter(nombreArchivo, false))) {
+            for (Pelicula pelicula : listaPeliculas) {
+                pw.print(pelicula.getTitulo() + ";" + pelicula.getAno() + ";" + pelicula.getDuracion());
+                pw.print(System.lineSeparator());
+            }
+        } catch (IOException e) {
+            System.err.println("Error al reescribir el archivo: " + e.getMessage());
+        }
+    }
 }

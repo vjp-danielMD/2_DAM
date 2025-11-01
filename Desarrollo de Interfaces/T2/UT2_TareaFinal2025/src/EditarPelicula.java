@@ -1,20 +1,26 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-
 /**
  *
  * @author alumno
  */
 public class EditarPelicula extends javax.swing.JDialog {
 
+    PantallaPrincipal padre;
+
     /**
      * Creates new form EditarPelicula
      */
     public EditarPelicula(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        padre = (PantallaPrincipal) parent;
         initComponents();
+        
     }
 
     /**
@@ -42,7 +48,23 @@ public class EditarPelicula extends javax.swing.JDialog {
 
         jLabel3.setText("DURACIÓN:");
 
+        jTextField1.setText(padre.getLogicaNegocio().getListaPeliculas().get(padre.getjTable1().getSelectedRow()).getTitulo());
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jTextField2.setText(padre.getLogicaNegocio().getListaPeliculas().get(padre.getjTable1().getSelectedRow()).getAno());
+
+        jTextField3.setText(padre.getLogicaNegocio().getListaPeliculas().get(padre.getjTable1().getSelectedRow()).getDuracion());
+
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,6 +114,25 @@ public class EditarPelicula extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String titulo, ano, duracion;
+        titulo = jTextField1.getText();
+        ano = jTextField2.getText();
+        duracion = jTextField3.getText();
+        Pelicula pelicula = padre.getLogicaNegocio().getListaPeliculas().get(padre.getjTable1().getSelectedRow());
+
+        pelicula.setTitulo(titulo);
+        pelicula.setAno(ano);
+        pelicula.setDuracion(duracion);
+        JOptionPane.showMessageDialog(this, "Película " + "'" + titulo + "'" + " editada", "Película editada", JOptionPane.INFORMATION_MESSAGE);
+        padre.getjTable1().updateUI();
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

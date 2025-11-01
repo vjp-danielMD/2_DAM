@@ -1,4 +1,3 @@
-
 import javax.swing.JOptionPane;
 
 /*
@@ -16,11 +15,14 @@ public class AnadirPelicula extends javax.swing.JDialog {
 
     /**
      * Creates new form AnadirPelicula
+     * @param parent
+     * @param modal
      */
     public AnadirPelicula(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        initComponents();
         padre = (PantallaPrincipal)parent;
+        initComponents();
+        
     }
 
     /**
@@ -111,8 +113,8 @@ public class AnadirPelicula extends javax.swing.JDialog {
         duracion = jTextField3.getText();
         Pelicula p = new Pelicula(titulo, ano, duracion);
         padre.anadirPelicula(p);
-        padre.getjTable1().updateUI();
         JOptionPane.showMessageDialog(this, "Película añadida a la lsita", "Película añadida", JOptionPane.INFORMATION_MESSAGE);
+        padre.getjTable1().updateUI();
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 

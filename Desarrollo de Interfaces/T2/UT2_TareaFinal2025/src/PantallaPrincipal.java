@@ -1,4 +1,5 @@
 
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 /*
@@ -69,8 +70,18 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         });
 
         jButtonEditar.setText("EDITAR");
+        jButtonEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEditarActionPerformed(evt);
+            }
+        });
 
         jButtonEliminar.setText("ELIMINAR");
+        jButtonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarActionPerformed(evt);
+            }
+        });
 
         jButtonBotones.setText("VER PELICULAS EN BOTONES");
         jButtonBotones.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +128,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonBotonesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBotonesActionPerformed
-        // TODO add your handling code here:
+        VerPeliculasBotones vpb = new VerPeliculasBotones(this, true);
+        vpb.setVisible(true);
     }//GEN-LAST:event_jButtonBotonesActionPerformed
 
     private void jButtonAnadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnadirActionPerformed
@@ -125,6 +137,22 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         anadir.setVisible(true);
         jTable1.updateUI();
     }//GEN-LAST:event_jButtonAnadirActionPerformed
+
+    private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
+        EditarPelicula editar = new EditarPelicula(this, true);
+        editar.setVisible(true);
+    }//GEN-LAST:event_jButtonEditarActionPerformed
+
+    private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
+        int fila = this.jTable1.getSelectedRow();
+        if (fila >= 0 && fila < this.logica.getListaPeliculas().size()) {
+            logica.eliminarPelicula(fila);
+            jTable1.setModel(new TableModel(logica.getListaPeliculas())); 
+            JOptionPane.showMessageDialog(this, "Película eliminada.", "Atención", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "No hay fila seleccionada", "Atención", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_jButtonEliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,7 +191,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     public void anadirPelicula(Pelicula p) {
         logica.agregarPelicula(p);
-        jTable1.updateUI();
+        jTable1.setModel(new TableModel(logica.getListaPeliculas()));
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAnadir;
