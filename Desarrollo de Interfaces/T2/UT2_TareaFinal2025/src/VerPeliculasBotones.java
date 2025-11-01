@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -33,21 +34,33 @@ public class VerPeliculasBotones extends javax.swing.JDialog {
         // Crear un panel con GridLayout
         JPanel panelBotones = new JPanel();
         panelBotones.setLayout(new GridLayout(0, 5, 10, 10)); // 5 columnas
+        panelBotones.setBackground(Color.BLACK);
 
         // Crear un botón por cada película
         for (Pelicula pelicula : padre.getLogicaNegocio().getListaPeliculas()) {
-            String textoBoto = "<html><center>"
-                    + pelicula.getTitulo() + "<br>"
-                    + "Año: " + pelicula.getAno() + "<br>"
-                    + "Duración: " + pelicula.getDuracion() + " min"
-                    + "</center></html>";
+            JButton boton = new JButton(pelicula.getTitulo());
 
-            JButton boton = new JButton(textoBoto);
+            // Estilo inicial: texto blanco, fondo negro
+            boton.setForeground(Color.WHITE);
+            boton.setBackground(Color.BLACK);
+            boton.setFocusPainted(false);
+            boton.setBorderPainted(true);
+
+            // Añadir el MouseListener personalizado
+            boton.addMouseListener(new BotonPeliculaMouseListener(boton));
+
+            // ActionListener para mostrar los detalles
+            boton.addActionListener(e -> {
+                MostrarDetallesPelicula detalle = new MostrarDetallesPelicula(this, true, pelicula);
+                detalle.setVisible(true);
+            });
+
             panelBotones.add(boton);
         }
 
-        // Meter el panel en un JScrollPane por si hay muchas películas
+        // Meter el panel en un JScrollPane
         JScrollPane scrollPane = new JScrollPane(panelBotones);
+        scrollPane.getViewport().setBackground(Color.BLACK);
 
         // Cambiar el layout del contentPane y añadir el scroll
         getContentPane().setLayout(new java.awt.BorderLayout());
