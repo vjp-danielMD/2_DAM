@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_linear"
+        android:name="com.example.ejercicio13t5.ui.slideshow.linear.FragmentLinear"
+        android:label="@string/menu_linear"
+        tools:layout="@layout/fragment_linear" />
+
+    <fragment
+        android:id="@+id/constraint"
+        android:name="com.example.ejercicio13t5.ui.slideshow.constraint.FragmentConstraint"
+        android:label="@string/menu_constaint"
+        tools:layout="@layout/fragment_constraint" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.ejercicio13t5.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
