@@ -18,6 +18,9 @@
 *.zip
 *.tar.gz
 *.rar
+* text=auto
+*.java text eol=lf
+*.xml text eol=lf
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
@@ -44,3 +47,9 @@ replay_pid*
 /Desarrollo de Interfaces/T2/repasoInterfaces/nbproject/private/
 /Desarrollo de Interfaces/T2/repasoInterfaces/build/
 /Acceso a Datos/T3/ACADT_UT3_P2/nbproject/private/
+
+# Ignorar carpetas de compilación
+/build/
+/app/build/
+/*.iml
+/.idea/
