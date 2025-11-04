@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+
+actor Usuario
+
+package "Presentación (App Móvil)" {
+  usecase "Interacción con UI"
+}
+
+package "Lógica (API / Backend)" {
+  usecase "Generar Ruta"
+  usecase "Registrar Experiencia"
+  usecase "Etiquetar Lugar"
+}
+
+package "Datos (Base de Datos / GPS / Multimedia)" {
+  usecase "Guardar Datos"
+  usecase "Consultar Mapas"
+}
+
+Usuario --> "Interacción con UI"
+"Interacción con UI" --> "Generar Ruta"
+"Interacción con UI" --> "Registrar Experiencia"
+"Interacción con UI" --> "Etiquetar Lugar"
+
+"Generar Ruta" --> "Consultar Mapas"
+"Registrar Experiencia" --> "Guardar Datos"
+"Etiquetar Lugar" --> "Guardar Datos"
+
+@enduml

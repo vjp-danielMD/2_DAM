@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="311px" preserveAspectRatio="none" style="width:1012px;height:311px;background:#FFFFFF;" version="1.1" viewBox="0 0 1012 311" width="1012px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <!--class Usuario-->
+        <g id="elem_Usuario">
+            <rect codeLine="2" fill="#F1F1F1" height="100.8281" id="Usuario" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="142" x="61" y="185.5"/>
+            <ellipse cx="103.9" cy="201.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M106.6656,197.375 Q106.8219,197.1563 107.0094,197.0469 Q107.1969,196.9375 107.4156,196.9375 Q107.7906,196.9375 108.025,197.2031 Q108.2594,197.4531 108.2594,198.0625 L108.2594,199.5156 Q108.2594,200.125 108.025,200.3906 Q107.7906,200.6563 107.4156,200.6563 Q107.0719,200.6563 106.8688,200.4531 Q106.6656,200.2656 106.5563,199.75 Q106.5094,199.3906 106.3219,199.2031 Q105.9938,198.8281 105.3844,198.6094 Q104.775,198.3906 104.15,198.3906 Q103.3844,198.3906 102.7438,198.7188 Q102.1188,199.0469 101.6188,199.7969 Q101.1344,200.5469 101.1344,201.5781 L101.1344,202.6719 Q101.1344,203.9063 102.025,204.7344 Q102.9156,205.5469 104.5094,205.5469 Q105.4469,205.5469 106.1031,205.2969 Q106.4938,205.1406 106.9156,204.7031 Q107.1813,204.4375 107.3219,204.3594 Q107.4781,204.2813 107.6813,204.2813 Q108.0094,204.2813 108.2594,204.5469 Q108.525,204.7969 108.525,205.1406 Q108.525,205.4844 108.1813,205.8906 Q107.6813,206.4688 106.8844,206.7969 Q105.8063,207.25 104.5094,207.25 Q102.9938,207.25 101.7906,206.625 Q100.8063,206.125 100.1188,205.0625 Q99.4313,203.9844 99.4313,202.7031 L99.4313,201.5469 Q99.4313,200.2188 100.0406,199.0781 Q100.6656,197.9219 101.7594,197.3125 Q102.8531,196.6875 104.0875,196.6875 Q104.8219,196.6875 105.4625,196.8594 Q106.1188,197.0156 106.6656,197.375 Z " fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="124.1" y="207.2285">Usuario</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="62" x2="202" y1="217.5" y2="217.5"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="69" y="228.8047"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="81" y="236.0332">nombre: String</text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="69" y="246.4141"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="81" y="253.6426">correo: String</text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="69" y="264.0234"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="81" y="271.252">contrasena: String</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="62" x2="202" y1="278.3281" y2="278.3281"/>
+        </g>
+        <!--class SistemaDeAutenticacion-->
+        <g id="elem_SistemaDeAutenticacion">
+            <rect codeLine="8" fill="#F1F1F1" height="100.8281" id="SistemaDeAutenticacion" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="250" x="7" y="7"/>
+            <ellipse cx="51.25" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M54.0156,18.875 Q54.1719,18.6563 54.3594,18.5469 Q54.5469,18.4375 54.7656,18.4375 Q55.1406,18.4375 55.375,18.7031 Q55.6094,18.9531 55.6094,19.5625 L55.6094,21.0156 Q55.6094,21.625 55.375,21.8906 Q55.1406,22.1563 54.7656,22.1563 Q54.4219,22.1563 54.2188,21.9531 Q54.0156,21.7656 53.9063,21.25 Q53.8594,20.8906 53.6719,20.7031 Q53.3438,20.3281 52.7344,20.1094 Q52.125,19.8906 51.5,19.8906 Q50.7344,19.8906 50.0938,20.2188 Q49.4688,20.5469 48.9688,21.2969 Q48.4844,22.0469 48.4844,23.0781 L48.4844,24.1719 Q48.4844,25.4063 49.375,26.2344 Q50.2656,27.0469 51.8594,27.0469 Q52.7969,27.0469 53.4531,26.7969 Q53.8438,26.6406 54.2656,26.2031 Q54.5313,25.9375 54.6719,25.8594 Q54.8281,25.7813 55.0313,25.7813 Q55.3594,25.7813 55.6094,26.0469 Q55.875,26.2969 55.875,26.6406 Q55.875,26.9844 55.5313,27.3906 Q55.0313,27.9688 54.2344,28.2969 Q53.1563,28.75 51.8594,28.75 Q50.3438,28.75 49.1406,28.125 Q48.1563,27.625 47.4688,26.5625 Q46.7813,25.4844 46.7813,24.2031 L46.7813,23.0469 Q46.7813,21.7188 47.3906,20.5781 Q48.0156,19.4219 49.1094,18.8125 Q50.2031,18.1875 51.4375,18.1875 Q52.1719,18.1875 52.8125,18.3594 Q53.4688,18.5156 54.0156,18.875 Z " fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="71.75" y="28.7285">SistemaDeAutenticacion</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="256" y1="39" y2="39"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="50.3047"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="224" x="27" y="57.5332">usuariosRegistrados: List&lt;Usuario&gt;</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="256" y1="64.6094" y2="64.6094"/>
+            <ellipse cx="18" cy="78.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="27" y="83.1426">registrarUsuario()</text>
+            <ellipse cx="18" cy="96.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="27" y="100.752">autenticar()</text>
+        </g>
+        <!--class Ruta-->
+        <g id="elem_Ruta">
+            <rect codeLine="14" fill="#F1F1F1" height="83.2188" id="Ruta" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="176" x="290" y="194.5"/>
+            <ellipse cx="358.75" cy="210.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M361.5156,206.375 Q361.6719,206.1563 361.8594,206.0469 Q362.0469,205.9375 362.2656,205.9375 Q362.6406,205.9375 362.875,206.2031 Q363.1094,206.4531 363.1094,207.0625 L363.1094,208.5156 Q363.1094,209.125 362.875,209.3906 Q362.6406,209.6563 362.2656,209.6563 Q361.9219,209.6563 361.7188,209.4531 Q361.5156,209.2656 361.4063,208.75 Q361.3594,208.3906 361.1719,208.2031 Q360.8438,207.8281 360.2344,207.6094 Q359.625,207.3906 359,207.3906 Q358.2344,207.3906 357.5938,207.7188 Q356.9688,208.0469 356.4688,208.7969 Q355.9844,209.5469 355.9844,210.5781 L355.9844,211.6719 Q355.9844,212.9063 356.875,213.7344 Q357.7656,214.5469 359.3594,214.5469 Q360.2969,214.5469 360.9531,214.2969 Q361.3438,214.1406 361.7656,213.7031 Q362.0313,213.4375 362.1719,213.3594 Q362.3281,213.2813 362.5313,213.2813 Q362.8594,213.2813 363.1094,213.5469 Q363.375,213.7969 363.375,214.1406 Q363.375,214.4844 363.0313,214.8906 Q362.5313,215.4688 361.7344,215.7969 Q360.6563,216.25 359.3594,216.25 Q357.8438,216.25 356.6406,215.625 Q355.6563,215.125 354.9688,214.0625 Q354.2813,212.9844 354.2813,211.7031 L354.2813,210.5469 Q354.2813,209.2188 354.8906,208.0781 Q355.5156,206.9219 356.6094,206.3125 Q357.7031,205.6875 358.9375,205.6875 Q359.6719,205.6875 360.3125,205.8594 Q360.9688,206.0156 361.5156,206.375 Z " fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="379.25" y="216.2285">Ruta</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="291" x2="465" y1="226.5" y2="226.5"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="298" y="237.8047"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="310" y="245.0332">puntoInicio: String</text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="298" y="255.4141"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="310" y="262.6426">trayectoria: List&lt;String&gt;</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="291" x2="465" y1="269.7188" y2="269.7188"/>
+        </g>
+        <!--class GeneradorDeRutas-->
+        <g id="elem_GeneradorDeRutas">
+            <rect codeLine="19" fill="#F1F1F1" height="65.6094" id="GeneradorDeRutas" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="172" x="292" y="24.5"/>
+            <ellipse cx="314.2" cy="40.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M316.9656,36.375 Q317.1219,36.1563 317.3094,36.0469 Q317.4969,35.9375 317.7156,35.9375 Q318.0906,35.9375 318.325,36.2031 Q318.5594,36.4531 318.5594,37.0625 L318.5594,38.5156 Q318.5594,39.125 318.325,39.3906 Q318.0906,39.6563 317.7156,39.6563 Q317.3719,39.6563 317.1688,39.4531 Q316.9656,39.2656 316.8563,38.75 Q316.8094,38.3906 316.6219,38.2031 Q316.2938,37.8281 315.6844,37.6094 Q315.075,37.3906 314.45,37.3906 Q313.6844,37.3906 313.0438,37.7188 Q312.4188,38.0469 311.9188,38.7969 Q311.4344,39.5469 311.4344,40.5781 L311.4344,41.6719 Q311.4344,42.9063 312.325,43.7344 Q313.2156,44.5469 314.8094,44.5469 Q315.7469,44.5469 316.4031,44.2969 Q316.7938,44.1406 317.2156,43.7031 Q317.4813,43.4375 317.6219,43.3594 Q317.7781,43.2813 317.9813,43.2813 Q318.3094,43.2813 318.5594,43.5469 Q318.825,43.7969 318.825,44.1406 Q318.825,44.4844 318.4813,44.8906 Q317.9813,45.4688 317.1844,45.7969 Q316.1063,46.25 314.8094,46.25 Q313.2938,46.25 312.0906,45.625 Q311.1063,45.125 310.4188,44.0625 Q309.7313,42.9844 309.7313,41.7031 L309.7313,40.5469 Q309.7313,39.2188 310.3406,38.0781 Q310.9656,36.9219 312.0594,36.3125 Q313.1531,35.6875 314.3875,35.6875 Q315.1219,35.6875 315.7625,35.8594 Q316.4188,36.0156 316.9656,36.375 Z " fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="329.8" y="46.2285">GeneradorDeRutas</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="293" x2="463" y1="56.5" y2="56.5"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="293" x2="463" y1="64.5" y2="64.5"/>
+            <ellipse cx="303" cy="78.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="312" y="83.0332">generarRutaAleatoria()</text>
+        </g>
+        <!--class Experiencia-->
+        <g id="elem_Experiencia">
+            <rect codeLine="23" fill="#F1F1F1" height="136.0469" id="Experiencia" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="146" x="538" y="168"/>
+            <ellipse cx="571.45" cy="184" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M574.2156,179.875 Q574.3719,179.6563 574.5594,179.5469 Q574.7469,179.4375 574.9656,179.4375 Q575.3406,179.4375 575.575,179.7031 Q575.8094,179.9531 575.8094,180.5625 L575.8094,182.0156 Q575.8094,182.625 575.575,182.8906 Q575.3406,183.1563 574.9656,183.1563 Q574.6219,183.1563 574.4188,182.9531 Q574.2156,182.7656 574.1063,182.25 Q574.0594,181.8906 573.8719,181.7031 Q573.5438,181.3281 572.9344,181.1094 Q572.325,180.8906 571.7,180.8906 Q570.9344,180.8906 570.2938,181.2188 Q569.6688,181.5469 569.1688,182.2969 Q568.6844,183.0469 568.6844,184.0781 L568.6844,185.1719 Q568.6844,186.4063 569.575,187.2344 Q570.4656,188.0469 572.0594,188.0469 Q572.9969,188.0469 573.6531,187.7969 Q574.0438,187.6406 574.4656,187.2031 Q574.7313,186.9375 574.8719,186.8594 Q575.0281,186.7813 575.2313,186.7813 Q575.5594,186.7813 575.8094,187.0469 Q576.075,187.2969 576.075,187.6406 Q576.075,187.9844 575.7313,188.3906 Q575.2313,188.9688 574.4344,189.2969 Q573.3563,189.75 572.0594,189.75 Q570.5438,189.75 569.3406,189.125 Q568.3563,188.625 567.6688,187.5625 Q566.9813,186.4844 566.9813,185.2031 L566.9813,184.0469 Q566.9813,182.7188 567.5906,181.5781 Q568.2156,180.4219 569.3094,179.8125 Q570.4031,179.1875 571.6375,179.1875 Q572.3719,179.1875 573.0125,179.3594 Q573.6688,179.5156 574.2156,179.875 Z " fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="589.55" y="189.7285">Experiencia</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="539" x2="683" y1="200" y2="200"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="546" y="211.3047"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="558" y="218.5332">texto: String</text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="546" y="228.9141"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="558" y="236.1426">imagenPath: String</text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="546" y="246.5234"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="558" y="253.752">audioPath: String</text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="546" y="264.1328"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="558" y="271.3613">latitud: double</text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="546" y="281.7422"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="558" y="288.9707">longitud: double</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="539" x2="683" y1="296.0469" y2="296.0469"/>
+        </g>
+        <!--class CuadernoDigital-->
+        <g id="elem_CuadernoDigital">
+            <rect codeLine="31" fill="#F1F1F1" height="100.8281" id="CuadernoDigital" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="224" x="499" y="7"/>
+            <ellipse cx="555.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M558.5156,18.875 Q558.6719,18.6563 558.8594,18.5469 Q559.0469,18.4375 559.2656,18.4375 Q559.6406,18.4375 559.875,18.7031 Q560.1094,18.9531 560.1094,19.5625 L560.1094,21.0156 Q560.1094,21.625 559.875,21.8906 Q559.6406,22.1563 559.2656,22.1563 Q558.9219,22.1563 558.7188,21.9531 Q558.5156,21.7656 558.4063,21.25 Q558.3594,20.8906 558.1719,20.7031 Q557.8438,20.3281 557.2344,20.1094 Q556.625,19.8906 556,19.8906 Q555.2344,19.8906 554.5938,20.2188 Q553.9688,20.5469 553.4688,21.2969 Q552.9844,22.0469 552.9844,23.0781 L552.9844,24.1719 Q552.9844,25.4063 553.875,26.2344 Q554.7656,27.0469 556.3594,27.0469 Q557.2969,27.0469 557.9531,26.7969 Q558.3438,26.6406 558.7656,26.2031 Q559.0313,25.9375 559.1719,25.8594 Q559.3281,25.7813 559.5313,25.7813 Q559.8594,25.7813 560.1094,26.0469 Q560.375,26.2969 560.375,26.6406 Q560.375,26.9844 560.0313,27.3906 Q559.5313,27.9688 558.7344,28.2969 Q557.6563,28.75 556.3594,28.75 Q554.8438,28.75 553.6406,28.125 Q552.6563,27.625 551.9688,26.5625 Q551.2813,25.4844 551.2813,24.2031 L551.2813,23.0469 Q551.2813,21.7188 551.8906,20.5781 Q552.5156,19.4219 553.6094,18.8125 Q554.7031,18.1875 555.9375,18.1875 Q556.6719,18.1875 557.3125,18.3594 Q557.9688,18.5156 558.5156,18.875 Z " fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="576.25" y="28.7285">CuadernoDigital</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="500" x2="722" y1="39" y2="39"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="507" y="50.3047"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="198" x="519" y="57.5332">experiencias: List&lt;Experiencia&gt;</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="500" x2="722" y1="64.6094" y2="64.6094"/>
+            <ellipse cx="510" cy="78.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="519" y="83.1426">registrarExperiencia()</text>
+            <ellipse cx="510" cy="96.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="519" y="100.752">obtenerExperiencias()</text>
+        </g>
+        <!--class EtiquetaEmocional-->
+        <g id="elem_EtiquetaEmocional">
+            <rect codeLine="37" fill="#F1F1F1" height="83.2188" id="EtiquetaEmocional" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="149" x="807.5" y="194.5"/>
+            <ellipse cx="822.5" cy="210.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M825.2656,206.375 Q825.4219,206.1563 825.6094,206.0469 Q825.7969,205.9375 826.0156,205.9375 Q826.3906,205.9375 826.625,206.2031 Q826.8594,206.4531 826.8594,207.0625 L826.8594,208.5156 Q826.8594,209.125 826.625,209.3906 Q826.3906,209.6563 826.0156,209.6563 Q825.6719,209.6563 825.4688,209.4531 Q825.2656,209.2656 825.1563,208.75 Q825.1094,208.3906 824.9219,208.2031 Q824.5938,207.8281 823.9844,207.6094 Q823.375,207.3906 822.75,207.3906 Q821.9844,207.3906 821.3438,207.7188 Q820.7188,208.0469 820.2188,208.7969 Q819.7344,209.5469 819.7344,210.5781 L819.7344,211.6719 Q819.7344,212.9063 820.625,213.7344 Q821.5156,214.5469 823.1094,214.5469 Q824.0469,214.5469 824.7031,214.2969 Q825.0938,214.1406 825.5156,213.7031 Q825.7813,213.4375 825.9219,213.3594 Q826.0781,213.2813 826.2813,213.2813 Q826.6094,213.2813 826.8594,213.5469 Q827.125,213.7969 827.125,214.1406 Q827.125,214.4844 826.7813,214.8906 Q826.2813,215.4688 825.4844,215.7969 Q824.4063,216.25 823.1094,216.25 Q821.5938,216.25 820.3906,215.625 Q819.4063,215.125 818.7188,214.0625 Q818.0313,212.9844 818.0313,211.7031 L818.0313,210.5469 Q818.0313,209.2188 818.6406,208.0781 Q819.2656,206.9219 820.3594,206.3125 Q821.4531,205.6875 822.6875,205.6875 Q823.4219,205.6875 824.0625,205.8594 Q824.7188,206.0156 825.2656,206.375 Z " fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="836.5" y="216.2285">EtiquetaEmocional</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="808.5" x2="955.5" y1="226.5" y2="226.5"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="815.5" y="237.8047"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="827.5" y="245.0332">lugar: String</text>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="815.5" y="255.4141"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="827.5" y="262.6426">emocion: String</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="808.5" x2="955.5" y1="269.7188" y2="269.7188"/>
+        </g>
+        <!--class MapaPsicogeografico-->
+        <g id="elem_MapaPsicogeografico">
+            <rect codeLine="42" fill="#F1F1F1" height="100.8281" id="MapaPsicogeografico" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="247" x="758.5" y="7"/>
+            <ellipse cx="809.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+            <path d="M812.5156,18.875 Q812.6719,18.6563 812.8594,18.5469 Q813.0469,18.4375 813.2656,18.4375 Q813.6406,18.4375 813.875,18.7031 Q814.1094,18.9531 814.1094,19.5625 L814.1094,21.0156 Q814.1094,21.625 813.875,21.8906 Q813.6406,22.1563 813.2656,22.1563 Q812.9219,22.1563 812.7188,21.9531 Q812.5156,21.7656 812.4063,21.25 Q812.3594,20.8906 812.1719,20.7031 Q811.8438,20.3281 811.2344,20.1094 Q810.625,19.8906 810,19.8906 Q809.2344,19.8906 808.5938,20.2188 Q807.9688,20.5469 807.4688,21.2969 Q806.9844,22.0469 806.9844,23.0781 L806.9844,24.1719 Q806.9844,25.4063 807.875,26.2344 Q808.7656,27.0469 810.3594,27.0469 Q811.2969,27.0469 811.9531,26.7969 Q812.3438,26.6406 812.7656,26.2031 Q813.0313,25.9375 813.1719,25.8594 Q813.3281,25.7813 813.5313,25.7813 Q813.8594,25.7813 814.1094,26.0469 Q814.375,26.2969 814.375,26.6406 Q814.375,26.9844 814.0313,27.3906 Q813.5313,27.9688 812.7344,28.2969 Q811.6563,28.75 810.3594,28.75 Q808.8438,28.75 807.6406,28.125 Q806.6563,27.625 805.9688,26.5625 Q805.2813,25.4844 805.2813,24.2031 L805.2813,23.0469 Q805.2813,21.7188 805.8906,20.5781 Q806.5156,19.4219 807.6094,18.8125 Q808.7031,18.1875 809.9375,18.1875 Q810.6719,18.1875 811.3125,18.3594 Q811.9688,18.5156 812.5156,18.875 Z " fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="830.25" y="28.7285">MapaPsicogeografico</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="759.5" x2="1004.5" y1="39" y2="39"/>
+            <rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="766.5" y="50.3047"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="221" x="778.5" y="57.5332">etiquetas: List&lt;EtiquetaEmocional&gt;</text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="759.5" x2="1004.5" y1="64.6094" y2="64.6094"/>
+            <ellipse cx="769.5" cy="78.9141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="778.5" y="83.1426">agregarEtiqueta()</text>
+            <ellipse cx="769.5" cy="96.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="778.5" y="100.752">obtenerMapa()</text>
+        </g>
+        <!--link SistemaDeAutenticacion to Usuario-->
+        <g id="link_SistemaDeAutenticacion_Usuario">
+            <path codeLine="48" d="M132,108.13 C132,132.3 132,155.28 132,179.43 " fill="none" id="SistemaDeAutenticacion-to-Usuario" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="132,185.43,136,176.43,132,180.43,128,176.43,132,185.43" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--link GeneradorDeRutas to Ruta-->
+        <g id="link_GeneradorDeRutas_Ruta">
+            <path codeLine="49" d="M378,90.87 C378,120.03 378,157.02 378,188.46 " fill="none" id="GeneradorDeRutas-to-Ruta" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="378,194.46,382,185.46,378,189.46,374,185.46,378,194.46" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--link CuadernoDigital to Experiencia-->
+        <g id="link_CuadernoDigital_Experiencia">
+            <path codeLine="50" d="M611,108.13 C611,126.69 611,142.09 611,161.96 " fill="none" id="CuadernoDigital-to-Experiencia" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="611,167.96,615,158.96,611,162.96,607,158.96,611,167.96" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--link MapaPsicogeografico to EtiquetaEmocional-->
+        <g id="link_MapaPsicogeografico_EtiquetaEmocional">
+            <path codeLine="51" d="M882,108.13 C882,135.36 882,162.69 882,188.35 " fill="none" id="MapaPsicogeografico-to-EtiquetaEmocional" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="882,194.35,886,185.35,882,189.35,878,185.35,882,194.35" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--SRC=[TPBHQiCm34NVynLvt2ZzWJ8APIrZi45fsGUeZkOP4gkJPUWO-_VPiPCwwVPcNubxZsIh5fohtvm7DbH_LtMzjDIT65VrKTXO7HL5p4XJnGg3GmkZ-bDLgZSx6YVOmHOtNj2AKQ0CsUJjKv0xe0vT30svLVqIZWyPOHsw5fohdCMx-wZ2OCVXFgOTl43oFdihz6nDI2jHWyyNAY4saADIRNtrU4ABaOMt6ErSxxVGlSfHsRG8lKEPlBkSaGrQPJA0u4KcqQQ3OB87-IXLy8sXkTY26F7Dgcx8drhi9R9weet9ZnuQP4jR4ngWJUbunHbsMX1EzreKqcxf977QGdUJKSLyUXJOTHJVSeXilGOkfy1Kl_qJht26lJEAD99cU0-dJ9sTH-HvKWyEEg07x5oSC4VhnFhFnrikryC7hsvUEXRZgPhlD1QATLH_JT3tp86hNm00]-->
+    </g>
+</svg>

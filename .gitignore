@@ -53,3 +53,5 @@ replay_pid*
 /app/build/
 /*.iml
 /.idea/
+/DeriveApp/nbproject/private/
+/Acceso a Datos/T3/ACADT_UT3_P2/build/

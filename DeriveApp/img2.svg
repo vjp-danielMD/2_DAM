@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="243px" preserveAspectRatio="none" style="width:864px;height:243px;background:#FFFFFF;" version="1.1" viewBox="0 0 864 243" width="864px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <!--cluster Presentaci?n (App M?vil)-->
+        <g id="cluster_Presentación (App Móvil)">
+            <path d="M100.5,77 L278.5,77 A3.75,3.75 0 0 1 281,79.5 L288,100.6094 L288.5,100.6094 A2.5,2.5 0 0 1 291,103.1094 L291,162.5 A2.5,2.5 0 0 1 288.5,165 L100.5,165 A2.5,2.5 0 0 1 98,162.5 L98,79.5 A2.5,2.5 0 0 1 100.5,77 " fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="98" x2="288" y1="100.6094" y2="100.6094"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="177" x="102" y="93.5332">Presentación (App Móvil)</text>
+        </g>
+        <!--cluster L?gica (API / Backend)-->
+        <g id="cluster_Lógica (API / Backend)">
+            <path d="M321.5,6 L477.5,6 A3.75,3.75 0 0 1 480,8.5 L487,29.6094 L525.5,29.6094 A2.5,2.5 0 0 1 528,32.1094 L528,233.5 A2.5,2.5 0 0 1 525.5,236 L321.5,236 A2.5,2.5 0 0 1 319,233.5 L319,8.5 A2.5,2.5 0 0 1 321.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="319" x2="487" y1="29.6094" y2="29.6094"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="155" x="323" y="22.5332">Lógica (API / Backend)</text>
+        </g>
+        <!--cluster Datos (Base de Datos / GPS / Multimedia)-->
+        <g id="cluster_Datos (Base de Datos / GPS / Multimedia)">
+            <path d="M558.5,7 L844.5,7 A3.75,3.75 0 0 1 847,9.5 L854,30.6094 L854.5,30.6094 A2.5,2.5 0 0 1 857,33.1094 L857,161.5 A2.5,2.5 0 0 1 854.5,164 L558.5,164 A2.5,2.5 0 0 1 556,161.5 L556,9.5 A2.5,2.5 0 0 1 558.5,7 " fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="556" x2="854" y1="30.6094" y2="30.6094"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="285" x="560" y="23.5332">Datos (Base de Datos / GPS / Multimedia)</text>
+        </g>
+        <g id="elem_Interacción con UI">
+            <ellipse cx="194.0785" cy="131.2157" fill="#F1F1F1" rx="79.0785" ry="18.2157" style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="136.6751" y="135.3395">Interacción con UI</text>
+        </g>
+        <g id="elem_Generar Ruta">
+            <ellipse cx="423.3041" cy="58.8608" fill="#F1F1F1" rx="69.8041" ry="16.3608" style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="376.8041" y="63.3774">Generar Ruta</text>
+        </g>
+        <g id="elem_Registrar Experiencia">
+            <ellipse cx="423.6756" cy="131.1351" fill="#F1F1F1" rx="88.6756" ry="20.1351" style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="135" x="356.1756" y="134.8636">Registrar Experiencia</text>
+        </g>
+        <g id="elem_Etiquetar Lugar">
+            <ellipse cx="423.7427" cy="203.1485" fill="#F1F1F1" rx="73.7427" ry="17.1485" style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="371.7427" y="207.6651">Etiquetar Lugar</text>
+        </g>
+        <g id="elem_Guardar Datos">
+            <ellipse cx="705.7859" cy="130.8572" fill="#F1F1F1" rx="72.2859" ry="16.8572" style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="655.7859" y="135.3738">Guardar Datos</text>
+        </g>
+        <g id="elem_Consultar Mapas">
+            <ellipse cx="706.1203" cy="60.8241" fill="#F1F1F1" rx="77.1203" ry="17.8241" style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="650.2783" y="65.1856">Consultar Mapas</text>
+        </g>
+        <!--entity Usuario-->
+        <g id="elem_Usuario">
+            <ellipse cx="30" cy="100.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M30,108.5 L30,135.5 M17,116.5 L43,116.5 M30,135.5 L17,150.5 M30,135.5 L43,150.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="6" y="166.5332">Usuario</text>
+        </g>
+        <!--link Usuario to Interacci?n con UI-->
+        <g id="link_Usuario_Interacción con UI">
+            <path d="M54.21,131 C70.31,131 86.76,131 108.92,131 " fill="none" id="Usuario-to-Interacción con UI" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="114.92,131,105.92,127,109.92,131,105.92,135,114.92,131" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--link Interacci?n con UI to Generar Ruta-->
+        <g id="link_Interacción con UI_Generar Ruta">
+            <path d="M239.55,116.17 C261.1,109.06 287.36,100.48 311,93 C333.58,85.86 353.0675,79.8888 373.8075,73.6088 " fill="none" id="Interacción con UI-to-Generar Ruta" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="379.55,71.87,369.777,70.6499,374.7646,73.319,372.0954,78.3066,379.55,71.87" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--link Interacci?n con UI to Registrar Experiencia-->
+        <g id="link_Interacción con UI_Registrar Experiencia">
+            <path d="M273.29,131 C293.09,131 308.47,131 328.7,131 " fill="none" id="Interacción con UI-to-Registrar Experiencia" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="334.7,131,325.7,127,329.7,131,325.7,135,334.7,131" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--link Interacci?n con UI to Etiquetar Lugar-->
+        <g id="link_Interacción con UI_Etiquetar Lugar">
+            <path d="M240.71,145.63 C262.06,152.45 287.82,160.67 311,168 C333.44,175.1 352.715,181.1545 373.345,187.6245 " fill="none" id="Interacción con UI-to-Etiquetar Lugar" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="379.07,189.42,371.6794,182.9101,374.2991,187.9238,369.2854,190.5435,379.07,189.42" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--link Generar Ruta to Consultar Mapas-->
+        <g id="link_Generar Ruta_Consultar Mapas">
+            <path d="M493.48,59.49 C534.52,59.78 580.6502,60.1174 622.8902,60.4174 " fill="none" id="Generar Ruta-to-Consultar Mapas" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="628.89,60.46,619.9186,56.3962,623.8901,60.4245,619.8618,64.396,628.89,60.46" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--link Registrar Experiencia to Guardar Datos-->
+        <g id="link_Registrar Experiencia_Guardar Datos">
+            <path d="M512.1,131 C551,131 590.22,131 627.1,131 " fill="none" id="Registrar Experiencia-to-Guardar Datos" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="633.1,131,624.1,127,628.1,131,624.1,135,633.1,131" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--link Etiquetar Lugar to Guardar Datos-->
+        <g id="link_Etiquetar Lugar_Guardar Datos">
+            <path d="M473.36,190.46 C524.69,177.28 599.1283,158.1712 650.4183,145.0112 " fill="none" id="Etiquetar Lugar-to-Guardar Datos" style="stroke:#181818;stroke-width:1.0;"/>
+            <polygon fill="#181818" points="656.23,143.52,646.5183,141.8823,651.3869,144.7626,648.5065,149.6313,656.23,143.52" style="stroke:#181818;stroke-width:1.0;"/>
+        </g>
+        <!--SRC=[VP1HQiCm38RVVGgHf-wXz0Q3TIibq43ew064esLYgUtPyXYCdIf7oCNcDdsebwOl1akV_b_wEteJ40kUstU1XZrfOMkKGYtMmo54z6oLSgW_i2KeQa-1ZA3ceJUmU78Egg7_ukwXW1y540Df30aiZP17FNBQ6ZYKXVgzKjeDVSiQaqPTmWhMgKwc-I-p9PDaFEoZO77Ts5FBGKwjpRSZpsGqvyH6-3EI968NM_Iv-mkA3R1OdyY6OFokO5k_fhUAdV2H6iR9EYcF9YcU-SpjsPgGnbAlGeVXx7Q93vRBnvb0RbP7Fh_y3ZYJn9s9IJ8gTnkfoKKpJfTrysGc7ZUfFm00]-->
+    </g>
+</svg>
