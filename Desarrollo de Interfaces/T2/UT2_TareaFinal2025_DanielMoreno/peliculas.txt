@@ -17,4 +17,3 @@ Star Wars;1977;121
 Casablanca;1942;102
 La Lista de Schindler;1993;195
 El Rey León;1994;88
-Shrek;2001;90
