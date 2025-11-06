@@ -27,6 +27,7 @@ public class ParteTresDialog extends javax.swing.JDialog {
             JButton boton = new JButton(""+i+1);
             boton.setBackground(Color.black);
             boton.setForeground(Color.white);
+            boton.setName(""+i+1);
             boton.addMouseListener(new MyMouseListener());
             jPanel1.add(boton);
         }
