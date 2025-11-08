@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.parsers.SAXParser;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -20,7 +22,7 @@ import org.w3c.dom.NodeList;
  */
 /**
  *
- * @author danie
+ * @author daniel
  */
 public class Main {
 
@@ -29,20 +31,43 @@ public class Main {
                 new Alumno("Daniel", Arrays.asList("matematicas", "lengua", "sociales")),
                 new Alumno("Lira", Arrays.asList("fotografia", "literatura", "pintura"))
         );
-        String ruta = "src/alumnos.xml";
+        String ruta = "src/alumnosDOM.xml";
         escrituraDOM(listaAlumnos, ruta);
-        
-        List<Alumno> leidos = leecturaDOM(new ArrayList<>(), ruta);
+        mostrarDOM(ruta);
+        mostrarDOM(ruta);
 
-        
+    }
+
+    public static void mostrarSAX(String ruta) {
+        List<Alumno> leidos = lecturaSAX(new ArrayList<>(), ruta);
+        System.out.println("---LECTURA DESDE XML en SAX---");
+        for (Alumno leido : leidos) {
+            System.out.println(leido);
+        }
+    }
+
+    public static List<Alumno> lecturaSAX(List<Alumno> lista, String ruta) {
+        try {
+            SAXParserFactory saxpf = SAXParserFactory.newInstance();
+            SAXParser parser = saxpf.newSAXParser();
+            AlumnoHandler handler = new AlumnoHandler();
+            parser.parse(new File(ruta), handler);
+            lista.addAll(handler.getListaAlumnos());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lista;
+    }
+
+    public static void mostrarDOM(String ruta) {
+        List<Alumno> leidos = lecturaDOM(new ArrayList<>(), ruta);
         System.out.println("---LECTURA DESDE XML en DOM---");
         for (int i = 0; i < leidos.size(); i++) {
             System.out.println(leidos.get(i));
         }
-
     }
 
-    public static List<Alumno> leecturaDOM(List<Alumno> lista, String ruta) {
+    public static List<Alumno> lecturaDOM(List<Alumno> lista, String ruta) {
         try {
             File archivo = new File(ruta);
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();

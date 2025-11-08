@@ -1,0 +1,18 @@
+[
+  {
+    "nombre": "Daniel",
+    "asignaturas": [
+      "matematicas",
+      "lengua",
+      "sociales"
+    ]
+  },
+  {
+    "nombre": "Lira",
+    "asignaturas": [
+      "fotografia",
+      "literatura",
+      "pintura"
+    ]
+  }
+]
