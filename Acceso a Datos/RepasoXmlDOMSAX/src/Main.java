@@ -34,7 +34,7 @@ public class Main {
         String ruta = "src/alumnosDOM.xml";
         escrituraDOM(listaAlumnos, ruta);
         mostrarDOM(ruta);
-        mostrarDOM(ruta);
+        mostrarSAX(ruta);
 
     }
 
