@@ -1,0 +1,3 @@
+Persona{nombre=Daniel, edad=22}
+Persona{nombre=Lucía, edad=32}
+Persona{nombre=Lira, edad=22}
