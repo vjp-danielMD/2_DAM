@@ -1,0 +1,4 @@
+primera linea de texto del fichero
+segunda linea de texto
+tercera linea de texto
+fin del fichero.
