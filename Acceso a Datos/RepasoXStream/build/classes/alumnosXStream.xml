@@ -1,0 +1,18 @@
+<alumnos>
+  <alumno>
+    <nombre>Daniel</nombre>
+    <asignaturas>
+      <asignatura>matematicas</asignatura>
+      <asignatura>lengua</asignatura>
+      <asignatura>sociales</asignatura>
+    </asignaturas>
+  </alumno>
+  <alumno>
+    <nombre>Lira</nombre>
+    <asignaturas>
+      <asignatura>fotografia</asignatura>
+      <asignatura>literatura</asignatura>
+      <asignatura>pintura</asignatura>
+    </asignaturas>
+  </alumno>
+</alumnos>
