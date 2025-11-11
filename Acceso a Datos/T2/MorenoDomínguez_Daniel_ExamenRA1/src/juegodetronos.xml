@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<juegodetronos>
+	<autor>George R. R. Martin</autor>
+	<casas>
+		<casa>
+			<nombre>Targaryen</nombre>
+			<simbolo>Dragón</simbolo>
+		</casa>
+		<casa>
+			<nombre>Stark</nombre>
+			<simbolo>Lobo</simbolo>
+		</casa>
+		<casa>
+			<nombre>Baratheon</nombre>
+			<simbolo>Venado</simbolo>
+		</casa>
+		<casa>
+			<nombre>Lannister</nombre>
+			<simbolo>León</simbolo>
+		</casa>
+	</casas>
+	<ciudades>
+		<ciudad>Antigua</ciudad>
+		<ciudad>Astapor</ciudad>
+		<ciudad>Braavos</ciudad>
+		<ciudad>Desembarco del Rey</ciudad>
+		<ciudad>Meeren</ciudad>
+		<ciudad>Pentos</ciudad>
+	</ciudades>
+	<historias>
+		<series>
+			<serie>Juego de Tronos</serie>
+			<serie>La Casa del Dragón</serie>
+		</series>
+		<libros>
+			<libro>Juego de tronos</libro>
+			<libro>Choque de reyes</libro>
+			<libro>Tormenta de espadas</libro>
+			<libro>Festín de cuervos</libro>
+			<libro>Danza de dragones</libro>
+		</libros>
+	</historias>
+</juegodetronos>
