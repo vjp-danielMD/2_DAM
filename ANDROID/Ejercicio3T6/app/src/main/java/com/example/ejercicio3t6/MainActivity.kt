@@ -15,15 +15,28 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val radioGroup: RadioGroup = findViewById<RadioGroup>(R.id.radioGroup)
-        val selectedRadioButtonId = radioGroup.checkedRadioButtonId
-        val textView: TextView = findViewById<TextView>(R.id.textView)
+        val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
+        val textView = findViewById<TextView>(R.id.textView)
 
-        if (selectedRadioButtonId == -1){
-            textView.setText("No se ha seleccionado nada")
-        }else if (selectedRadioButtonId == R.id.radioButton){
-            textView.setText("@strin")
+        val selectedId = radioGroup.checkedRadioButtonId
+        if (selectedId == -1) {
+            textView.text = getString(R.string.no_seleccion)
+        } else if (selectedId == R.id.radioButton) {
+            textView.text = getString(R.string.masculino)
+        } else if (selectedId == R.id.radioButton2) {
+            textView.text = getString(R.string.femenino)
         }
 
+        radioGroup.setOnCheckedChangeListener(object : RadioGroup.OnCheckedChangeListener {
+            override fun onCheckedChanged(group: RadioGroup, checkedId: Int) {
+                if (checkedId == R.id.radioButton) {
+                    textView.text = getString(R.string.masculino)
+                } else if (checkedId == R.id.radioButton2) {
+                    textView.text = getString(R.string.femenino)
+                } else {
+                    textView.text = getString(R.string.no_seleccion)
+                }
+            }
+        })
     }
 }

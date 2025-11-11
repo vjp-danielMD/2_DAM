@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Ejercicio3T6</string>
     <string name="texto_pregunta">¿Qué tengo seleccionado?</string>
+    <string name="no_seleccion">No hay nada seleccionado</string>
     <string name="masculino">Has seleccionado masculino</string>
     <string name="femenino">Has seleccionado femenino</string>
 </resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ejercicio5T6</string>
+    <string name="sombrero_text">SOMBRERO:</string>
+    <string name="sombrero_puesto">PUESTO</string>
+    <string name="somrebro_quitado">QUITADO</string>
+    <string name="gafas_text">GAFAS:</string>
+</resources>
