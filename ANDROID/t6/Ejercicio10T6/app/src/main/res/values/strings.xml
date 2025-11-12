@@ -1,3 +1,25 @@
-<resources>
-    <string name="app_name">Ejercicio10T6</string>
-</resources>
+    <resources>
+        <string name="app_name">Ejercicio10T6</string>
+        <string name="title_activity_tabbed">Ejercicio 10 T6</string>
+        <string name="tab_text_1">PERSONAJE</string>
+        <string name="tab_text_2">MISIÓN</string>
+        <string name="nombre_en_clave">Nombre en clave:</string>
+        <string name="sniper">Francotirador</string>
+        <string name="marine">Marine</string>
+        <string name="spy">Espía</string>
+        <string name="beret">Boina Verde</string>
+        <string name="multilpayer">Multijugador</string>
+        <string name="germany">Alemania</string>
+        <string name="africa">África</string>
+        <string name="norway">Noruega</string>
+        <string name="france">Francia</string>
+        <string name="choose">Elegir</string>
+        <string name="empty_name">Por favor, debe indicar un nombre</string>
+        <string name="reg_character">Personaje %1$s registrado como %2$s</string>
+        <string name="no_type">Por favor, seleccione un tipo de personaje</string>
+        <string name="on">Multijugador: ON</string>
+        <string name="off">Multijugador: OFF</string>
+        <string name="must_choose_mission">Debe elegir al menos una misión</string>
+        <string name="chosen_missions">Elegida/s misión/es: %1$s</string>
+
+    </resources>
