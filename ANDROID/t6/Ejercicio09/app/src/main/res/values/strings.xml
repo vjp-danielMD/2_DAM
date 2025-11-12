@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ejercicio09</string>
+    <string name="sup">SUP</string>
+    <string name="med">MED</string>
+    <string name="inf">INF</string>
+    <string name="ultimo">Ultimo:</string>
+    <string name="medio">Medio</string>
+    <string name="superior">Superior</string>
+    <string name="inferior">Inferior</string>
+    <string name="toast">TOAST</string>
+    <string name="contador">Contador:</string>
+</resources>

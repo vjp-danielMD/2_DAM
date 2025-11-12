@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ejercicio6T6</string>
+    <string name="pulsar">Pulsa para llamar a Walter White</string>
+    <string name="llamando">Llamando a Walter White</string>
+</resources>
