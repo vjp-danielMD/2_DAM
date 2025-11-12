@@ -1,0 +1,29 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable fondo
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable potato
+drawable potatog
+drawable potatogs
+drawable potatos
+id imageView
+id main
+id switch1
+id textView
+id textView2
+id toggleButton
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string gafas_text
+string sombrero_puesto
+string sombrero_text
+string somrebro_quitado
+style Base.Theme.Ejercicio5T6
+style Theme.Ejercicio5T6
+xml backup_rules
+xml data_extraction_rules

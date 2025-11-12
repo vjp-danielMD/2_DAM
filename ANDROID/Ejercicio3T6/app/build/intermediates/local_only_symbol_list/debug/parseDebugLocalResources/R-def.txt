@@ -1,0 +1,23 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id main
+id radioButton
+id radioButton2
+id radioGroup
+id textView
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string femenino
+string masculino
+string no_seleccion
+string texto_pregunta
+style Base.Theme.Ejercicio3T6
+style Theme.Ejercicio3T6
+xml backup_rules
+xml data_extraction_rules

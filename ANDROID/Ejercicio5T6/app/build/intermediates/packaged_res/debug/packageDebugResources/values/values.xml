@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Ejercicio5T6</string>
+    <string name="gafas_text">GAFAS:</string>
+    <string name="sombrero_puesto">PUESTO</string>
+    <string name="sombrero_text">SOMBRERO:</string>
+    <string name="somrebro_quitado">QUITADO</string>
+    <style name="Base.Theme.Ejercicio5T6" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Ejercicio5T6" parent="Base.Theme.Ejercicio5T6"/>
+</resources>
