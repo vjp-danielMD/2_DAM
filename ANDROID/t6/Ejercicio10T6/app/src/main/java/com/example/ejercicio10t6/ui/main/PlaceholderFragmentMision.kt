@@ -4,11 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.ejercicio10t6.databinding.FragmentMisionBinding
 import com.example.ejercicio10t6.R
@@ -58,22 +56,26 @@ class PlaceholderFragmentMision : Fragment() {
             }
         }
 
-        // Botón "Elegir" listener
+        // boton "Elegir" listener
         buttonChoose.setOnClickListener {
-            val selectedMissions = mutableListOf<String>()
-            if (checkGermany.isChecked) selectedMissions.add(getString(R.string.germany))
-            if (checkAfrica.isChecked) selectedMissions.add(getString(R.string.africa))
-            if (checkNorway.isChecked) selectedMissions.add(getString(R.string.norway))
-            if (checkFrance.isChecked) selectedMissions.add(getString(R.string.france))
+            // Creamos un string vacío
+            var missions = ""
 
-            if (selectedMissions.isEmpty()) {
+            if (checkGermany.isChecked) missions += getString(R.string.germany) + ", "
+            if (checkAfrica.isChecked) missions += getString(R.string.africa) + ", "
+            if (checkNorway.isChecked) missions += getString(R.string.norway) + ", "
+            if (checkFrance.isChecked) missions += getString(R.string.france) + ", "
+
+            if (missions.isEmpty()) {
                 Toast.makeText(requireContext(), getString(R.string.must_choose_mission), Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(requireContext(),getString(R.string.chosen_missions, selectedMissions.joinToString(", ")),
-                    Toast.LENGTH_SHORT).show()
+                // quitar la ultima coma y espacio
+                missions = missions.dropLast(2)
+                Toast.makeText(requireContext(), getString(R.string.chosen_missions, missions), Toast.LENGTH_SHORT).show()
             }
-
         }
+
+
         return root
     }
 

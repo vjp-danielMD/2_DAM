@@ -1,78 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green"
     android:orientation="vertical"
+    android:background="@color/green"
     tools:context=".ui.main.PlaceholderFragmentPersonaje">
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="439dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/misiones"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="53dp" />
-
+    <!-- Layout de imágenes, 60% de altura -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="77dp"
-        android:orientation="horizontal"
-        android:gravity="bottom">
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/germany" />
+            android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/checkBox3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/africa" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/img1"
+                android:scaleType="centerCrop"/>
 
-        <CheckBox
-            android:id="@+id/checkBox4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/norway" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/img2"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
 
-        <CheckBox
-            android:id="@+id/checkBox5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/france" />
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/img3"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/img4"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
+
     </LinearLayout>
 
+    <!-- Layout de botones y checkboxes, 40% de altura -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="99dp"
-        android:gravity="bottom"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
 
-        <ToggleButton
-            android:id="@+id/toggleButton"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textOn="@string/on"
-            android:textOff="@string/off"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/germany" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/africa" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/norway" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/france" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/choose" />
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textOff="@string/off"
+                android:textOn="@string/on" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/choose" />
+        </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>

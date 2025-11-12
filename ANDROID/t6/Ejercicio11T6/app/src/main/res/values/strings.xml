@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ejercicio11T6</string>
+    <string name="elige">Elige un número entre 1 y 10</string>
+    <string name="win">¡Enhorabuena!</string>
+    <string name="intentos_final">Has necesitado %1$s intentos</string>
+    <string name="suerte">¡Probar Suerte!</string>
+    <string name="reiniciar">Reiniciar</string>
+    <string name="intentos">Intentos:</string>
+    <string name="introduce">Introduce un número</string>
+    <string name="pista">Pista: Introduce un número mayor</string>
+    <string name="pista_dos">Pista: Introduce un número menor</string>
+</resources>
