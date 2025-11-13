@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Ejercicio12T6</string>
+    
+    <string name="primera">¿Cuál fue el primer país invadido por Alemania en la Segunda Guerra Mundial?</string>
+    <string name="primera_op_uno">Polonia</string>
+    <string name="primera_op_dos">Francia</string>
+    <string name="primera_op_tres">Gran Bretaña</string>
+    
+    <string name="segunda">¿En qué años naicó y murió Alejandro Magno?</string>
+    <string name="segunda_op_uno">356 a.C. - 323 a.C.</string>
+    <string name="segunda_op_dos">356 d.C. - 323 d.C.</string>
+    <string name="segunda_op_tres">429 a.C. - 398 a.C.</string>
+
+    <string name="tercera">¿Quiénes se enfrentaron en las Guerras Púnicas entre el 264 a. C. y el 146 a. C.?</string>
+    <string name="tercera_op_uno">Liga de Delos (Atenas) VS Liga del Peloponeso (Esparta)</string>
+    <string name="tercera_op_dos">Ciudades Estado Griegas VS Imperio Persa</string>
+    <string name="tercera_op_tres">Roma VS Cartago</string>
+
+    <string name="send">Enviar</string>
+    <string name="toast">Has acertado un %1$d %% de las preguntas</string>
 </resources>
