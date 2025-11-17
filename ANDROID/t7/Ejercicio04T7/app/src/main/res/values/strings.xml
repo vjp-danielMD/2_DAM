@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ejercicio04T7</string>
+    <string name="llamar">LLAMAR</string>
+    <string name="no_permisos_msg">NO tienes permisos, concédelos.</string>
+</resources>

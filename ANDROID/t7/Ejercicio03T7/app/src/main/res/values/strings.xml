@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ejercicio03T7</string>
+    <string name="hola">HOLA</string>
+    <string name="escribe_tu_nombre">Escribe tu nombre</string>
+    <string name="saludo">Hola %1$s</string>
+    <string name="aviso">El nombre no puede estar vacío</string>
+</resources>

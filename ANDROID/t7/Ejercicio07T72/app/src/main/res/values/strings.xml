@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ejercicio07T7</string>
+    <string name="nombre">Nombre:</string>
+    <string name="sortear">Sortear</string>
+    <string name="background">background</string>
+    <string name="insertar">Insertar</string>
+    <string name="borrar">Borrar</string>
+    <string name="ganador">GANADOR!!!</string>
+    <string name="empty_name">El nombre no puede estar vacío</string>
+    <string name="new_name">Nombre insertado correctamente</string>
+</resources>
