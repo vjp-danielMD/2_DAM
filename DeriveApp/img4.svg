@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="488px" preserveAspectRatio="none" style="width:993px;height:488px;background:#FFFFFF;" version="1.1" viewBox="0 0 993 488" width="993px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="32" x2="32" y1="82.6094" y2="406.125"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="326" x2="326" y1="82.6094" y2="406.125"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="571" x2="571" y1="82.6094" y2="406.125"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="779.5" x2="779.5" y1="82.6094" y2="406.125"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="854.5" x2="854.5" y1="82.6094" y2="406.125"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="936.5" x2="936.5" y1="82.6094" y2="406.125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="5" y="79.5332">Usuario</text>
+        <ellipse cx="32" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+        <path d="M32,21.5 L32,48.5 M19,29.5 L45,29.5 M32,48.5 L19,63.5 M32,48.5 L45,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="5" y="419.6582">Usuario</text>
+        <ellipse cx="32" cy="431.2344" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+        <path d="M32,439.2344 L32,466.2344 M19,447.2344 L45,447.2344 M32,466.2344 L19,481.2344 M32,466.2344 L45,481.2344 " fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="80" x="286" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="293" y="71.5332">AppDeriva</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="80" x="286" y="405.125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="293" y="426.6582">AppDeriva</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138" x="502" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="509" y="71.5332">GeneradorDeRutas</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="138" x="502" y="405.125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="509" y="426.6582">GeneradorDeRutas</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85" x="737.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="744.5" y="71.5332">API_Mapas</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85" x="737.5" y="405.125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="744.5" y="426.6582">API_Mapas</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="44" x="832.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="839.5" y="71.5332">Ruta</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="44" x="832.5" y="405.125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="839.5" y="426.6582">Ruta</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101" x="886.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="893.5" y="71.5332">BaseDeDatos</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101" x="886.5" y="405.125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="893.5" y="426.6582">BaseDeDatos</text>
+        <polygon fill="#181818" points="314,110.9609,324,114.9609,314,118.9609,318,114.9609" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="32" x2="320" y1="114.9609" y2="114.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="270" x="39" y="110.1045">solicitar generarRutaAleatoria(ubicacionActual)</text>
+        <polygon fill="#181818" points="559,141.3125,569,145.3125,559,149.3125,563,145.3125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="326" x2="565" y1="145.3125" y2="145.3125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="221" x="333" y="140.4561">generarRutaAleatoria(ubicacionActual)</text>
+        <polygon fill="#181818" points="768,171.6641,778,175.6641,768,179.6641,772,175.6641" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="571" x2="774" y1="175.6641" y2="175.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185" x="578" y="170.8076">consultarMapa(ubicacionActual)</text>
+        <polygon fill="#181818" points="582,202.0156,572,206.0156,582,210.0156,578,206.0156" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="576" x2="779" y1="206.0156" y2="206.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="142" x="588" y="201.1592">datos de calles y puntos</text>
+        <polygon fill="#181818" points="842.5,232.3672,852.5,236.3672,842.5,240.3672,846.5,236.3672" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="571" x2="848.5" y1="236.3672" y2="236.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="247" x="578" y="231.5107">crear trayectoria aleatoria con datos reales</text>
+        <polygon fill="#181818" points="582,262.7188,572,266.7188,582,270.7188,578,266.7188" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="576" x2="853.5" y1="266.7188" y2="266.7188"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83" x="588" y="261.8623">instancia Ruta</text>
+        <polygon fill="#181818" points="337,293.0703,327,297.0703,337,301.0703,333,297.0703" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="331" x2="570" y1="297.0703" y2="297.0703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="123" x="343" y="292.2139">objeto Ruta generado</text>
+        <polygon fill="#181818" points="925,323.4219,935,327.4219,925,331.4219,929,327.4219" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="326" x2="931" y1="327.4219" y2="327.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="333" y="322.5654">guardar(ruta)</text>
+        <polygon fill="#181818" points="337,353.7734,327,357.7734,337,361.7734,333,357.7734" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="331" x2="936" y1="357.7734" y2="357.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="343" y="352.917">confirmación guardado</text>
+        <polygon fill="#181818" points="43,384.125,33,388.125,43,392.125,39,388.125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="37" x2="325" y1="388.125" y2="388.125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164" x="49" y="383.2686">mostrar ruta en la aplicación</text>
+        <!--SRC=[ZP91IWGn44NtEKKjPnPpWLa8BGtYGX31jTIaoo6IIK8b4UPS7i6B-HDxr1bRS1Ugw_t_yzDiIrHwp9NLHMFc0sskQ4Xf57MlJ5lAqJlh2Ylj9OYoFjJ2WnS6x7XLTywoTJ4CjbJsQ_FDGkYc8rFKKHgMeVS_bLzWItL_-tJ7gQlO67BrIDK62o6-LZVBAIOOPvg4B7ilcOwKQi1eqRWTcgSAMYZAHx4zDl7f0YtFh8ab29hE_67kGYuSBB0sMR2yU8AuUv4IFsFiv-NpdgyvooXZ3u2AyP0Jwqe1hCtFRvVAYFtiz83ktj_2p9rh0pZz65iwn8phApLXaa0U5IJVkmV_0G00]-->
+    </g>
+</svg>

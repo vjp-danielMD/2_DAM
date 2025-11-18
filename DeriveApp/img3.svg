@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="597px" preserveAspectRatio="none" style="width:1034px;height:597px;background:#FFFFFF;" version="1.1" viewBox="0 0 1034 597" width="1034px" zoomAndPan="magnify">
+    <defs/>
+    <g>
+        <rect fill="none" height="307.3516" style="stroke:#000000;stroke-width:1.5;" width="1017" x="10" y="190.6641"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="47" x2="47" y1="82.6094" y2="515.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="350" x2="350" y1="82.6094" y2="515.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="546.5" x2="546.5" y1="82.6094" y2="515.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="698.5" x2="698.5" y1="82.6094" y2="515.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="862" x2="862" y1="82.6094" y2="515.0156"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="966" x2="966" y1="82.6094" y2="515.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="20" y="79.5332">Usuario</text>
+        <ellipse cx="47" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+        <path d="M47,21.5 L47,48.5 M34,29.5 L60,29.5 M47,48.5 L34,63.5 M47,48.5 L60,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="20" y="528.5488">Usuario</text>
+        <ellipse cx="47" cy="540.125" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+        <path d="M47,548.125 L47,575.125 M34,556.125 L60,556.125 M47,575.125 L34,590.125 M47,575.125 L60,590.125 " fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="80" x="310" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="317" y="71.5332">AppDeriva</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="80" x="310" y="514.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="317" y="535.5488">AppDeriva</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="167" x="463.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="470.5" y="71.5332">SistemaDeAutenticacion</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="167" x="463.5" y="514.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="470.5" y="535.5488">SistemaDeAutenticacion</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="116" x="640.5" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="647.5" y="71.5332">CuadernoDigital</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="116" x="640.5" y="514.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="647.5" y="535.5488">CuadernoDigital</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="87" x="819" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="826" y="71.5332">Experiencia</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="87" x="819" y="514.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="826" y="535.5488">Experiencia</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101" x="916" y="50"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="923" y="71.5332">BaseDeDatos</text>
+        <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101" x="916" y="514.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="923" y="535.5488">BaseDeDatos</text>
+        <polygon fill="#181818" points="338,110.9609,348,114.9609,338,118.9609,342,114.9609" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="47" x2="344" y1="114.9609" y2="114.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="54" y="110.1045">iniciar sesión()</text>
+        <polygon fill="#181818" points="535,141.3125,545,145.3125,535,149.3125,539,145.3125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="350" x2="541" y1="145.3125" y2="145.3125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="173" x="357" y="140.4561">autenticar(correo, contraseña)</text>
+        <polygon fill="#181818" points="361,171.6641,351,175.6641,361,179.6641,357,175.6641" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="355" x2="546" y1="175.6641" y2="175.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="134" x="367" y="170.8076">resultado autenticación</text>
+        <path d="M10,190.6641 L71,190.6641 L71,199.0156 L61,209.0156 L10,209.0156 L10,190.6641 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/>
+        <rect fill="none" height="307.3516" style="stroke:#000000;stroke-width:1.5;" width="1017" x="10" y="190.6641"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="25" y="205.1592">alt</text>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="130" x="86" y="204.083">[autenticación correcta]</text>
+        <polygon fill="#181818" points="338,227.3672,348,231.3672,338,235.3672,342,231.3672" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="47" x2="344" y1="231.3672" y2="231.3672"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="279" x="54" y="226.5107">registrar experiencia(texto, imagen, audio, GPS)</text>
+        <polygon fill="#181818" points="686.5,257.7188,696.5,261.7188,686.5,265.7188,690.5,261.7188" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="350" x2="692.5" y1="261.7188" y2="261.7188"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="144" x="357" y="256.8623">registrarExperiencia(exp)</text>
+        <polygon fill="#181818" points="850.5,288.0703,860.5,292.0703,850.5,296.0703,854.5,292.0703" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="698.5" x2="856.5" y1="292.0703" y2="292.0703"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="140" x="705.5" y="287.2139">crear objeto Experiencia</text>
+        <polygon fill="#181818" points="709.5,318.4219,699.5,322.4219,709.5,326.4219,705.5,322.4219" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="703.5" x2="861.5" y1="322.4219" y2="322.4219"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="715.5" y="317.5654">instancia creada</text>
+        <polygon fill="#181818" points="361,348.7734,351,352.7734,361,356.7734,357,352.7734" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="355" x2="697.5" y1="352.7734" y2="352.7734"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="120" x="367" y="347.917">confirmación registro</text>
+        <polygon fill="#181818" points="954.5,379.125,964.5,383.125,954.5,387.125,958.5,383.125" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;" x1="350" x2="960.5" y1="383.125" y2="383.125"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="72" x="357" y="378.2686">guardar(exp)</text>
+        <polygon fill="#181818" points="361,409.4766,351,413.4766,361,417.4766,357,413.4766" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="355" x2="965.5" y1="413.4766" y2="413.4766"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="367" y="408.6201">confirmación guardado</text>
+        <polygon fill="#181818" points="58,439.8281,48,443.8281,58,447.8281,54,443.8281" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="52" x2="349" y1="443.8281" y2="443.8281"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="196" x="64" y="438.9717">"Experiencia registrada con éxito"</text>
+        <line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="10" x2="1027" y1="452.8281" y2="452.8281"/>
+        <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="116" x="15" y="464.2471">[autenticación fallida]</text>
+        <polygon fill="#181818" points="58,486.0156,48,490.0156,58,494.0156,54,490.0156" style="stroke:#181818;stroke-width:1.0;"/>
+        <line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="52" x2="349" y1="490.0156" y2="490.0156"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="172" x="64" y="485.1592">"Error: credenciales inválidas"</text>
+        <!--SRC=[VL51RW8n3Bpd5H4daE0372hHRjKh4ke3tCIiN8K4ELx4TthiiUeJzcFrBaj95sXEIUoPyOp1IMBxcXjWIiOC5xjuiAlzlaAc0zYbfKYEW6t6JErtdCxCfQgj6yg2EwXmrGX68GUEKbGSdDyyTOaPqzow58KXO_i5CtC7k1Z9C-Oc2FXq8NJT7CP0aD6VxOMSWB5wxlXXh5MPrH4Uz_g9KUrD1O-Y4z8EQenpvVMapvVrPjPp_R7yr817ZgcYcWH2oVbSK2hz2JpkLugYJ-6EKST9R-yegIprwB9rSLETOXRewnsHXzkYenXq5rlYtH3SO21TcttKVLLOWQIig5eZzRhHNszb-N-94zHVIIZelAcbdPHkpwbwwAXi-taaIHE38UDuyLi8WGRdzxcP4_Tf-ruWODRi3kr71yrA7FqF]-->
+    </g>
+</svg>

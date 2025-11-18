@@ -1,0 +1,14 @@
+@startuml
+actor Usuario
+
+Usuario -> AppDeriva : solicitar generarRutaAleatoria(ubicacionActual)
+AppDeriva -> GeneradorDeRutas : generarRutaAleatoria(ubicacionActual)
+GeneradorDeRutas -> API_Mapas : consultarMapa(ubicacionActual)
+API_Mapas --> GeneradorDeRutas : datos de calles y puntos
+GeneradorDeRutas -> Ruta : crear trayectoria aleatoria con datos reales
+Ruta --> GeneradorDeRutas : instancia Ruta
+GeneradorDeRutas --> AppDeriva : objeto Ruta generado
+AppDeriva -> BaseDeDatos : guardar(ruta)
+BaseDeDatos --> AppDeriva : confirmación guardado
+AppDeriva --> Usuario : mostrar ruta en la aplicación
+@enduml
