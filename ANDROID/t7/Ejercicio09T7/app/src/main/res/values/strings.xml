@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Ejercicio09T7</string>
+    <string name="contrasena">CONTRASEÑA</string>
+    <string name="usuarioTextView">USUARIO</string>
+    <string name="loginTextButton">LOGIN</string>
+</resources>
