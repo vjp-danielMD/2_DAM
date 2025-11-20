@@ -3,4 +3,13 @@
     <string name="contrasena">CONTRASEÑA</string>
     <string name="usuarioTextView">USUARIO</string>
     <string name="loginTextButton">LOGIN</string>
+    <string name="saludo">Bienvenido, %1$s</string>
+    <string name="admin">ADMIN</string>
+    <string name="toast">TOAST</string>
+    <string name="acerca_de">ACERCA DE</string>
+    <string name="error_login">Usuario y/o contraseña incorrectos</string>
+    <string name="campo_vacio">Debes rellenar usuario y contraseña</string>
+    <string name="admin_texto">Administrando: %1$s</string>
+    <string name="acerca_de_autor">Autor: Daniel</string>
+    <string name="sesion_activa">Sesión activa: %1$s</string>
 </resources>
