@@ -30,7 +30,7 @@ class Bienvenida : AppCompatActivity() {
 
         textViewSaludo.text = getString(R.string.saludo, nombre)
 
-        if (usuario.getRol() == "admin") {
+        if (usuario.rol == "admin") {
             btnAdmin.visibility = View.VISIBLE
             btnToast.visibility = View.VISIBLE
             btnAbout.visibility = View.VISIBLE

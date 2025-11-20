@@ -20,8 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         arrayListUsuarios = arrayListOf(
-            Usuario("root", "12345", "admin"),
-            Usuario("pepe", "abcde", "usuario")
+            Usuario("root", "12345", "admin"), Usuario("pepe", "abcde", "usuario")
         )
 
         val edtiUser = findViewById<EditText>(R.id.editTextUser)
@@ -36,16 +35,19 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, R.string.campo_vacio, Toast.LENGTH_SHORT).show()
             } else {
                 var encontrado: Usuario? = null
-                for (u in arrayListUsuarios) {
-                    if (u.getNomUsuario() == user && u.getPass() == pass && encontrado == null) {
+                var i = 0
+                while (i < arrayListUsuarios.size && encontrado == null) {
+                    val u = arrayListUsuarios[i]
+                    if (u.nomUsuario == user && u.pass == pass) {
                         encontrado = u
                     }
+                    i++
                 }
 
                 if (encontrado != null) {
                     val intent = Intent(this, Bienvenida::class.java)
-                    intent.putExtra("usuario", encontrado.getNomUsuario())
-                    intent.putExtra("rol", encontrado.getRol())
+                    intent.putExtra("usuario", encontrado.nomUsuario)
+                    intent.putExtra("rol", encontrado.rol)
                     startActivity(intent)
                 } else {
                     Toast.makeText(this, R.string.error_login, Toast.LENGTH_SHORT).show()
