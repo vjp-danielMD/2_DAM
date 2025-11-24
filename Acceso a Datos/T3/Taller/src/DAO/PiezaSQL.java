@@ -16,34 +16,45 @@ public class PiezaSQL {
 
     public static Pieza getPieza() {
         Scanner sc = new Scanner(System.in);
-        String nombre, descripcion;
-        int stock;
-        double precio;
-        boolean unico;
 
         System.out.println("Nombre: ");
-        nombre = sc.nextLine();
-        System.out.println("Decripcion: ");
-        descripcion = sc.nextLine();
-        System.out.println("Stock: ");
-        stock = sc.nextInt();
-        System.out.println("Precio: ");
-        precio = sc.nextDouble();
-        System.out.println("Unico: ");
-        unico = sc.nextBoolean();
+        String nombre = sc.nextLine();
 
-        return new Pieza(nombre, descripcion, stock, precio, unico);
+        System.out.println("Descripcion: ");
+        String descripcion = sc.nextLine();
+
+        System.out.println("Stock: ");
+        int stock = sc.nextInt();
+
+        System.out.println("Precio: ");
+        double precio = sc.nextDouble();
+
+        System.out.println("Unico (true/false): ");
+        boolean unico = sc.nextBoolean();
+        sc.nextLine();
+
+        System.out.println("ID de Categoria: ");
+        int categoriaId = sc.nextInt();
+
+        System.out.println("ID de Material: ");
+        int materialId = sc.nextInt();
+
+        return new Pieza(nombre, descripcion, stock, precio, unico, categoriaId, materialId);
     }
 
     public static void crearTablaPieza(Connection con) {
         String sql = """
-                     CREATE TABLE pieza(
-                        id INT AUTO_INCREMENT PRIMARY KEY,
-                        nombre VARCHAR(50),
-                        descripcion VARCHAR(100),
-                        stock INT,
-                        precio DECIMAL(10,2),
-                        unico BOOLEAN
+                     CREATE TABLE Pieza (
+                         id INT AUTO_INCREMENT PRIMARY KEY,
+                         nombre VARCHAR(50),
+                         descripcion VARCHAR(100),
+                         stock INT,
+                         precio DECIMAL(10,2),
+                         unico BOOLEAN,
+                         categoria_id INT,
+                         material_id INT,
+                         CONSTRAINT fk_categoria FOREIGN KEY (categoria_id) REFERENCES Categoria(id),
+                         CONSTRAINT fk_material FOREIGN KEY (material_id) REFERENCES Material(id)
                      );
                      """;
         Statement st = null;
@@ -67,8 +78,9 @@ public class PiezaSQL {
     public static void insertarPieza(Connection con) {
         Pieza p = getPieza();
         String sql = """
-                     INSERT INTO pieza (nombre, descripcion, stock, precio, unico) VALUES (?, ?, ?, ?, ?);
-                     """;
+                 INSERT INTO pieza (nombre, descripcion, stock, precio, unico, categoria_id, material_id)
+                 VALUES (?, ?, ?, ?, ?, ?, ?);
+                 """;
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
@@ -77,6 +89,9 @@ public class PiezaSQL {
             ps.setInt(3, p.getStock());
             ps.setDouble(4, p.getPrecio());
             ps.setBoolean(5, p.isUnico());
+            ps.setInt(6, p.getCategoriaId());
+            ps.setInt(7, p.getMaterialId());
+
             int filas = ps.executeUpdate();
             System.out.println("Pieza insertada; " + filas + " filas afectadas.");
         } catch (SQLException e) {
@@ -179,7 +194,7 @@ public class PiezaSQL {
         System.out.println("ID: ");
         return sc.nextInt();
     }
-    
+
     public static int pedirNewCantidad() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nuevo Stock:");

@@ -1,10 +1,10 @@
 /*
-     * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-     * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package DAO;
 
-import Objects.Categoria;
+import Objects.Material;
 import java.sql.*;
 import java.util.Scanner;
 
@@ -12,22 +12,22 @@ import java.util.Scanner;
  *
  * @author alumno
  */
-public class CategoriaSQL {
+public class MaterialSQL {
 
-    public static Categoria getCategoria() {
+    public static Material getCategoria() {
         String nombre, descripcion;
         Scanner sc = new Scanner(System.in);
         System.out.println("Nombre:");
         nombre = sc.nextLine();
         System.out.println("Descripcion:");
         descripcion = sc.nextLine();
-        return new Categoria(nombre, descripcion);
+        return new Material(nombre, descripcion);
     }
 
-    public static void crearTablaCategoria(Connection con) {
+    public static void crearTablaMaterial(Connection con) {
         String sql = """
-                         CREATE TABLE Categoria (
-                             id INT PRIMARY KEY AUTO_INCREMENT,
+                         CREATE TABLE Material (
+                             id INT AUTO_INCREMENT PRIMARY KEY,
                              nombre VARCHAR(50) NOT NULL,
                              descripcion VARCHAR(255)
                          );
@@ -36,7 +36,7 @@ public class CategoriaSQL {
         try {
             st = con.createStatement();
             st.executeUpdate(sql);
-            System.out.println("Tabla Categoria creada");
+            System.out.println("Tabla Material creada");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -50,16 +50,16 @@ public class CategoriaSQL {
         }
     }
 
-    public static void insertarCategoria(Connection con) {
-        Categoria c = getCategoria();
-        String sql = "INSERT INTO categoria (nombre, descripcion) VALUES (?, ?);";
+    public static void insertarMaterial(Connection con) {
+        Material c = getCategoria();
+        String sql = "INSERT INTO material (nombre, descripcion) VALUES (?, ?);";
         PreparedStatement ps = null;
         try {
             ps = con.prepareStatement(sql);
             ps.setString(1, c.getNombre());
             ps.setString(2, c.getDescripcion());
             int filas = ps.executeUpdate();
-            System.out.println("Categoria insertada; " + filas + " filas afectadas.");
+            System.out.println("Material insertado; " + filas + " filas afectadas.");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -73,8 +73,8 @@ public class CategoriaSQL {
         }
     }
 
-    public static void mostrarCategorias(Connection con) {
-        String sql = "SELECT * FROM categoria";
+    public static void mostrarMateriales(Connection con) {
+        String sql = "SELECT * FROM material";
         Statement st = null;
         ResultSet rs = null;
         try {
@@ -103,20 +103,20 @@ public class CategoriaSQL {
         }
     }
 
-    public static void crearProcedimientoActualizarDescripcionCategoria(Connection con) {
+    public static void crearProcedimientoActualizarDescripcionMaterial(Connection con) {
         Statement st = null;
-        String sqlDrop = "DROP PROCEDURE IF EXISTS actualizar_descripcion_categoria";
-        String sqlCreate = "CREATE PROCEDURE actualizar_descripcion_categoria("
+        String sqlDrop = "DROP PROCEDURE IF EXISTS actualizar_descripcion_material";
+        String sqlCreate = "CREATE PROCEDURE actualizar_descripcion_material("
                 + "IN p_id INT, IN p_nueva_descripcion VARCHAR(255)) "
                 + "BEGIN "
-                + "   UPDATE categoria SET descripcion = p_nueva_descripcion WHERE id = p_id; "
+                + "   UPDATE material SET descripcion = p_nueva_descripcion WHERE id = p_id; "
                 + "END";
 
         try {
             st = con.createStatement();
             st.executeUpdate(sqlDrop);
             st.executeUpdate(sqlCreate);
-            System.out.println("Procedimiento actualizar_descripcion_categoria creado con exito.");
+            System.out.println("Procedimiento actualizar_descripcion_material creado con exito.");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -130,8 +130,8 @@ public class CategoriaSQL {
         }
     }
 
-    public static void llamarActualizarDescripcionCategoria(Connection con, int id, String nuevaDescripcion) {
-        String call = "{call actualizar_descripcion_categoria(?, ?)}";
+    public static void llamarActualizarDescripcion(Connection con, int id, String nuevaDescripcion) {
+        String call = "{call actualizar_descripcion_material(?, ?)}";
         CallableStatement cs = null;
 
         try {
@@ -139,7 +139,7 @@ public class CategoriaSQL {
             cs.setInt(1, id);
             cs.setString(2, nuevaDescripcion);
             cs.executeUpdate();
-            System.out.println("Descripcion de la categoria " + id + " actualizada a: " + nuevaDescripcion);
+            System.out.println("Descripcion del material " + id + " actualizado a: " + nuevaDescripcion);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -158,8 +158,8 @@ public class CategoriaSQL {
         System.out.println("ID: ");
         return sc.nextInt();
     }
-    
-    public static String pedirNuevaDescripcion(){
+
+    public static String pedirNuevaDescripcion() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Descripcion: ");
         return sc.nextLine();
