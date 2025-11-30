@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Ejercicio3T8</string>
+    <string name="pulsa_comenzar">PULSA COMENZAR CUANDO ESTES PREPARADO PARA REALIZAR EL TEST</string>
+    <string name="test_de_hardware">TEST DE HARDWARE</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="salir">SALIR</string>
+    <string name="pregunta_n_1">Pregunta Nº1</string>
+    <string name="siguiente_pregunta">Siguiente pregunta</string>
+    <string name="elige_el_nombre_del_hardware_de_la_figura">Elige el nombre del hardware de la figura</string>
+    <string name="volver_al_inicio">volver al inicio</string>
+    <string name="resultados_del_text">RESULTADOS DEL TEXT</string>
+    <string name="pregutnas_correctas">pregutnas correctas:</string>
+    <string name="preguntas_erroneas">Preguntas erroneas:</string>
+    <string name="preguntas_sin_contestar">Preguntas sin contestar:</string>
+    <string name="nota">NOTA:</string>
+    <string name="ver_resultados">Ver resultados</string>
+</resources>

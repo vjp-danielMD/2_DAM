@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="hardware">
+        <item>Tarjeta de sonido</item>
+        <item>Memoria RAM</item>
+        <item>Placa base</item>
+        <item>Procesador</item>
+        <item>Fuente de alimentacion</item>
+    </string-array>
+</resources>

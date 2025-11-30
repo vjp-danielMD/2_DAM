@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ejercicio2T8</string>
+    <string name="has_elegido">Has elegido: </string>
+    <string name="smr">SMR</string>
+    <string name="asir">ASIR</string>
+    <string name="dam">DAM</string>
+    <string name="daw">DAW</string>
+    <string name="ceceti">CECETI</string>
+    <string name="ce_videojuegos">CE videojuegos</string>
+
+</resources>
