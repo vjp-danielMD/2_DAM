@@ -48,7 +48,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jButtonColores = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jSlider1 = new javax.swing.JSlider();
