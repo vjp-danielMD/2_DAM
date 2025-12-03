@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Ejercicio6T8</string>
+    <string name="opcion1">opcion1</string>
+    <string name="opcion2">opcion2</string>
+    <string name="opcion3">opcion1</string>
+    <string name="opcion1_1">opcion1_1</string>
+    <string name="opcion1_2">opcion1_2</string>
+    <string name="opcion1_3">opcion1_3</string>
+    <string name="opcion2_1">opcion2_1</string>
+    <string name="opcion2_2">opcion2_2</string>
+    <string name="opcion2_3">opcion2_3</string>
+    <string name="opcion3_1">opcion3_1</string>
+    <string name="opcion3_2">opcion3_2</string>
+    <string name="opcion3_3">opcion3_3</string>
 </resources>
