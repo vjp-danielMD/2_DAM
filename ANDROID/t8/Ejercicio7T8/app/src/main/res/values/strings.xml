@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ejercicio7T8</string>
+    <string name="cambiar_color_de_fondo">Cambiar color de fondo</string>
+    <string name="mostrar_toast">Mostrar Toast</string>
+</resources>

@@ -12,4 +12,5 @@
     <string name="opcion3_1">opcion3_1</string>
     <string name="opcion3_2">opcion3_2</string>
     <string name="opcion3_3">opcion3_3</string>
+    <string name="qu_opci_n_se_ha_escogido">¿Qué opción se ha escogido?</string>
 </resources>
