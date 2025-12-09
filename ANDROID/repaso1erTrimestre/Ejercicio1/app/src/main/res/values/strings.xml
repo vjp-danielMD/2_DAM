@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ejercicio1</string>
+    <string name="calculadora_imc">Calculadora IMC</string>
+    <string name="peso_kg">Peso (kg):</string>
+</resources>
