@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="deportes">
+        <item>Elige un deporte</item>
+        <item>Crossfit</item>
+        <item>Yoga</item>
+        <item>Spinning</item>
+        <item>Running</item>
+    </string-array>
+</resources>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ExamenRA2_DanielMorenoDominguez</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_preferencias">Preferencias</string>
+    <string name="menu_entrenamiento">Entrenamiento</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="recordar_entrenamiento">Recordar entrenamiento</string>
+    <string name="elige_un_deporte">Elige un deporte</string>
+    <string name="elige_preferencias">Elige preferencias</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="adam">Adam</string>
+    <string name="diana">Diana</string>
+    <string name="entrenadores">Entrenadores:</string>
+    <string name="calentamiento">Calentamiento</string>
+    <string name="m_sica">Música</string>
+    <string name="buscar_sede">Buscar sede:</string>
+    <string name="buscar">BUSCAR</string>
+    <string name="recordatorio_true">Recordatorio activado</string>
+    <string name="recordatorio_false">Recordatorio desactivado</string>
+    <string name="musica_si">Música: sí</string>
+    <string name="calentamiento_si">Calentamiento: sí</string>
+
+    <string name="porfavor_sede">Por favor, debe introducir una sede</string>
+    <string name="no_hay_sedes">No hay sedes en la lista</string>
+</resources>
