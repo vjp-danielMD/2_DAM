@@ -5,6 +5,7 @@
 package com.mycompany.mysql;
 
 import java.sql.*;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,52 +21,49 @@ public class NewJFrame extends javax.swing.JFrame {
         cargarDatos();
     }
 
-public void cargarDatos() {
-    Connection con = null;
-    Statement s = null;
-    ResultSet rs = null;
+    public void cargarDatos() {
+        Connection con = null;
+        Statement s = null;
+        ResultSet rs = null;
 
-    try {
-        con = Conexion.getConnection();
-        s = con.createStatement();
-        rs = s.executeQuery("SELECT * FROM alumnos");
+        try {
+            con = Conexion.getConnection();
+            s = con.createStatement();
+            rs = s.executeQuery("SELECT * FROM alumnos");
 
-        while (rs.next()) {
-            System.out.println(rs.getInt(1));
-            System.out.println(rs.getString(2));
-            System.out.println(rs.getString(3));
-        }
+            // Obtener el modelo de la tabla
+            DefaultTableModel modelo = (DefaultTableModel)jTable1.getModel();
 
-    } catch (SQLException e) {
-        e.printStackTrace();
-    } finally {
-        // Cerrar ResultSet
-        if (rs != null) {
-            try {
+            // Limpiar filas previas
+            modelo.setRowCount(0);
+
+            // Recorrer resultados y añadirlos al modelo
+            while (rs.next()) {
+                Alumno alumno = new Alumno(
+                        rs.getInt("idAlumno"),
+                        rs.getString("nombre"),
+                        rs.getString("curso")
+                );
+                modelo.addRow(alumno.toStringArray());
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (rs != null) try {
                 rs.close();
             } catch (SQLException e) {
-                e.printStackTrace();
             }
-        }
-        // Cerrar Statement
-        if (s != null) {
-            try {
+            if (s != null) try {
                 s.close();
             } catch (SQLException e) {
-                e.printStackTrace();
             }
-        }
-        // Cerrar Connection
-        if (con != null) {
-            try {
+            if (con != null) try {
                 con.close();
             } catch (SQLException e) {
-                e.printStackTrace();
             }
         }
     }
-}
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -76,17 +74,47 @@ public void cargarDatos() {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "ID", "Nombre", "Title 3"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -128,5 +156,7 @@ public void cargarDatos() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
