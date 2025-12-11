@@ -32,7 +32,7 @@ public class NewJFrame extends javax.swing.JFrame {
             rs = s.executeQuery("SELECT * FROM alumnos");
 
             // Obtener el modelo de la tabla
-            DefaultTableModel modelo = (DefaultTableModel)jTable1.getModel();
+            DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
 
             // Limpiar filas previas
             modelo.setRowCount(0);
@@ -76,6 +76,8 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jButtonInsertar = new javax.swing.JButton();
+        jButtonEliminarFila = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,13 +102,32 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
+        jButtonInsertar.setText("INSERTAR");
+        jButtonInsertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInsertarActionPerformed(evt);
+            }
+        });
+
+        jButtonEliminarFila.setText("ELIMINAR");
+        jButtonEliminarFila.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarFilaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButtonInsertar)
+                        .addGap(85, 85, 85)
+                        .addComponent(jButtonEliminarFila)))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -114,11 +135,57 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonInsertar)
+                    .addComponent(jButtonEliminarFila))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInsertarActionPerformed
+        JDialogInsertar dialog = new JDialogInsertar(this, true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jButtonInsertarActionPerformed
+
+    private void jButtonEliminarFilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarFilaActionPerformed
+        int filaSeleccionada = jTable1.getSelectedRow();
+        if (filaSeleccionada == -1) {
+            // No hay fila seleccionada
+            javax.swing.JOptionPane.showMessageDialog(null, "Seleccione una fila para eliminar.");
+            return;
+        }
+
+        // Obtener el ID de la fila seleccionada (columna 0)
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+        int idAlumno = Integer.parseInt(modelo.getValueAt(filaSeleccionada, 0).toString());
+
+        Connection con = null;
+        PreparedStatement ps = null;
+        try {
+            con = Conexion.getConnection();
+            ps = con.prepareStatement("DELETE FROM alumnos WHERE idAlumno = ?");
+            ps.setInt(1, idAlumno);
+            ps.executeUpdate();
+
+            // Refrescar la tabla
+            cargarDatos();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (ps != null) try {
+                ps.close();
+            } catch (SQLException e) {
+            }
+            if (con != null) try {
+                con.close();
+            } catch (SQLException e) {
+            }
+        }
+    }//GEN-LAST:event_jButtonEliminarFilaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,6 +223,8 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonEliminarFila;
+    private javax.swing.JButton jButtonInsertar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

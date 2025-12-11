@@ -20,6 +20,11 @@ public class Alumno {
         this.curso = curso;
     }
 
+    public Alumno(String nombre, String curso) {
+        this.nombre = nombre;
+        this.curso = curso;
+    }
+
     public int getIdAlumno() {
         return idAlumno;
     }
