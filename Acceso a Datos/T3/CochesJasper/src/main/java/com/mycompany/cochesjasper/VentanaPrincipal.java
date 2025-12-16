@@ -2,23 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.mysql;
+package com.mycompany.cochesjasper;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author alumno
+ * @author danie
  */
-public class NewJFrame extends javax.swing.JFrame {
+public class VentanaPrincipal extends javax.swing.JFrame {
 
     /**
-     * Creates new form NewJFrame
+     * Creates new form VentanaPrincipal
      */
-    public NewJFrame() {
+    public VentanaPrincipal() {
         initComponents();
-        cargarDatos();
     }
 
     public void cargarDatos() {
@@ -29,7 +32,7 @@ public class NewJFrame extends javax.swing.JFrame {
         try {
             con = Conexion.getConnection();
             s = con.createStatement();
-            rs = s.executeQuery("SELECT * FROM alumnos");
+            rs = s.executeQuery("SELECT * FROM coche");
 
             // Obtener el modelo de la tabla
             DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
@@ -39,12 +42,13 @@ public class NewJFrame extends javax.swing.JFrame {
 
             // Recorrer resultados y añadirlos al modelo
             while (rs.next()) {
-                Alumno alumno = new Alumno(
-                        rs.getInt("idAlumno"),
-                        rs.getString("nombre"),
-                        rs.getString("curso")
+                Coche coche = new Coche(
+                        rs.getInt("idCoche"),
+                        rs.getString("marca"),
+                        rs.getString("modelo"),
+                        rs.getString("imagen")
                 );
-                modelo.addRow(alumno.toStringArray());
+                modelo.addRow(coche.toStringArray());
             }
 
         } catch (SQLException e) {
@@ -77,30 +81,19 @@ public class NewJFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButtonInsertar = new javax.swing.JButton();
-        jButtonEliminarFila = new javax.swing.JButton();
         jButtonPDF = new javax.swing.JButton();
+        jButtonEliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "ID", "Nombre", "Title 3"
+                "ID", "Marca", "Modelo", "Imagen"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
+        ));
         jScrollPane1.setViewportView(jTable1);
 
         jButtonInsertar.setText("INSERTAR");
@@ -110,17 +103,12 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jButtonEliminarFila.setText("ELIMINAR");
-        jButtonEliminarFila.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEliminarFilaActionPerformed(evt);
-            }
-        });
-
         jButtonPDF.setText("PDF");
-        jButtonPDF.addActionListener(new java.awt.event.ActionListener() {
+
+        jButtonEliminar.setText("ELIMINAR");
+        jButtonEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPDFActionPerformed(evt);
+                jButtonEliminarActionPerformed(evt);
             }
         });
 
@@ -130,27 +118,28 @@ public class NewJFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonInsertar)
-                        .addGap(71, 71, 71)
-                        .addComponent(jButtonEliminarFila)
+                        .addGap(102, 102, 102)
+                        .addComponent(jButtonPDF)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonPDF)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                        .addComponent(jButtonEliminar)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonInsertar)
-                    .addComponent(jButtonEliminarFila)
-                    .addComponent(jButtonPDF))
-                .addContainerGap(60, Short.MAX_VALUE))
+                    .addComponent(jButtonPDF)
+                    .addComponent(jButtonEliminar))
+                .addGap(0, 33, Short.MAX_VALUE))
         );
 
         pack();
@@ -161,7 +150,7 @@ public class NewJFrame extends javax.swing.JFrame {
         dialog.setVisible(true);
     }//GEN-LAST:event_jButtonInsertarActionPerformed
 
-    private void jButtonEliminarFilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarFilaActionPerformed
+    private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
         int filaSeleccionada = jTable1.getSelectedRow();
         if (filaSeleccionada == -1) {
             // No hay fila seleccionada
@@ -171,14 +160,14 @@ public class NewJFrame extends javax.swing.JFrame {
 
         // Obtener el ID de la fila seleccionada (columna 0)
         DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
-        int idAlumno = Integer.parseInt(modelo.getValueAt(filaSeleccionada, 0).toString());
+        int idCoche = Integer.parseInt(modelo.getValueAt(filaSeleccionada, 0).toString());
 
         Connection con = null;
         PreparedStatement ps = null;
         try {
             con = Conexion.getConnection();
-            ps = con.prepareStatement("DELETE FROM alumnos WHERE idAlumno = ?");
-            ps.setInt(1, idAlumno);
+            ps = con.prepareStatement("DELETE FROM coche WHERE idCoche = ?");
+            ps.setInt(1, idCoche);
             ps.executeUpdate();
 
             // Refrescar la tabla
@@ -196,11 +185,7 @@ public class NewJFrame extends javax.swing.JFrame {
             } catch (SQLException e) {
             }
         }
-    }//GEN-LAST:event_jButtonEliminarFilaActionPerformed
-
-    private void jButtonPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPDFActionPerformed
-        
-    }//GEN-LAST:event_jButtonPDFActionPerformed
+    }//GEN-LAST:event_jButtonEliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -219,26 +204,26 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrame().setVisible(true);
+                new VentanaPrincipal().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonEliminarFila;
+    private javax.swing.JButton jButtonEliminar;
     private javax.swing.JButton jButtonInsertar;
     private javax.swing.JButton jButtonPDF;
     private javax.swing.JScrollPane jScrollPane1;
