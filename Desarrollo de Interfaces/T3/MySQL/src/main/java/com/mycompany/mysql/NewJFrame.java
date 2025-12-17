@@ -4,8 +4,15 @@
  */
 package com.mycompany.mysql;
 
+import java.io.File;
+import java.net.URL;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
 
 /**
  *
@@ -199,7 +206,21 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonEliminarFilaActionPerformed
 
     private void jButtonPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPDFActionPerformed
-        
+        try {
+            URL url = getClass().getClassLoader().getResource("Alumnos.jrxml");
+
+            File file = new File(url.toURI());
+            System.out.println(file.getAbsolutePath());
+
+            JasperReport archivo = JasperCompileManager.compileReport(file.getAbsolutePath());
+            Connection con = Conexion.getConnection();
+            JasperPrint prin = JasperFillManager.fillReport(archivo, null, con);
+
+            JasperExportManager.exportReportToPdfFile(prin, "reporte.pdf");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jButtonPDFActionPerformed
 
     /**

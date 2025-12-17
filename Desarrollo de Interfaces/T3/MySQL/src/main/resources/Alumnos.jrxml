@@ -1,0 +1,64 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Blank_A4" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="28e52a85-a798-4ea7-a5e3-55f5e5796384">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="YWx1bW5vcy5hbHVtbm9zIEFTICwxOTQsMzEsYjU2YTk1YTMtYjQ2MS00NGQwLWJkZmItNmJjMzli&#xa;NzMzMjBlOw=="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<query language="SQL"><![CDATA[SELECT `idAlumno`,
+	`Nombre`,
+	`Curso`
+FROM alumnos.alumnos]]></query>
+	<field name="idAlumno" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idAlumno"/>
+		<property name="com.jaspersoft.studio.field.label" value="idAlumno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="alumnos"/>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="alumnos"/>
+	</field>
+	<field name="Curso" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Curso"/>
+		<property name="com.jaspersoft.studio.field.label" value="Curso"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="alumnos"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="textField" uuid="0ef18a61-086e-4d3d-88f9-1cc452deb94c" stretchType="ContainerHeight" x="210" y="50" width="140" height="20">
+			<expression><![CDATA["BASE DE DATOS ALUMNOS"]]></expression>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="3e9272bb-685b-4e81-a36c-4618786478c3" x="50" y="0" width="90" height="30">
+			<text><![CDATA[idAlumno]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="51bc8c79-c561-46a8-bf09-c30af965802d"/>
+		</element>
+		<element kind="staticText" uuid="292ad42d-736e-4390-98be-4660cec4e9d0" x="235" y="0" width="90" height="30">
+			<text><![CDATA[Nombre]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="96267a2b-a2e3-478d-9e13-efcf9aadcad2"/>
+		</element>
+		<element kind="staticText" uuid="624382d5-cf8c-419d-b7b7-9bb974745ab5" x="420" y="0" width="90" height="30">
+			<text><![CDATA[Curso]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef8c7ead-4b30-416a-89a6-2affaa6a4184"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<element kind="textField" uuid="71784986-fbf9-4662-a547-12f23c69d153" x="50" y="0" width="90" height="30">
+				<expression><![CDATA[$F{idAlumno}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="51bc8c79-c561-46a8-bf09-c30af965802d"/>
+			</element>
+			<element kind="textField" uuid="1549fa37-8db9-4447-89e1-e996341d98e1" x="235" y="0" width="90" height="30">
+				<expression><![CDATA[$F{Nombre}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="96267a2b-a2e3-478d-9e13-efcf9aadcad2"/>
+			</element>
+			<element kind="textField" uuid="9c58c152-5bfa-4d55-a7c7-ebd33e2a55f4" x="420" y="0" width="90" height="30">
+				<expression><![CDATA[$F{Curso}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ef8c7ead-4b30-416a-89a6-2affaa6a4184"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
