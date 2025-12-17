@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ejercicio01T9</string>
+    <string name="price">Price:</string>
+    <string name="color">Color:</string>
+    <string name="name">Name:</string>
+    <string name="consultar">Consultar</string>
+    <string name="id_component">ID Component:</string>
+    <string name="datos_cargados_correctamente">Datos cargados correctamente</string>
+    <string name="consultando">Consultando...</string>
+    <string name="no_se_encontr_el_dispositivo_con_id">No se encontró el dispositivo con ID: %1$s</string>
+    <string name="error_al_consultar">Error al consultar: %1$s</string>
+    <string name="por_favor_ingresa_un_id">Por favor, ingresa un ID</string>
+</resources>

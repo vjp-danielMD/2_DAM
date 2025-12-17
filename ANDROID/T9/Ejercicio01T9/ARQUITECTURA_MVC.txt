@@ -1,0 +1,132 @@
+┌─────────────────────────────────────────────────────────────────┐
+│                        ARQUITECTURA MVC                          │
+│                     Ejercicio01T9 - Android                      │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│                         VISTA (View)                             │
+├─────────────────────────────────────────────────────────────────┤
+│  MainActivity.kt                                                 │
+│  ├─ EditText (editTextNumber) - Input del ID                    │
+│  ├─ Button (buttonConsultar) - Botón para consultar             │
+│  ├─ TextView (textViewName) - Muestra el nombre                 │
+│  ├─ TextView (textViewColor) - Muestra el color                 │
+│  └─ TextView (textViewPrice) - Muestra el precio                │
+│                                                                  │
+│  activity_main.xml                                               │
+│  ├─ Layout Superior (35%) - Entrada de datos                    │
+│  └─ Layout Inferior (50%) - Visualización de resultados         │
+└─────────────────────────────────────────────────────────────────┘
+                              ↕
+                    (onClick / actualizarUI)
+                              ↕
+┌─────────────────────────────────────────────────────────────────┐
+│                    CONTROLADOR (Controller)                      │
+├─────────────────────────────────────────────────────────────────┤
+│  DeviceController.kt                                             │
+│  ├─ obtenerDispositivoPorId(id: String): Device?                │
+│  │   └─ Lógica de negocio para obtener un dispositivo           │
+│  │                                                               │
+│  └─ obtenerTodosLosDispositivos(): List<Device>?                │
+│      └─ Lógica de negocio para obtener todos los dispositivos   │
+│                                                                  │
+│  Responsabilidades:                                              │
+│  • Validación de datos                                          │
+│  • Manejo de errores                                            │
+│  • Logging                                                       │
+│  • Coordinación entre Vista y Modelo                            │
+└─────────────────────────────────────────────────────────────────┘
+                              ↕
+                    (Llamadas a la API)
+                              ↕
+┌─────────────────────────────────────────────────────────────────┐
+│                      SERVICIOS (Services)                        │
+├─────────────────────────────────────────────────────────────────┤
+│  ClienteRetrofit.kt                                              │
+│  └─ Configuración de Retrofit                                   │
+│      ├─ BASE_URL: "https://api.restful-api.dev/"                │
+│      ├─ GsonConverterFactory                                    │
+│      └─ apiService: APIService                                  │
+│                                                                  │
+│  APIService.kt (Interface)                                       │
+│  ├─ @GET("objects")                                             │
+│  │   suspend fun getObjects(): Response<List<Device>>           │
+│  │                                                               │
+│  └─ @GET("objects/{id}")                                        │
+│      suspend fun getObjectById(@Path("id") id): Response<Device>│
+└─────────────────────────────────────────────────────────────────┘
+                              ↕
+                    (HTTP GET Request)
+                              ↕
+┌─────────────────────────────────────────────────────────────────┐
+│                      API REST EXTERNA                            │
+├─────────────────────────────────────────────────────────────────┤
+│  https://api.restful-api.dev/                                    │
+│  ├─ GET /objects        → Lista de todos los objetos            │
+│  └─ GET /objects/{id}   → Objeto específico por ID              │
+└─────────────────────────────────────────────────────────────────┘
+                              ↕
+                    (JSON Response)
+                              ↕
+┌─────────────────────────────────────────────────────────────────┐
+│                       MODELO (Model)                             │
+├─────────────────────────────────────────────────────────────────┤
+│  Device.kt                                                       │
+│  data class Device(                                              │
+│      val id: String,                                             │
+│      val name: String,                                           │
+│      val data: Data? = null                                      │
+│  )                                                               │
+│                                                                  │
+│  Data.kt                                                         │
+│  data class Data(                                                │
+│      val color: String? = null,                                  │
+│      val capacity: String? = null,                               │
+│      val price: Double? = null,                                  │
+│      val generation: String? = null,                             │
+│      val year: Int? = null,                                      │
+│      ... (otros campos opcionales)                               │
+│  )                                                               │
+│                                                                  │
+│  Responsabilidades:                                              │
+│  • Representar la estructura de datos                           │
+│  • Mapeo automático JSON → Kotlin (GSON)                        │
+└─────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════
+                        FLUJO DE EJECUCIÓN
+═══════════════════════════════════════════════════════════════════
+
+1. Usuario ingresa ID y presiona "Consultar"
+   ↓
+2. MainActivity captura el evento onClick
+   ↓
+3. MainActivity llama a DeviceController.obtenerDispositivoPorId(id)
+   ↓
+4. DeviceController usa ClienteRetrofit.apiService
+   ↓
+5. APIService realiza petición HTTP GET a la API
+   ↓
+6. API responde con JSON
+   ↓
+7. GSON convierte JSON → Device (Modelo)
+   ↓
+8. DeviceController retorna Device a MainActivity
+   ↓
+9. MainActivity actualiza la UI con los datos del Device
+   ↓
+10. Usuario ve los datos en pantalla
+
+
+═══════════════════════════════════════════════════════════════════
+                      TECNOLOGÍAS UTILIZADAS
+═══════════════════════════════════════════════════════════════════
+
+• Kotlin - Lenguaje de programación
+• Retrofit 2.11.0 - Cliente HTTP
+• GSON - Serialización/Deserialización JSON
+• OkHttp 4.12.0 - Cliente HTTP de bajo nivel
+• Coroutines - Programación asíncrona
+• Android SDK 36 - Framework Android
+• Material Design - Componentes UI
