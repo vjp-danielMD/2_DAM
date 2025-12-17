@@ -1,0 +1,40 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="coches" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e18dc3e-aa8c-44d0-909c-39ed02de106c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="Y29jaGVzLmNvY2hlcyBBUyAsMTc0LDg1LGU5MWVlMGMxLTM0NjYtNGJlOC1iYjQyLTdiNWEyOGNh&#xa;YjE0YTs="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="coches.jrdax"/>
+	<query language="SQL"><![CDATA[SELECT `idCoche`,
+	marca,
+	modelo,
+	imagen
+FROM coches.coches]]></query>
+	<field name="idCoche" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idCoche"/>
+		<property name="com.jaspersoft.studio.field.label" value="idCoche"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="coches"/>
+	</field>
+	<field name="marca" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="marca"/>
+		<property name="com.jaspersoft.studio.field.label" value="marca"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="coches"/>
+	</field>
+	<field name="modelo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="modelo"/>
+		<property name="com.jaspersoft.studio.field.label" value="modelo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="coches"/>
+	</field>
+	<field name="imagen" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="imagen"/>
+		<property name="com.jaspersoft.studio.field.label" value="imagen"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="coches"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch"/>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch"/>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
