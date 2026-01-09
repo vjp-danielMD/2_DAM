@@ -1,0 +1,39 @@
+{
+  "spells": [
+    {
+      "id": "1",
+      "name": "Bola de Fuego",
+      "level": 3,
+      "school": "Evocación",
+      "description": "Una explosión de fuego mágico que causa daño devastador en un área."
+    },
+    {
+      "id": "2",
+      "name": "Invisibilidad",
+      "level": 2,
+      "school": "Ilusión",
+      "description": "Hace invisible a una criatura u objeto, ocultándola de la vista."
+    },
+    {
+      "id": "3",
+      "name": "Rayo de Escarcha",
+      "level": 1,
+      "school": "Evocación",
+      "description": "Un rayo de energía gélida que congela al objetivo."
+    },
+    {
+      "id": "4",
+      "name": "Animar Muertos",
+      "level": 5,
+      "school": "Nigromancia",
+      "description": "Levanta cadáveres como sirvientes no-muertos bajo tu control."
+    },
+    {
+      "id": "5",
+      "description": "Luz brillante que cierra las heridas mas profundas.",
+      "level": 6,
+      "name": "Luz cegadora",
+      "school": "Restauracion"
+    }
+  ]
+}

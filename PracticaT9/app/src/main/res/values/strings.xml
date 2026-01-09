@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Grimorio Mágico</string>
+    <string name="navigation_drawer_open">Abrir grimorio</string>
+    <string name="navigation_drawer_close">Cerrar grimorio</string>
+    <string name="nav_header_title">Grimorio de Hechizos</string>
+    <string name="nav_header_subtitle">Wizard\'s Compendium</string>
+    <string name="nav_header_desc">Navegación del grimorio</string>
+    <string name="action_settings">Configuración</string>
+
+    <string name="menu_home">📜 Todos los Hechizos</string>
+    <string name="menu_gallery">🔍 Buscar Hechizo</string>
+    <string name="menu_slideshow">✨ Añadir Hechizo</string>
+    <string name="menu_delete">🗑️ Eliminar Hechizo</string>
+
+    <string name="all_spells_title">Grimorio Completo</string>
+    <string name="loading_spells">Consultando grimorio…</string>
+    <string name="no_spells">El grimorio está vacío</string>
+    <string name="error_loading_spells">Error al cargar hechizos</string>
+    <string name="spell_count">Total de hechizos: %d</string>
+
+    <string name="search_spell_title">Buscar en el Grimorio</string>
+    <string name="spell_id_hint">ID del hechizo</string>
+    <string name="search_button">Buscar</string>
+    <string name="spell_not_found">Hechizo no encontrado</string>
+    <string name="enter_spell_id">Introduce un ID válido</string>
+    
+    <string name="spell_name_label">Nombre:</string>
+    <string name="spell_level_label">Nivel:</string>
+    <string name="spell_school_label">Escuela:</string>
+    <string name="spell_description_label">Descripción:</string>
+
+    <string name="add_spell_title">Añadir Nuevo Hechizo</string>
+    <string name="spell_name_hint">Nombre del hechizo</string>
+    <string name="spell_level_hint">Nivel (1-9)</string>
+    <string name="spell_school_hint">Escuela de magia</string>
+    <string name="spell_description_hint">Descripción del efecto</string>
+    <string name="add_button">Añadir al Grimorio</string>
+    <string name="spell_added">Hechizo añadido exitosamente</string>
+    <string name="error_adding_spell">Error al añadir hechizo</string>
+    <string name="fill_all_fields">Completa todos los campos</string>
+
+    <string name="delete_spell_title">Eliminar Hechizo</string>
+    <string name="delete_button">Eliminar del Grimorio</string>
+    <string name="spell_deleted">Hechizo eliminado exitosamente</string>
+    <string name="error_deleting_spell">Error al eliminar hechizo</string>
+    <string name="confirm_delete">¿Eliminar este hechizo del grimorio?</string>
+
+    <string name="network_error">Error de conexión. ¿Está json-server ejecutándose?</string>
+    <string name="server_error">Error del servidor</string>
+    <string name="unknown_error">Error desconocido</string>
+</resources>

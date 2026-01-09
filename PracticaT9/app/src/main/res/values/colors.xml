@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="mystical_purple">#4A148C</color>
+    <color name="dark_purple">#311B92</color>
+    <color name="deep_blue">#1A237E</color>
+    <color name="magical_gold">#FFD700</color>
+    <color name="arcane_silver">#C0C0C0</color>
+    <color name="spell_glow">#9C27B0</color>
+    <color name="grimoire_bg">#1C1C2E</color>
+    <color name="spell_card_bg">#2A2A40</color>
+    <color name="text_mystical">#E1BEE7</color>
+</resources>

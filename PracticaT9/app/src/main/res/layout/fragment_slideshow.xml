@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grimoire_bg"
+    tools:context=".ui.slideshow.SlideshowFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_spell_title"
+            android:textAlignment="center"
+            android:textColor="@color/magical_gold"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etSpellName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="@string/spell_name_hint"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/arcane_silver"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <EditText
+            android:id="@+id/etSpellLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/spell_level_hint"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/arcane_silver"
+            app:layout_constraintTop_toBottomOf="@id/etSpellName" />
+
+        <EditText
+            android:id="@+id/etSpellSchool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/spell_school_hint"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/arcane_silver"
+            app:layout_constraintTop_toBottomOf="@id/etSpellLevel" />
+
+        <EditText
+            android:id="@+id/etSpellDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="top|start"
+            android:hint="@string/spell_description_hint"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:minLines="3"
+            android:textColor="@color/white"
+            android:textColorHint="@color/arcane_silver"
+            app:layout_constraintTop_toBottomOf="@id/etSpellSchool" />
+
+        <Button
+            android:id="@+id/btnAddSpell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/spell_glow"
+            android:text="@string/add_button"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/etSpellDescription" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnAddSpell" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
