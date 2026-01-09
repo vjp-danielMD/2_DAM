@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Peliculas>
+    <Pelicula id="P001">
+        <titulo>The Shawshank Redemption</titulo>
+        <director>Frank Darabont</director>
+        <anio>1994</anio>
+        <puntuacion>9.3</puntuacion>
+    </Pelicula>
+    <Pelicula id="P002">
+        <titulo>The Godfather</titulo>
+        <director>Francis Ford Coppola</director>
+        <anio>1972</anio>
+        <puntuacion>9.2</puntuacion>
+    </Pelicula>
+    <Pelicula id="P003">
+        <titulo>Inception</titulo>
+        <director>Christopher Nolan</director>
+        <anio>2010</anio>
+        <puntuacion>8.8</puntuacion>
+    </Pelicula>
+    <Pelicula id="P004">
+        <titulo>The Matrix</titulo>
+        <director>Lana Wachowski</director>
+        <anio>1999</anio>
+        <puntuacion>8.7</puntuacion>
+    </Pelicula>
+    <Pelicula id="P005">
+        <titulo>Avengers: Endgame</titulo>
+        <director>Russo Brothers</director>
+        <anio>2019</anio>
+        <puntuacion>7.9</puntuacion>
+    </Pelicula>
+</Peliculas>

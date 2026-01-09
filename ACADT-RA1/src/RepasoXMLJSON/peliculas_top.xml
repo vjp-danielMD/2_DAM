@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Peliculas>
+        
+    <Pelicula id="P001">
+                
+        <titulo>The Shawshank Redemption</titulo>
+                
+        <director>Frank Darabont</director>
+                
+        <anio>1994</anio>
+                
+        <puntuacion>9.3</puntuacion>
+            
+    </Pelicula>
+        
+    <Pelicula id="P002">
+                
+        <titulo>The Godfather</titulo>
+                
+        <director>Francis Ford Coppola</director>
+                
+        <anio>1972</anio>
+                
+        <puntuacion>9.2</puntuacion>
+            
+    </Pelicula>
+        
+    <Pelicula id="P003">
+                
+        <titulo>Inception</titulo>
+                
+        <director>Christopher Nolan</director>
+                
+        <anio>2010</anio>
+                
+        <puntuacion>9.2</puntuacion>
+            
+    </Pelicula>
+        
+    <Pelicula id="P004">
+                
+        <titulo>The Matrix</titulo>
+                
+        <director>Wachowski Sisters</director>
+                
+        <anio>1999</anio>
+                
+        <puntuacion>8.7</puntuacion>
+            
+    </Pelicula>
+    
+    <Pelicula id="P006">
+        <titulo>Blade Runner 2049</titulo>
+        <director>Denis Villeneuve</director>
+        <anio>2017</anio>
+        <puntuacion>8.5</puntuacion>
+    </Pelicula>
+</Peliculas>
