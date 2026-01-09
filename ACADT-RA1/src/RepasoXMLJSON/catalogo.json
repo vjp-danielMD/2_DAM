@@ -1,0 +1,29 @@
+{
+   "Videojuegos": [
+      {
+         "titulo": "The Legend of Zelda: Breath of the Wild",
+         "plataforma": "Nintendo Switch",
+         "precio": 49.99
+      },
+      {
+         "titulo": "God of War",
+         "plataforma": "PlayStation 5",
+         "precio": 39.99
+      },
+      {
+         "titulo": "Red Dead Redemption 2",
+         "plataforma": "Xbox Series X",
+         "precio": 44.99
+      },
+      {
+         "titulo": "Cyberpunk 2077",
+         "plataforma": "PC",
+         "precio": 29.99
+      },
+      {
+         "titulo": "Elden Ring",
+         "plataforma": "PC",
+         "precio": 59.99
+      }
+   ]
+}

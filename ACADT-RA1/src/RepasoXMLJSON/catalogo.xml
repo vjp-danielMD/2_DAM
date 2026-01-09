@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Videojuegos>
+    <Videojuego>
+        <titulo>The Legend of Zelda: Breath of the Wild</titulo>
+        <plataforma>Nintendo Switch</plataforma>
+        <precio>49.99</precio>
+    </Videojuego>
+    <Videojuego>
+        <titulo>God of War</titulo>
+        <plataforma>PlayStation 5</plataforma>
+        <precio>39.99</precio>
+    </Videojuego>
+    <Videojuego>
+        <titulo>Red Dead Redemption 2</titulo>
+        <plataforma>Xbox Series X</plataforma>
+        <precio>44.99</precio>
+    </Videojuego>
+    <Videojuego>
+        <titulo>Cyberpunk 2077</titulo>
+        <plataforma>PC</plataforma>
+        <precio>29.99</precio>
+    </Videojuego>
+    <Videojuego>
+        <titulo>Elden Ring</titulo>
+        <plataforma>PC</plataforma>
+        <precio>59.99</precio>
+    </Videojuego>
+</Videojuegos>
