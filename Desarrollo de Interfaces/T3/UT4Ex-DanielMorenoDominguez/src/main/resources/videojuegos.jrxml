@@ -1,0 +1,126 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="videojuegos" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2ba5f414-73b9-4a86-aeec-202fe9236007">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="dmlkZW9qdWVnb3NleC52aWRlb2p1ZWdvcyBBUyAsMTUxLDEwNCw0ZmJlNWQyZC03ZDFiLTRlNDUt&#xa;YWM5NS00MzEzODNjOTFiMGY7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Videojuegos.jrdax"/>
+	<query language="SQL"><![CDATA[SELECT `idVideojuego`,
+	`Nombre`,
+	`Plataforma`,
+	`Imagen`
+FROM videojuegosex.videojuegos]]></query>
+	<field name="idVideojuego" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idVideojuego"/>
+		<property name="com.jaspersoft.studio.field.label" value="idVideojuego"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="videojuegos"/>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="videojuegos"/>
+	</field>
+	<field name="Plataforma" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Plataforma"/>
+		<property name="com.jaspersoft.studio.field.label" value="Plataforma"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="videojuegos"/>
+	</field>
+	<field name="Imagen" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Imagen"/>
+		<property name="com.jaspersoft.studio.field.label" value="Imagen"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="videojuegos"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="88" splitType="Stretch">
+		<element kind="rectangle" uuid="6f2202f5-26fa-44ea-8f88-864313ef4325" x="41" y="10" width="503" height="60" backcolor="#050505"/>
+		<element kind="staticText" uuid="9260e1ba-2701-4c5d-a389-4bf739b49b7b" x="210" y="25" width="200" height="30" forecolor="#12B823" fontName="Consolas" fontSize="25.0">
+			<text><![CDATA[VIDEOJUEGOS]]></text>
+			<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="cd857274-6570-4651-a44c-b3eef68c62f0" x="41" y="0" width="60" height="30" hTextAlign="Right">
+			<text><![CDATA[idVideojuego]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae59e16f-d2b1-4fc6-b200-7422a478e42c"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="bf122a68-04e3-4b4c-99c4-215253a0c495" x="101" y="0" width="138" height="30" hTextAlign="Center">
+			<text><![CDATA[Nombre]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="687424f8-3980-478d-b02c-b37e38ef75ee"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="d3751f14-497a-499d-aae2-a0faf76862c1" x="239" y="0" width="138" height="30" hTextAlign="Center">
+			<text><![CDATA[Plataforma]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9c6c399a-ebbf-4250-9009-5b957e924609"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="67936028-32fe-4e48-a192-a5fe2e68765e" x="377" y="0" width="138" height="30" hTextAlign="Center">
+			<text><![CDATA[Imagen]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="309aa3d0-d83a-46a6-b354-06f24dd62b26"/>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<element kind="textField" uuid="25ddea3d-04cf-4c64-8905-d4d3cc6610fb" x="50" y="0" width="51" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{idVideojuego}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae59e16f-d2b1-4fc6-b200-7422a478e42c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="f06bf75d-3d8f-4ac5-9671-07f22ee96923" x="101" y="0" width="138" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{Nombre}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="687424f8-3980-478d-b02c-b37e38ef75ee"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="decdd4ae-cf61-4e9e-b92e-aa2f9fe9186b" x="239" y="0" width="138" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{Plataforma}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9c6c399a-ebbf-4250-9009-5b957e924609"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="image" uuid="5fb21d03-37a8-4e42-b3a6-d693f0056e65" x="400" y="0" width="90" height="90">
+				<expression><![CDATA[$F{Imagen}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
