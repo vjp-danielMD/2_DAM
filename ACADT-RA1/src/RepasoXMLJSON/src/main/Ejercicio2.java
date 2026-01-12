@@ -15,11 +15,13 @@ import javax.xml.transform.dom.*;
 import javax.xml.transform.stream.*;
 import org.w3c.dom.*;
 import com.google.gson.*;
-import com.google.gson.internal.bind.JsonTreeWriter;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -58,6 +60,7 @@ public class Ejercicio2 {
                     generarJSON(new File("catalogo.json"));
                     break;
                 case 4:
+                    leerYMostrarJson(new File("catalogo.json"));
                     break;
                 case 0:
                     System.out.println("Saliendo ...");
@@ -187,7 +190,27 @@ public class Ejercicio2 {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
-        
+    }
+    
+    public static void leerYMostrarJson(File file){
+        try {
+            FileReader fr = new FileReader(file);
+            Gson gson = new Gson();
+            
+            Type tipoMapa = new TypeToken<HashMap<String, ArrayList<Videojuego>>>(){}.getType();
+            HashMap<String, ArrayList<Videojuego>> mapa = gson.fromJson(fr, tipoMapa);
+            fr.close();
+            
+            ArrayList<Videojuego> videojuegos = mapa.get("Videojuegos");
+            
+            System.out.println("== Contenido de catalogo.json ==");
+            Gson pretty = new GsonBuilder().setPrettyPrinting().create();
+            for (Videojuego v : videojuegos) {
+                System.out.println(pretty.toJson(v));
+            }   
+            System.out.println("Json procesado correctamente.");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
