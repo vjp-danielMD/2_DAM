@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<simpsons>
+    <creador>Matt Groening</creador>
+    <creacion>1987</creacion>
+    <personajesPrincipales>
+        <personaje>Homer</personaje>
+        <personaje>Marge</personaje>
+        <personaje>Bart</personaje>
+        <personaje>Lisa</personaje>
+        <personaje>Maggie</personaje>
+    </personajesPrincipales>
+    <comercializacion>
+        <videojuegos>
+            <videojuego>The Simpsons: Road Rage</videojuego>
+            <videojuego>The Simpsons: Hit and Run</videojuego>
+            <videojuego>Los Simpson: el videojuego</videojuego>
+        </videojuegos>
+        <juegosmesa>
+            <juego>Cluedo</juego>
+            <juego>Monopoly</juego>
+            <juego>Ajedrez</juego>
+        </juegosmesa>
+    </comercializacion>
+    <lugares>
+        <lugar>
+            <nombre>Tarberna de Moe</nombre>
+            <ciudad>Springfield</ciudad>
+            <dueño>Moe</dueño>
+        </lugar>
+        <lugar>
+            <nombre>El badulaque</nombre>
+            <ciudad>Springfield</ciudad>
+            <dueño>Apu</dueño>
+        </lugar>
+        <lugar>
+            <nombre>Central Nuclear</nombre>
+            <ciudad>Springfield</ciudad>
+            <dueño>Montgomery Burns</dueño>
+        </lugar>
+    </lugares>
+</simpsons>

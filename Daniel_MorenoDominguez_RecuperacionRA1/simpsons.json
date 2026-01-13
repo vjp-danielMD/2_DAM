@@ -1,0 +1,42 @@
+{
+    "simpsons": {
+        "creador": "Matt Groening",
+        "creacion": 1987,
+        "personajesPrincipales": [
+            "Homer",
+            "Marge",
+            "Bart",
+            "Lisa",
+            "Maggie"
+        ],
+        "comercializacion": {
+            "videojuegos": [
+                "The Simpsons: Road Rage",
+                "The Simpsons: Hit and Run",
+                "Los Simpson: el videojuego"
+            ],
+            "juegosmesa": [
+                "Cluedo",
+                "Monopoly",
+                "Ajedrez"
+            ]
+        },
+        "lugares": [
+            {
+                "nombre": "Tarberna de Moe",
+                "ciudad": "Springfield",
+                "dueño": "Moe"
+            },
+            {
+                "nombre": "El badulaque",
+                "ciudad": "Springfield",
+                "dueño": "Apu"
+            },
+            {
+                "nombre": "Central Nuclear",
+                "ciudad": "Springfield",
+                "dueño": "Montgomery Burns"
+            }
+        ]
+    }
+}
