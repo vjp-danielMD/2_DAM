@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - Listas y Bucles</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+        }
+
+        .datos {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        .mensaje-edad {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .modulos-lista {
+            margin-top: 15px;
+        }
+
+        .modulo-item {
+            padding: 5px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 5 - Listas y Bucles con Thymeleaf</h1>
+
+    <div class="datos">
+        <p><span class="label">Nombre:</span> <span th:text="${persona.nombre}">Nombre</span></p>
+        <p><span class="label">Apellidos:</span> <span th:text="${persona.apellidos}">Apellidos</span></p>
+        <p><span class="label">Edad:</span> <span th:text="${persona.edad}">Edad</span></p>
+    </div>
+
+    <!-- Condicional: Mayor de edad -->
+    <div th:if="${persona.edad >= 18}" class="mensaje-edad">
+        Esta persona es MAYOR DE EDAD (tiene 18 años o más)
+    </div>
+
+    <!-- Condicional: Menor de edad -->
+    <div th:unless="${persona.edad >= 18}" class="mensaje-edad">
+        Esta persona es MENOR DE EDAD (tiene menos de 18 años)
+    </div>
+
+    <!-- Lista de módulos -->
+    <h2>Módulos de 2º DAM</h2>
+    <div class="modulos-lista">
+        <div th:each="modulo, iterStat : ${modulos}" class="modulo-item">
+            <span th:text="${iterStat.count} + '. '">1. </span>
+            <span th:text="${modulo}">Nombre del módulo</span>
+        </div>
+    </div>
+</body>
+
+</html>

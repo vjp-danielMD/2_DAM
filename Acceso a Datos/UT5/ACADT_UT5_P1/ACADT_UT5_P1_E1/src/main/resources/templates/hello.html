@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Hello World</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 1 - Hello World con Thymeleaf</h1>
+    <div class="message">
+        <p th:text="${mensaje}">Mensaje por defecto</p>
+    </div>
+</body>
+
+</html>

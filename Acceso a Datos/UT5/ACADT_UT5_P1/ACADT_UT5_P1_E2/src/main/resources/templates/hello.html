@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Datos Múltiples</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+        }
+
+        .datos {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 2 - Datos Múltiples con Thymeleaf</h1>
+    <div class="datos">
+        <p><span class="label">Nombre:</span> <span th:text="${nombre}">Nombre</span></p>
+        <p><span class="label">Apellidos:</span> <span th:text="${apellidos}">Apellidos</span></p>
+        <p><span class="label">Edad:</span> <span th:text="${edad}">Edad</span></p>
+    </div>
+</body>
+
+</html>
