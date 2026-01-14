@@ -11,7 +11,7 @@ public class HelloController {
 
     @GetMapping("/")
     public String hello(Model model) {
-        Persona persona = new Persona("Ana", "Martínez Sánchez", 17);
+        Persona persona = new Persona("Ana", "Martínez Sánchez", 25);
         model.addAttribute("persona", persona);
         return "hello";
     }
