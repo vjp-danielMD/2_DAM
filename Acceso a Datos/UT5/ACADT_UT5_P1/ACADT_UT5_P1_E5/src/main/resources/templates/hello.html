@@ -54,17 +54,14 @@
         <p><span class="label">Edad:</span> <span th:text="${persona.edad}">Edad</span></p>
     </div>
 
-    <!-- Condicional: Mayor de edad -->
     <div th:if="${persona.edad >= 18}" class="mensaje-edad">
         Esta persona es MAYOR DE EDAD (tiene 18 años o más)
     </div>
 
-    <!-- Condicional: Menor de edad -->
     <div th:unless="${persona.edad >= 18}" class="mensaje-edad">
         Esta persona es MENOR DE EDAD (tiene menos de 18 años)
     </div>
 
-    <!-- Lista de módulos -->
     <h2>Módulos de 2º DAM</h2>
     <div class="modulos-lista">
         <div th:each="modulo, iterStat : ${modulos}" class="modulo-item">
