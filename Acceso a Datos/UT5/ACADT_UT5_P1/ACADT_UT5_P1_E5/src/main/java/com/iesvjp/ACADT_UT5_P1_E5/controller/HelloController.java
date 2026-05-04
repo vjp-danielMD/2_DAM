@@ -17,7 +17,6 @@ public class HelloController {
         Persona persona = new Persona("Juan", "Pérez Gómez", 19);
         model.addAttribute("persona", persona);
 
-        // Lista de módulos de 2º DAM
         List<String> modulos = Arrays.asList(
                 "Acceso a Datos (ACADT)",
                 "Programación Multimedia y Dispositivos Móviles (PMDM)",
