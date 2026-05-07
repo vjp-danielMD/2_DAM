@@ -1,0 +1,58 @@
+a. Número de ciudades.
+
+db.cities.countDocuments()
+
+
+b. Datos de la ciudad de Elx.
+
+db.cities.find({name:'Elx'})
+
+
+c. Población de la ciudad de Vergel.
+
+db.cities.find({name:'Elx'})
+
+
+d. Cantidad de ciudades en España ({"country":"ES"}).
+
+db.cities.find({country:'ES'}).size()
+
+
+e. Datos de las ciudades españolas con más de 1.000.000 de habitantes.
+
+db.cities.find({country:'ES', population:{$gt:100000}})
+
+
+f. Cantidad de ciudades de Andorra ({"country":"AD"}) y España.
+
+db.cities.countDocuments({$or: [{country:'ES'}, {country:'AD'}]})
+
+
+g. Listado con el nombre y la población de las 10 ciudades más pobladas.
+
+db.cities.find({},{name:1,population:1}).limit(10)
+
+
+h. Nombre de las distintas zonas horarias en España.
+
+db.cities.distinct('timezone')
+
+
+i. Nombre de las ciudades españolas que su zona horaria no sea Europe/Madrid.
+
+db.cities.find({$and: [{country:"ES"}, {timezone:{$not:/Europe\/Madrid/}}]})
+
+
+j. Ciudades españolas que comiencen por Ben
+
+db.cities.find({country:'ES'}, {name:/^Ben/})
+
+
+k. Ciudades que su zona horaria NO sea Atlantic/Canary o Africa/Ceuta.
+
+db.cities.find({timezone:{$nin:['Atlantic/Canary','Africa/Ceuta']}})
+
+
+l. Nombre y población de las tres ciudades europeas más pobladas.
+
+db.cities.find({timezone:/^Europe/},{name:1,population:1}).sort({population:1}).limit(3)
