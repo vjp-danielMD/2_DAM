@@ -12,65 +12,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     public VentanaPrincipal() {
         initComponents();
-        this.setTitle("Asistente IA - Nivel Avanzado");
     }
 
-    private String parsearRespuesta(String body) throws Exception {
-        if (body == null || !body.contains("\"content\":")) {
-            throw new Exception("Respuesta inválida del servidor");
-        }
-        // Buscamos donde empieza el texto del mensaje
-        int inicio = body.indexOf("\"content\":") + 10;
-        inicio = body.indexOf("\"", inicio) + 1;
-        int fin = body.indexOf("\"", inicio);
-
-        String resultado = body.substring(inicio, fin);
-
-        // Limpiamos los saltos de línea y comillas escapadas que vienen en el JSON
-        return resultado.replace("\\n", "\n").replace("\\\"", "\"");
-    }
-
-    private String llamarLMStudio(String prompt) throws Exception {
-        String nombreModelo = "qwen/qwen3-vl-4b";
-        // Escapamos correctamente caracteres para el JSON
-        String textoLimpio = prompt.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", " ").trim();
-        String jsonBody = "{\"model\": \"" + nombreModelo + "\", \"messages\": [{\"role\": \"user\", \"content\": \"" + textoLimpio + "\"}], \"temperature\": 0.7, \"stream\": false}";
-
-        // Usamos una configuración de cliente más estándar para evitar bloqueos
-        HttpClient client = HttpClient.newBuilder()
-                .version(HttpClient.Version.HTTP_1_1) // Forzamos HTTP 1.1 para mayor estabilidad con LM Studio
-                .proxy(HttpClient.Builder.NO_PROXY)
-                .connectTimeout(java.time.Duration.ofSeconds(10))
-                .build();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://127.0.0.1:1234/v1/chat/completions"))
-                .header("Content-Type", "application/json")
-                .header("Connection", "close") // ºevita el ECONNRESET al terminar
-                .POST(HttpRequest.BodyPublishers.ofString(jsonBody))
-                .build();
-
-        // El hilo se detendrá aquí hasta que reciba el JSON completo
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
-        return parsearRespuesta(response.body());
-    }
-
+    /**
+     * Método para enviar el texto a la API de Flask (Python) para que lo lea.
+     */
     private void leerConFlask(String texto) {
+        if (texto.isEmpty() || texto.equals("Respuesta de la IA...")) return;
+        
         new Thread(() -> {
             try {
-                // Reemplaza espacios por %20 y caracteres especiales
-                String encodedTexto = java.net.URLEncoder.encode(texto, "UTF-8");
-
-                java.net.URI uri = java.net.URI.create("http://127.0.0.1:5000/leer?texto=" + encodedTexto);
-                java.net.http.HttpClient client = java.net.http.HttpClient.newHttpClient();
-                java.net.http.HttpRequest request = java.net.http.HttpRequest.newBuilder()
+                String encodedTexto = URLEncoder.encode(texto, StandardCharsets.UTF_8);
+                URI uri = URI.create("http://127.0.0.1:5000/leer?texto=" + encodedTexto);
+                
+                HttpClient client = HttpClient.newHttpClient();
+                HttpRequest request = HttpRequest.newBuilder()
                         .uri(uri)
                         .GET()
                         .build();
 
-                client.send(request, java.net.http.HttpResponse.BodyHandlers.ofString());
-
+                client.send(request, HttpResponse.BodyHandlers.ofString());
             } catch (Exception e) {
                 System.err.println("Error enviando a Flask: " + e.getMessage());
             }
@@ -80,11 +41,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
+
         jScrollPane1 = new javax.swing.JScrollPane();
         txtPregunta = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtRespuesta = new javax.swing.JTextArea();
-        btnEjecutar = new javax.swing.JButton();
+        btnEnviarIA = new javax.swing.JButton();
+        btnReproducirVoz = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -101,98 +64,117 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txtRespuesta.setWrapStyleWord(true);
         jScrollPane2.setViewportView(txtRespuesta);
 
-        btnEjecutar.setText("PREGUNTAR Y LEER (FLASK)");
-        btnEjecutar.addActionListener(new java.awt.event.ActionListener() {
+        btnEnviarIA.setBackground(new java.awt.Color(204, 255, 204));
+        btnEnviarIA.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnEnviarIA.setText("MANDAR");
+        btnEnviarIA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEjecutarActionPerformed(evt);
+                btnEnviarIAActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Pregunta:");
-        jLabel2.setText("Respuesta IA:");
+        btnReproducirVoz.setBackground(new java.awt.Color(204, 204, 255));
+        btnReproducirVoz.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnReproducirVoz.setText("LEER");
+        btnReproducirVoz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReproducirVozActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Escribe tu pregunta:");
+
+        jLabel2.setText("Respuesta de la IA:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
-                                        .addComponent(jScrollPane2)
-                                        .addComponent(btnEjecutar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jLabel1)
-                                                        .addComponent(jLabel2))
-                                                .addGap(0, 0, Short.MAX_VALUE)))
-                                .addContainerGap())
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnEnviarIA, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnReproducirVoz, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnEjecutar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnEnviarIA, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(btnReproducirVoz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>                        
 
-    private void btnEjecutarActionPerformed(java.awt.event.ActionEvent evt) {
+    private void btnEnviarIAActionPerformed(java.awt.event.ActionEvent evt) {                                            
         String prompt = txtPregunta.getText().trim();
-        if (prompt.isEmpty()) {
-            return;
-        }
+        if (prompt.isEmpty()) return;
 
-        txtRespuesta.setText("Pensando... (espera unos segundos)");
-        btnEjecutar.setEnabled(false);
+        txtRespuesta.setText("Pensando...");
+        btnEnviarIA.setEnabled(false);
 
         new Thread(() -> {
             try {
-                // 1. Llamada a la IA
-                String respuesta = llamarLMStudio(prompt);
+                ChatGPT api = new ChatGPT();
+                String respuesta = api.enviarPregunta(prompt);
 
-                // 2. Actualizar Interfaz
                 SwingUtilities.invokeLater(() -> {
                     txtRespuesta.setText(respuesta);
-                    txtRespuesta.setCaretPosition(0); // Scroll arriba
-                    btnEjecutar.setEnabled(true);
+                    btnEnviarIA.setEnabled(true);
                 });
-
-                // 3. Mandar a la voz
-                leerConFlask(respuesta);
-
             } catch (Exception e) {
                 e.printStackTrace();
                 SwingUtilities.invokeLater(() -> {
                     txtRespuesta.setText("Error: " + e.getMessage());
-                    btnEjecutar.setEnabled(true);
+                    btnEnviarIA.setEnabled(true);
                 });
             }
         }).start();
-    }
+    }                                           
+
+    private void btnReproducirVozActionPerformed(java.awt.event.ActionEvent evt) {                                                 
+        String respuestaActual = txtRespuesta.getText().trim();
+        leerConFlask(respuestaActual);
+    }                                                
 
     public static void main(String args[]) {
         System.setProperty("jdk.httpclient.allowRestrictedHeaders", "connection");
 
-        java.awt.EventQueue.invokeLater(() -> new VentanaPrincipal().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> {
+            new VentanaPrincipal().setVisible(true);
+        });
     }
 
-    private javax.swing.JButton btnEjecutar;
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton btnEnviarIA;
+    private javax.swing.JButton btnReproducirVoz;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea txtPregunta;
     private javax.swing.JTextArea txtRespuesta;
+    // End of variables declaration                   
 }
