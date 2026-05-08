@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PruebaFirebase</string>
+    <string name="marca">Marca</string>
+    <string name="modelo">Modelo</string>
+    <string name="n_puertas">Nº Puertas</string>
+    <string name="velocidad_m_xima">Velocidad Máxima</string>
+    <string name="insertar_coche">INSERTAR COCHE</string>
+    <string name="los_coches_aparecer_n_aqu">Los coches aparecerán aquí...</string>
+</resources>
