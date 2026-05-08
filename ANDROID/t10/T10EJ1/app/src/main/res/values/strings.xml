@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">T10EJ1</string>
+    <string name="introduce_el_nombre">Introduce el nombre</string>
+    <string name="introduce_las_notas_o_datos">Introduce las notas o datos</string>
+    <string name="grabar">GRABAR</string>
+    <string name="buscar">BUSCAR</string>
 </resources>
