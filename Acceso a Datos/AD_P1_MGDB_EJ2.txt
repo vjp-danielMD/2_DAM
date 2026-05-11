@@ -1,0 +1,11 @@
+Realiza las siguientes consultas:
+a. Visualiza los empleados del departamento 10.
+	db.empleados.find({ dep: 10 })
+b. Visualiza los empleados del departamento 10 y 20.
+	db.empleados.find({ dep: { $in: [10, 20] } })
+c. Obten los empleados con salario >=1100 y oficio profesor/a.
+	db.empleados.find({ salario: { $gte: 1100 }, oficio: { $in: ["profesor", "Profesora"] } })
+d. Sube el salario a los analistas en 100€, a todos los analistas.
+	db.empleados.updateMany({ oficio: "Analista" }, { $inc: { salario: 100 } })
+e. Decrementa la comisión en 20€ (escribir -20), solo a los que tengan comisión.
+	db.empleados.updateMany({ comision: { $exists: true } }, { $inc: { comision: -20 } })
