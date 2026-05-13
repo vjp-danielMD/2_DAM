@@ -41,7 +41,7 @@ function Ejercicio5 {
         Write-Output ("Año {0}: {1:N2}" -f $i, $capital)
     }
 }
-
+    
 
 
 function Ejercicio6 {
