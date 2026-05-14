@@ -1,0 +1,50 @@
+a. Modifica la población de tu ciudad (Plasencia) a 50.000.
+
+db.cities.updateOne({name:'Plasencia'},{$set:{population:50000}})
+
+
+b. Incrementa la población de Elx en 666 personas.
+
+db.cities.updateOne({name:'Elx'},{$inc:{population: 600}})
+
+
+c. Reduce la cantidad de todas las ciudades de Andorra en 5 personas.
+
+db.cities.updateMany({country:'AD'},{$inc:{population:-5}})
+
+
+d. Modifica la ciudad de Gibraltar para que sea española (tanto el país como la
+zona horaria).
+
+db.cities.updateOne({name:'Gibraltar',country:'GI'},{$set:{country:'ES',timezone:'Europe/Madrid'}})
+
+
+e. Modifica todas las ciudades y añade un atributo tags que contenga un array
+vacío.
+
+db.cities.updateMany({}, {$set: {tags: []}})
+
+
+f. Modifica todas las ciudades españolas y añade al atributo tags el valor sun.
+
+db.cities.updateMany({country:"ES"},{$addToSet:{tags:"sun"}})
+
+
+g. Modifica el valor de sun de la ciudad A Coruña y sustitúyelo por rain.
+
+db.cities.updateOne({name:"A Coruña", tags:"sun"},{ $set:{tags:"rain"}})
+
+
+h. Renombra en las ciudades de Andorra, el atributo population por poblacion.
+
+db.cities.updateMany({country:'AD'}, { $rename: { population: "poblacion" } })
+
+
+i. Elimina las coordenadas de Gibraltar (ES).
+
+db.cities.updateMany({country:'AD'}, {$unset:{location:1}})
+
+
+j. Elimina tu ciudad (Plasencia).
+
+db.cities.deleteOne({name:'Plasencia'})
