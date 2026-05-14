@@ -7,28 +7,25 @@
 <HBox spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
       fx:controller="com.iesvjp.ut6.tarea2.PrimaryController">
     <children>
-        <!-- PANEL IZQUIERDO: FORMULARIO -->
         <VBox spacing="10.0" prefWidth="200.0">
             <children>
                 <Label text="Nombre:" />
-                <TextField fx:id="txtNombre" />
+                <TextField fx:id="nombre" />
                 
                 <Label text="Apellidos:" />
-                <TextField fx:id="txtApellidos" />
+                <TextField fx:id="apellidos" />
                 
                 <Label text="Edad:" />
-                <TextField fx:id="txtEdad" />
+                <TextField fx:id="edad" />
                 
                 <Button fx:id="btnAgregar" text="Agregar Persona" 
                         onAction="#agregarPersona" maxWidth="Infinity" />
             </children>
-        </VBox> <!-- ESTA ES LA ETIQUETA QUE PROBABLEMENTE FALTABA O ESTABA MAL PUESTA -->
-
-        <!-- PANEL DERECHO: TABLA -->
+        </VBox>
         <TableView fx:id="tablaPersonas" HBox.hgrow="ALWAYS">
             <columns>
-                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="100.0" />
-                <TableColumn fx:id="colApellidos" text="Apellidos" prefWidth="150.0" />
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="153.0" />
+                <TableColumn fx:id="colApellidos" text="Apellidos" prefWidth="175.0" />
                 <TableColumn fx:id="colEdad" text="Edad" prefWidth="50.0" />
             </columns>
         </TableView>

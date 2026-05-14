@@ -4,30 +4,31 @@
  */
 package com.iesvjp.ut6.tarea2;
 
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-
 /**
  *
  * @author alumno
  */
 public class Persona {
-    private final SimpleStringProperty nombre;
-    private final SimpleStringProperty apellidos;
-    private final SimpleIntegerProperty edad;
 
-    public Persona(String nombre, String apellidos, int edad) {
-        this.nombre = new SimpleStringProperty(nombre);
-        this.apellidos = new SimpleStringProperty(apellidos);
-        this.edad = new SimpleIntegerProperty(edad);
+    private String nombre;
+    private String apellidos;
+    private String edad;
+
+    public Persona(String nombre, String apellidos, String edad) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.edad = edad;
     }
 
-    // Getters para las propiedades (necesarios para el TableView)
-    public String getNombre() { return nombre.get(); }
-    public String getApellidos() { return apellidos.get(); }
-    public int getEdad() { return edad.get(); }
-    
-    public SimpleStringProperty nombreProperty() { return nombre; }
-    public SimpleStringProperty apellidosProperty() { return apellidos; }
-    public SimpleIntegerProperty edadProperty() { return edad; }
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
 }
