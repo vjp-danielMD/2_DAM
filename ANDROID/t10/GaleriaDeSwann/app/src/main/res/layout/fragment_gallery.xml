@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registrar_obra_de_arte"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/etNombreArticulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre_de_la_obra_antig_edad" />
+
+    <EditText
+        android:id="@+id/etPrecioArticulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/precio"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etUnidadesArticulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/unidades_en_stock"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnGuardarArticulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/a_adir_a_la_colecci_n"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

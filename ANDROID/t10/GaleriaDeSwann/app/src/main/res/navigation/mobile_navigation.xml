@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <!-- Gestión del nombre del negocio (Home) -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.iesvjp.galeriadeswann.ui.home.HomeFragment"
+        android:label="Galería de Swann"
+        tools:layout="@layout/fragment_home" />
+
+    <!-- Añadir Artículo (Antes era Gallery) -->
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="com.iesvjp.galeriadeswann.ui.gallery.GalleryFragment"
+        android:label="Añadir Obra"
+        tools:layout="@layout/fragment_gallery" />
+
+    <!-- Consultar Todos (Antes era Slideshow) -->
+    <fragment
+        android:id="@+id/nav_list"
+        android:name="com.iesvjp.galeriadeswann.ui.slideshow.SlideshowFragment"
+        android:label="Inventario de Arte"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <!-- Consultar por ID -->
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.iesvjp.galeriadeswann.ui.home.HomeFragment"
+        android:label="Buscar por ID" />
+
+    <!-- Modificar -->
+    <fragment
+        android:id="@+id/nav_update"
+        android:name="com.iesvjp.galeriadeswann.ui.home.HomeFragment"
+        android:label="Modificar Obra" />
+
+    <!-- Eliminar por ID -->
+    <fragment
+        android:id="@+id/nav_delete"
+        android:name="com.iesvjp.galeriadeswann.ui.home.HomeFragment"
+        android:label="Retirar de Colección" />
+
+</navigation>
