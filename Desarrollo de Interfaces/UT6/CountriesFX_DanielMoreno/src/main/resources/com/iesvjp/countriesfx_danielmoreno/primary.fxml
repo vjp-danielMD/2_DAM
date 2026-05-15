@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iesvjp.countriesfx_danielmoreno.PrimaryController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <children>
+        <TextField fx:id="txtSearch" />
+        
+        <HBox spacing="20" VBox.vgrow="ALWAYS">
+            <children>
+                <ListView fx:id="listCountries" prefWidth="300.0" />
+                
+                <VBox spacing="12" fx:id="detailsPanel" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="lblName" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="Selecciona un país" wrapText="true" />
+                        
+                        <ImageView fx:id="imgFlagLarge" fitHeight="180.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+                        
+                        <Separator />
+                        
+                        <Label fx:id="lblCapital" style="-fx-font-weight: bold;" text="Capital: " />
+                        <Label fx:id="lblRegion" text="Región: " />
+                        <Label fx:id="lblSubregion" text="Subregión: " />
+                        <Label fx:id="lblPopulation" text="Población: " />
+                        <Label fx:id="lblCurrencies" text="Moneda(s): " wrapText="true" />
+                        <Label fx:id="lblLanguages" text="Idioma(s): " wrapText="true" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        
+        <Label fx:id="lblStatus" text="Listo" textFill="#0000ff" />
+    </children>
+</VBox>
