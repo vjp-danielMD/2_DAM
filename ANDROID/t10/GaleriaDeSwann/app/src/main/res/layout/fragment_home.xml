@@ -10,7 +10,7 @@
         android:id="@+id/tvNombreActual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre del Negocio"
+        android:text="@string/nombre_del_negocio"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -20,7 +20,7 @@
         android:id="@+id/etNuevoNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Introduce el nuevo nombre"
+        android:hint="@string/introduce_el_nuevo_nombre"
         android:inputType="textCapWords"
         android:layout_marginBottom="16dp"/>
 
@@ -28,7 +28,7 @@
         android:id="@+id/btnGuardarNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar Nombre"
+        android:text="@string/guardar_nombre"
         android:backgroundTint="#4A2C2A"/> <!-- Un color marrón oscuro elegante -->
 
 </LinearLayout>

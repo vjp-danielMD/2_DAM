@@ -21,4 +21,21 @@
     <string name="precio">Precio (€)</string>
     <string name="unidades_en_stock">Unidades en stock</string>
     <string name="a_adir_a_la_colecci_n">Añadir a la Colección</string>
+    <string name="acciones_de_la_obra">Acciones de la Obra</string>
+    <string name="compartir">Compartir</string>
+    <string name="modificar_detalles">Modificar Detalles</string>
+    <string name="editar_obra">Editar Obra</string>
+    <string name="nombre">Nombre</string>
+    <string name="unidades">Unidades</string>
+    <string name="retirar_obra_de_la_colecci_n">Retirar Obra de la Colección</string>
+    <string name="introduce_el_id_del_art_culo_a_eliminar">Introduce el ID del artículo a eliminar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="nombre_del_negocio">Nombre del Negocio</string>
+    <string name="introduce_el_nuevo_nombre">Introduce el nuevo nombre</string>
+    <string name="guardar_nombre">Guardar Nombre</string>
+    <string name="precio2">Precio:</string>
+    <string name="unidades2">Unidades:</string>
+    <string name="la_colecci_n_de_arte_est_vac_a_actualmente">La colección de arte está vacía actualmente</string>
+    <string name="nombre_de_la_obra">Nombre de la obra</string>
+    <string name="guardar_cambios">Guardar Cambios</string>
 </resources>

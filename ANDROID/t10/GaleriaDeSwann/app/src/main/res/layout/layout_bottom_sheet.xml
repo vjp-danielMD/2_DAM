@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FDFBF7">
+
+    <TextView
+        android:id="@+id/tvTituloSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/acciones_de_la_obra"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnSheetCompartir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/compartir"
+        android:backgroundTint="#4A2C2A"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnSheetEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modificar_detalles"
+        android:backgroundTint="#D4AF37"
+        android:textColor="@color/black"/>
+</LinearLayout>

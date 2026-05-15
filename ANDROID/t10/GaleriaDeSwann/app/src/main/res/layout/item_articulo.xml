@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -11,16 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="#FAFAFA">
 
         <TextView
             android:id="@+id/tvItemNombre"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre del Objeto"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#4A2C2A"/>
+            android:textColor="@color/black"
+            android:text="Nombre de la Obra"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,22 +34,23 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Precio: 0.00€" />
+                android:text="Precio: 0.0 €" />
 
             <TextView
                 android:id="@+id/tvItemUnidades"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stock: 0"
-                android:textStyle="italic" />
+                android:text="Stock: 0" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/tvItemId"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ID: 1"
-            android:textSize="10sp"
-            android:layout_gravity="end"/>
+            android:textSize="12sp"
+            android:text="ID: 0"
+            android:layout_marginTop="8dp"
+            android:gravity="end"/>
     </LinearLayout>
-</CardView>
+
+</androidx.cardview.widget.CardView>

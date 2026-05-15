@@ -29,19 +29,19 @@
     <!-- Consultar por ID -->
     <fragment
         android:id="@+id/nav_search"
-        android:name="com.iesvjp.galeriadeswann.ui.home.HomeFragment"
+        android:name="com.iesvjp.galeriadeswann.ui.search.SearchFragment"
         android:label="Buscar por ID" />
 
     <!-- Modificar -->
     <fragment
         android:id="@+id/nav_update"
-        android:name="com.iesvjp.galeriadeswann.ui.home.HomeFragment"
+        android:name="com.iesvjp.galeriadeswann.ui.update.UpdateFragment"
         android:label="Modificar Obra" />
 
     <!-- Eliminar por ID -->
     <fragment
         android:id="@+id/nav_delete"
-        android:name="com.iesvjp.galeriadeswann.ui.home.HomeFragment"
+        android:name="com.iesvjp.galeriadeswann.ui.delete.DeleteFragment"
         android:label="Retirar de Colección" />
 
 </navigation>
