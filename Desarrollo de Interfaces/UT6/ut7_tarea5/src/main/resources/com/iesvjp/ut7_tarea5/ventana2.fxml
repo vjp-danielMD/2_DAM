@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="480.0" prefWidth="640.0" styleClass="panel-principal" stylesheets="@css/estilo2.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iesvjp.ut7_tarea5.Ventana2Controller">
+
+    <Label styleClass="label-titulo" text="SEGUNDA VENTANA (2)" />
+    <Label styleClass="label-normal" text="Esta ventana carga un archivo CSS completamente aislado." />
+    <Label styleClass="label-sombra" text="Texto con efecto de sombra paralela mediante CSS" />
+    <Label styleClass="label-fino" text="ID de sesión: Temporal-Verificación" />
+
+    <VBox alignment="CENTER" spacing="10" styleClass="caja-bordeada">
+        <Label styleClass="label-normal" text="Muestrario de Botones de la Hoja 2:" />
+        
+        <Button onAction="#irVentana1" styleClass="btn-volver" text="Volver a Ventana 1" />
+        <Button onAction="#irVentana3" styleClass="btn-fantasma" text="Saltar a Ventana 3" />
+        
+        <HBox alignment="CENTER" spacing="10">
+            <Button onAction="#deClaseBotonSuave" styleClass="btn-suave" text="Alerta Suave" />
+            <Button onAction="#deClasePeticionOpciones" styleClass="btn-redondo" text="ChoiceDialog" />
+            <Button onAction="#deClaseBotonLargo" styleClass="btn-largo" text="Alerta Botón Largo (200px)" />
+        </HBox>
+    </VBox>
+</VBox>

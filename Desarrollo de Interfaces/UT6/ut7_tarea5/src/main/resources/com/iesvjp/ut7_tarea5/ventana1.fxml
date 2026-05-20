@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="480.0" prefWidth="640.0" styleClass="panel-principal" stylesheets="@css/estilo1.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iesvjp.ut7_tarea5.Ventana1Controller">
+
+    <Label styleClass="label-titulo" text="VENTANA PRINCIPAL (1)" />
+    <Label styleClass="label-subtitulo" text="Estilo Visual: Dark Neón" />
+    <Label styleClass="label-alerta" text="¡Atención! Las alertas bloquean la interfaz hasta cerrarse." />
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button onAction="#irVentana2" styleClass="btn-navegacion" text="Ir a Ventana 2" />
+        <Button onAction="#irVentana3" styleClass="btn-navegacion" text="Ir a Ventana 3" />
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="8" style="-fx-padding: 15px 0 0 0;">
+        <Button onAction="#mostrarAlertaInfo" styleClass="btn-info" text="Lanzar Info" />
+        <Button onAction="#mostrarAlertaWarning" styleClass="btn-warning" text="Lanzar Warning" />
+        <Button onAction="#mostrarAlertaError" styleClass="btn-error" text="Lanzar Error" />
+        <Button onAction="#mostrarConfirmacion" styleClass="btn-navegacion" text="Pedir Confirmación" />
+        <Button onAction="#pedirDato" styleClass="btn-input" text="Solicitar Texto (Input)" />
+    </VBox>
+</VBox>
