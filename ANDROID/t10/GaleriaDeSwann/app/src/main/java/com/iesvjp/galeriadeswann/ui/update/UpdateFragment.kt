@@ -74,7 +74,6 @@ class UpdateFragment : Fragment() {
 
         viewLifecycleOwner.lifecycleScope.launch {
             val db = AppDatabase.getDatabase(requireContext())
-            // Creamos un nuevo objeto manteniendo el mismo ID original para que Room sepa cuál sobreescribir
             val articuloModificado = Articulo(
                 id = articuloActual!!.id,
                 nombre = nombre,
@@ -85,9 +84,8 @@ class UpdateFragment : Fragment() {
             db.articuloDao().actualizar(articuloModificado)
             Toast.makeText(requireContext(), "Artículo modificado con éxito", Toast.LENGTH_SHORT).show()
 
-            // Limpiar y ocultar
             binding.layoutFormularioUpdate.visibility = View.GONE
-            binding.etUpdateIdBuscar.text.clear()
+            binding.etUpdateIdBuscar.text?.clear()
         }
     }
 

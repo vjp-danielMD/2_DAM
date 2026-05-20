@@ -4,75 +4,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="24dp"
+    android:background="@color/background_ivory">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Buscar Obra por ID"
-        android:textSize="20sp"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="@color/text_charcoal"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:layout_marginBottom="24dp">
 
-        <EditText
-            android:id="@+id/etBuscarId"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Introduce el ID"
-            android:inputType="number" />
+            app:boxStrokeColor="@color/primary_walnut"
+            app:hintTextColor="@color/primary_walnut">
 
-        <Button
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBuscarId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/text_charcoal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBuscar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Buscar"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="12dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            app:backgroundTint="@color/accent_gold"
+            android:textColor="@color/primary_dark"/>
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardResultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp">
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/card_elevation"
+        app:cardBackgroundColor="@color/surface_white"
+        app:strokeColor="@color/accent_gold"
+        app:strokeWidth="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/card_padding">
 
             <TextView
                 android:id="@+id/tvResultadoNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/primary_walnut"
                 android:textStyle="bold"
-                android:textColor="@color/black"
                 android:text="@string/nombre" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"/>
 
             <TextView
                 android:id="@+id/tvResultadoPrecio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textColor="@color/text_charcoal"
                 android:text="@string/precio2" />
 
             <TextView
                 android:id="@+id/tvResultadoUnidades"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="6dp"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/text_muted"
                 android:text="@string/unidades2" />
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

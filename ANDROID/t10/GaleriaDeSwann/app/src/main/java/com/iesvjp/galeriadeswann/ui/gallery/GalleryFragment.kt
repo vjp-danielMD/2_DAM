@@ -31,35 +31,35 @@ class GalleryFragment : Fragment() {
     }
 
     private fun validarYGuardar() {
-        val nombre = binding.etNombreArticulo.text.toString()
-        val precioStr = binding.etPrecioArticulo.text.toString()
-        val unidadesStr = binding.etUnidadesArticulo.text.toString()
+        val nombre = binding.etNombreArticulo.text.toString().trim()
+        val precioStr = binding.etPrecioArticulo.text.toString().trim()
+        val unidadesStr = binding.etUnidadesArticulo.text.toString().trim()
 
-        // VALIDACIÓN: Comprobar que no haya campos vacíos
         if (nombre.isEmpty() || precioStr.isEmpty() || unidadesStr.isEmpty()) {
             Toast.makeText(requireContext(), "Por favor, rellena todos los datos", Toast.LENGTH_SHORT).show()
             return
         }
 
-        val precio = precioStr.toDouble()
-        val unidades = unidadesStr.toInt()
+        val precio = precioStr.toDoubleOrNull()
+        val unidades = unidadesStr.toIntOrNull()
 
-        // Creamos el objeto Articulo (el ID es 0 porque es auto-generado)
+        if (precio == null || unidades == null) {
+            Toast.makeText(requireContext(), "Por favor, introduce valores numéricos válidos", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val nuevoArticulo = Articulo(nombre = nombre, precio = precio, unidades = unidades)
 
-        // ASINCRONÍA: Usamos Corrutinas con lifecycleScope
         lifecycleScope.launch {
             try {
                 val db = AppDatabase.getDatabase(requireContext())
                 db.articuloDao().insertar(nuevoArticulo)
 
-                // FEEDBACK al usuario
                 Toast.makeText(requireContext(), "Artículo añadido con éxito", Toast.LENGTH_SHORT).show()
 
-                // Limpiar formulario
-                binding.etNombreArticulo.text.clear()
-                binding.etPrecioArticulo.text.clear()
-                binding.etUnidadesArticulo.text.clear()
+                binding.etNombreArticulo.setText("")
+                binding.etPrecioArticulo.setText("")
+                binding.etUnidadesArticulo.setText("")
 
             } catch (e: Exception) {
                 Toast.makeText(requireContext(), "Error al guardar: ${e.message}", Toast.LENGTH_LONG).show()

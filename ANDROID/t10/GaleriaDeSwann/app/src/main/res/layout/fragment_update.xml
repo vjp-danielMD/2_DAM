@@ -1,75 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:background="@color/background_ivory">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Modificar Obra de Arte"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Buscador previo -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="20dp">
-
-        <EditText
-            android:id="@+id/etUpdateIdBuscar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="ID de la obra a modificar"
-            android:inputType="number" />
-
-        <Button
-            android:id="@+id/btnBuscarUpdate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Buscar" />
-    </LinearLayout>
-
-    <!-- Formulario de edición (Oculto al principio) -->
-    <LinearLayout
-        android:id="@+id/layoutFormularioUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:padding="24dp">
 
-        <EditText
-            android:id="@+id/etUpdateNombre"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/modificar_obra_de_arte"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textColor="@color/text_charcoal"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/nombre_de_la_obra" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
 
-        <EditText
-            android:id="@+id/etUpdatePrecio"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/id_de_la_obra_a_modificar"
+                app:boxStrokeColor="@color/primary_walnut"
+                app:hintTextColor="@color/primary_walnut">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUpdateIdBuscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/text_charcoal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBuscarUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buscar"
+                android:layout_marginStart="12dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                app:backgroundTint="@color/accent_gold"
+                android:textColor="@color/primary_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutFormularioUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/precio"
-            android:inputType="numberDecimal" />
+            android:orientation="vertical"
+            android:visibility="gone">
 
-        <EditText
-            android:id="@+id/etUpdateUnidades"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/unidades"
-            android:inputType="number" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/nombre_de_la_obra"
+                app:boxStrokeColor="@color/primary_walnut"
+                app:hintTextColor="@color/primary_walnut">
 
-        <Button
-            android:id="@+id/btnActualizar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/guardar_cambios"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#4A2C2A"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUpdateNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/text_charcoal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/precio"
+                app:boxStrokeColor="@color/primary_walnut"
+                app:hintTextColor="@color/primary_walnut">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUpdatePrecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_charcoal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="@string/unidades"
+                app:boxStrokeColor="@color/primary_walnut"
+                app:hintTextColor="@color/primary_walnut">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUpdateUnidades"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/text_charcoal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnActualizar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guardar_cambios"
+                android:padding="12dp"
+                app:backgroundTint="@color/primary_walnut"
+                android:textColor="@color/white" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

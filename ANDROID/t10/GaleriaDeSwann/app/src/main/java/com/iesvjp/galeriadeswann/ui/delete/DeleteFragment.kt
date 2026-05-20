@@ -30,24 +30,28 @@ class DeleteFragment : Fragment() {
     }
 
     private fun eliminarPorId() {
-        val idStr = binding.etDeleteId.text.toString()
+        val idStr = binding.etDeleteId.text.toString().trim()
 
         if (idStr.isEmpty()) {
             Toast.makeText(requireContext(), "Por favor, rellena todos los datos", Toast.LENGTH_SHORT).show()
             return
         }
 
-        val idEliminar = idStr.toInt()
+        val idEliminar = idStr.toIntOrNull()
+        if (idEliminar == null) {
+            Toast.makeText(requireContext(), "Por favor, introduce un ID válido", Toast.LENGTH_SHORT).show()
+            return
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             val db = AppDatabase.getDatabase(requireContext())
-            // Comprobamos primero si existe para dar el feedback exacto que pide el enunciado
             val articulo = db.articuloDao().obtenerPorId(idEliminar)
 
             if (articulo != null) {
                 db.articuloDao().eliminarPorId(idEliminar)
                 Toast.makeText(requireContext(), "Artículo eliminado con éxito", Toast.LENGTH_SHORT).show()
-                binding.etDeleteId.text.clear()
+
+                binding.etDeleteId.setText("")
             } else {
                 Toast.makeText(requireContext(), "Error: el ID introducido no existe", Toast.LENGTH_SHORT).show()
             }

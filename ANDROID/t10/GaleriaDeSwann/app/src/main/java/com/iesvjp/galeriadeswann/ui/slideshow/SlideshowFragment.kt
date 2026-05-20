@@ -35,14 +35,13 @@ class SlideshowFragment : Fragment() {
         _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
 
         configurarRecyclerView()
-        configurarSwipeToDelete() // Configuración de la Opción B
+        configurarSwipeToDelete()
         cargarArticulos()
 
         return binding.root
     }
 
     private fun configurarRecyclerView() {
-        // Opción A: Al pulsar un elemento, se abre el BottomSheet
         adaptador = ArticuloAdapter(emptyList()) { articulo ->
             mostrarBottomSheet(articulo)
         }
@@ -50,9 +49,6 @@ class SlideshowFragment : Fragment() {
         binding.rvArticulos.adapter = adaptador
     }
 
-    // ==========================================
-    // OPCIÓN A: BOTTOM SHEET & ALERT DIALOG POPUP
-    // ==========================================
     private fun mostrarBottomSheet(articulo: Articulo) {
         val dialog = BottomSheetDialog(requireContext())
         val view = layoutInflater.inflate(R.layout.layout_bottom_sheet, null)
@@ -60,13 +56,11 @@ class SlideshowFragment : Fragment() {
 
         view.findViewById<android.widget.TextView>(R.id.tvTituloSheet).text = articulo.nombre
 
-        // Acción: Compartir (Intent)
         view.findViewById<View>(R.id.btnSheetCompartir).setOnClickListener {
             dialog.dismiss()
             compartirArticulo(articulo)
         }
 
-        // Acción: Editar (Popup AlertDialog)
         view.findViewById<View>(R.id.btnSheetEditar).setOnClickListener {
             dialog.dismiss()
             mostrarDialogEditar(articulo)
@@ -83,7 +77,6 @@ class SlideshowFragment : Fragment() {
         val etPrecio = viewInflated.findViewById<EditText>(R.id.etDialogPrecio)
         val etUnidades = viewInflated.findViewById<EditText>(R.id.etDialogUnidades)
 
-        // Rellenamos los campos con los datos actuales
         etNombre.setText(articulo.nombre)
         etPrecio.setText(articulo.precio.toString())
         etUnidades.setText(articulo.unidades.toString())
@@ -112,12 +105,10 @@ class SlideshowFragment : Fragment() {
         builder.show()
     }
 
-    // ==========================================
-    // INTENT NATIVO: COMPARTIR
-    // ==========================================
+
     private fun compartirArticulo(articulo: Articulo) {
         val textoCompartir = """
-            Estimado miembro de la alta sociedad, le presento una pieza de nuestra colección exclusiva:
+            Estimado cliente, le presento una pieza de nuestra colección exclusiva:
             Obra: ${articulo.nombre}
             Valor de tasación: ${articulo.precio} €
             Disponibilidad: ${articulo.unidades} unidades disponibles.
@@ -133,9 +124,6 @@ class SlideshowFragment : Fragment() {
         startActivity(Intent.createChooser(intent, "Compartir catálogo mediante:"))
     }
 
-    // ==========================================
-    // OPCIÓN B: GESTO SWIPE TO DELETE + UNDO
-    // ==========================================
     private fun configurarSwipeToDelete() {
         val itemTouchHelperCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
             override fun onMove(rc: RecyclerView, vh: RecyclerView.ViewHolder, t: RecyclerView.ViewHolder): Boolean = false
@@ -146,14 +134,13 @@ class SlideshowFragment : Fragment() {
 
                 viewLifecycleOwner.lifecycleScope.launch {
                     val db = AppDatabase.getDatabase(requireContext())
-                    db.articuloDao().eliminar(articuloAEliminar) // Borramos de Room
-                    cargarArticulos() // Refrescamos la lista
+                    db.articuloDao().eliminar(articuloAEliminar)
+                    cargarArticulos()
 
-                    // Feedback premium: Mensaje Snackbar con botón de Deshacer (Undo)
+
                     Snackbar.make(binding.root, "${articuloAEliminar.nombre} retirado de la colección", Snackbar.LENGTH_LONG)
                         .setAction("DESHACER") {
                             viewLifecycleOwner.lifecycleScope.launch {
-                                // Si pulsa deshacer, lo volvemos a insertar en Room
                                 db.articuloDao().insertar(articuloAEliminar)
                                 cargarArticulos()
                             }

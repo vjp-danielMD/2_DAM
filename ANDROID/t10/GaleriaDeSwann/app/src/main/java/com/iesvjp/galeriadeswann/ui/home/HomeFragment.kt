@@ -14,7 +14,6 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    // Nombre del archivo de preferencias
     private val PREFS_NAME = "PrefsSwann"
     private val KEY_NEGOCIO = "nombre_negocio"
 
@@ -24,17 +23,16 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        // 1. Cargar el nombre al iniciar
         cargarNombre()
 
-        // 2. Configurar el botón de guardar
         binding.btnGuardarNombre.setOnClickListener {
-            val nuevoNombre = binding.etNuevoNombre.text.toString()
+            val nuevoNombre = binding.etNuevoNombre.text.toString().trim()
 
             if (nuevoNombre.isNotEmpty()) {
                 guardarNombre(nuevoNombre)
                 Toast.makeText(requireContext(), "Nombre actualizado con éxito", Toast.LENGTH_SHORT).show()
-                binding.etNuevoNombre.text.clear()
+
+                binding.etNuevoNombre.setText("")
             } else {
                 Toast.makeText(requireContext(), "Por favor, escribe un nombre", Toast.LENGTH_SHORT).show()
             }

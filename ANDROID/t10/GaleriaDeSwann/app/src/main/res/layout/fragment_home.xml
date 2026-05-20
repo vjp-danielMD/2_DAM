@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@color/background_ivory">
 
     <TextView
         android:id="@+id/tvNombreActual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nombre_del_negocio"
-        android:textSize="24sp"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="@color/text_charcoal"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginBottom="32dp"
+        android:gravity="center"/>
 
-    <EditText
-        android:id="@+id/etNuevoNombre"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNuevoNombre"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:hint="@string/introduce_el_nuevo_nombre"
-        android:inputType="textCapWords"
-        android:layout_marginBottom="16dp"/>
+        app:boxStrokeColor="@color/primary_walnut"
+        app:hintTextColor="@color/primary_walnut">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNuevoNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:textColor="@color/text_charcoal"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnGuardarNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/guardar_nombre"
-        android:backgroundTint="#4A2C2A"/> <!-- Un color marrón oscuro elegante -->
+        android:padding="12dp"
+        app:backgroundTint="@color/primary_walnut"
+        android:textColor="@color/white"/>
 
 </LinearLayout>
