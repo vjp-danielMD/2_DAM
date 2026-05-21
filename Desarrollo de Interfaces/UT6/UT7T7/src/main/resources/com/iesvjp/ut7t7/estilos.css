@@ -1,0 +1,47 @@
+/* Fondo general claro para la ventana principal */
+.root {
+    -fx-background-color: #f4f6f9;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Fondo oscuro para la ventana secundaria (como en tu captura) */
+.fondo-oscuro {
+    -fx-background-color: #e0e0e0;
+}
+
+/* Estilos de botones */
+.button {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-text-fill: #333333;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.btn-aniadir {
+    -fx-font-weight: bold;
+}
+
+/* Estilo para la tabla */
+.table-view {
+    -fx-border-color: #bbbbbb;
+    -fx-background-color: #ffffff;
+}
+
+.table-view .column-header {
+    -fx-background-color: #eaeaea;
+    -fx-border-color: #cccccc;
+}
+
+/* Campos de texto */
+.text-field {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #cccccc;
+    -fx-padding: 6;
+}
