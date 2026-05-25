@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.iesvjp.galeriadeswann.R
 import com.iesvjp.galeriadeswann.databinding.FragmentUpdateBinding
-import com.iesvjp.galeriadeswann.modelo.AppDatabase
+import com.iesvjp.galeriadeswann.controlador.ArticuloController
 import com.iesvjp.galeriadeswann.modelo.Articulo
 import kotlinx.coroutines.launch
 
@@ -17,19 +18,21 @@ class UpdateFragment : Fragment() {
     private var _binding: FragmentUpdateBinding? = null
     private val binding get() = _binding!!
     private var articuloActual: Articulo? = null
+    private lateinit var articuloController: ArticuloController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentUpdateBinding.inflate(inflater, container, false)
+        articuloController = ArticuloController(requireContext())
 
-        // Botón para buscar el artículo por ID antes de editar
+        // preparar busqueda
         binding.btnBuscarUpdate.setOnClickListener {
             buscarParaModificar()
         }
 
-        // Botón para procesar la actualización en la BD
+        // preparar actualizacion
         binding.btnActualizar.setOnClickListener {
             actualizarArticulo()
         }
@@ -40,14 +43,13 @@ class UpdateFragment : Fragment() {
     private fun buscarParaModificar() {
         val idStr = binding.etUpdateIdBuscar.text.toString()
         if (idStr.isEmpty()) {
-            Toast.makeText(requireContext(), "Por favor, rellena todos los datos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.toast_rellena_datos), Toast.LENGTH_SHORT).show()
             binding.layoutFormularioUpdate.visibility = View.GONE
             return
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
-            val db = AppDatabase.getDatabase(requireContext())
-            val articulo = db.articuloDao().obtenerPorId(idStr.toInt())
+            val articulo = articuloController.obtenerPorId(idStr.toInt())
 
             if (articulo != null) {
                 articuloActual = articulo
@@ -57,7 +59,7 @@ class UpdateFragment : Fragment() {
                 binding.etUpdateUnidades.setText(articulo.unidades.toString())
             } else {
                 binding.layoutFormularioUpdate.visibility = View.GONE
-                Toast.makeText(requireContext(), "Error: el ID introducido no existe", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.toast_error_id_no_existe), Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -68,12 +70,11 @@ class UpdateFragment : Fragment() {
         val unidadesStr = binding.etUpdateUnidades.text.toString()
 
         if (nombre.isEmpty() || precioStr.isEmpty() || unidadesStr.isEmpty()) {
-            Toast.makeText(requireContext(), "Por favor, rellena todos los datos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.toast_rellena_datos), Toast.LENGTH_SHORT).show()
             return
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
-            val db = AppDatabase.getDatabase(requireContext())
             val articuloModificado = Articulo(
                 id = articuloActual!!.id,
                 nombre = nombre,
@@ -81,8 +82,8 @@ class UpdateFragment : Fragment() {
                 unidades = unidadesStr.toInt()
             )
 
-            db.articuloDao().actualizar(articuloModificado)
-            Toast.makeText(requireContext(), "Artículo modificado con éxito", Toast.LENGTH_SHORT).show()
+            articuloController.actualizar(articuloModificado)
+            Toast.makeText(requireContext(), getString(R.string.toast_articulo_modificado), Toast.LENGTH_SHORT).show()
 
             binding.layoutFormularioUpdate.visibility = View.GONE
             binding.etUpdateIdBuscar.text?.clear()

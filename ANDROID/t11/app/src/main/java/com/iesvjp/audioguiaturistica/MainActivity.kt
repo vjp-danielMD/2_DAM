@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
+        // Configuramos un cliente OkHttp personalizado para Picasso
+        // Esto permite añadir un User-Agent a las peticiones HTTP y evitar posibles bloqueos de los servidores de imágenes
         val client = OkHttpClient.Builder()
             .addInterceptor { chain ->
                 val newRequest = chain.request().newBuilder()
@@ -22,21 +24,27 @@ class MainActivity : AppCompatActivity() {
             }
             .build()
 
+        // Creamos la instancia de Picasso utilizando el cliente OkHttp personalizado
         val picasso = Picasso.Builder(this)
             .downloader(OkHttp3Downloader(client))
             .build()
 
+        // Establecemos nuestra instancia configurada como la instancia principal/singleton de Picasso
         Picasso.setSingletonInstance(picasso)
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Enlazamos los componentes de la interfaz de usuario
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
 
+        // Configuramos el adaptador para el ViewPager2, pasándole esta actividad
         val adapter = ViewPagerAdapter(this)
         viewPager.adapter = adapter
 
+        // Vinculamos el TabLayout con el ViewPager2 utilizando TabLayoutMediator
+        // Esto permite que el título de cada pestaña se actualice según la posición actual
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when (position) {
                 0 -> tab.text = getString(R.string.tab_monumentos)

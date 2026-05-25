@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.iesvjp.galeriadeswann.R
 import com.iesvjp.galeriadeswann.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -30,11 +31,11 @@ class HomeFragment : Fragment() {
 
             if (nuevoNombre.isNotEmpty()) {
                 guardarNombre(nuevoNombre)
-                Toast.makeText(requireContext(), "Nombre actualizado con éxito", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.toast_nombre_actualizado), Toast.LENGTH_SHORT).show()
 
                 binding.etNuevoNombre.setText("")
             } else {
-                Toast.makeText(requireContext(), "Por favor, escribe un nombre", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.toast_escribe_nombre), Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -52,7 +53,7 @@ class HomeFragment : Fragment() {
 
     private fun cargarNombre() {
         val prefs = requireActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        val nombreGuardado = prefs.getString(KEY_NEGOCIO, "Galería de Charles Swann")
+        val nombreGuardado = prefs.getString(KEY_NEGOCIO, getString(R.string.galer_a_de_charles_swann))
         binding.tvNombreActual.text = nombreGuardado
     }
 

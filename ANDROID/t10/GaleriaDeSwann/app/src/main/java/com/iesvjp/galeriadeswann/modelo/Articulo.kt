@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "tabla_articulos")
 data class Articulo(
-    // ID sea automático
+    // id autogenerado
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
 

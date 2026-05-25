@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.iesvjp.galeriadeswann.R
 import com.iesvjp.galeriadeswann.databinding.FragmentGalleryBinding
-import com.iesvjp.galeriadeswann.modelo.AppDatabase
+import com.iesvjp.galeriadeswann.controlador.ArticuloController
 import com.iesvjp.galeriadeswann.modelo.Articulo
 import kotlinx.coroutines.launch
 
@@ -16,12 +17,14 @@ class GalleryFragment : Fragment() {
 
     private var _binding: FragmentGalleryBinding? = null
     private val binding get() = _binding!!
+    private lateinit var articuloController: ArticuloController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        articuloController = ArticuloController(requireContext())
 
         binding.btnGuardarArticulo.setOnClickListener {
             validarYGuardar()
@@ -36,7 +39,7 @@ class GalleryFragment : Fragment() {
         val unidadesStr = binding.etUnidadesArticulo.text.toString().trim()
 
         if (nombre.isEmpty() || precioStr.isEmpty() || unidadesStr.isEmpty()) {
-            Toast.makeText(requireContext(), "Por favor, rellena todos los datos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.toast_rellena_datos), Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -44,7 +47,7 @@ class GalleryFragment : Fragment() {
         val unidades = unidadesStr.toIntOrNull()
 
         if (precio == null || unidades == null) {
-            Toast.makeText(requireContext(), "Por favor, introduce valores numéricos válidos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.toast_valores_invalidos), Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -52,17 +55,16 @@ class GalleryFragment : Fragment() {
 
         lifecycleScope.launch {
             try {
-                val db = AppDatabase.getDatabase(requireContext())
-                db.articuloDao().insertar(nuevoArticulo)
+                articuloController.insertar(nuevoArticulo)
 
-                Toast.makeText(requireContext(), "Artículo añadido con éxito", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.toast_articulo_anadido), Toast.LENGTH_SHORT).show()
 
                 binding.etNombreArticulo.setText("")
                 binding.etPrecioArticulo.setText("")
                 binding.etUnidadesArticulo.setText("")
 
             } catch (e: Exception) {
-                Toast.makeText(requireContext(), "Error al guardar: ${e.message}", Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), getString(R.string.toast_error_guardar, e.message), Toast.LENGTH_LONG).show()
             }
         }
     }

@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/nav_list"
-        android:name="com.iesvjp.galeriadeswann.ui.slideshow.SlideshowFragment"
+        android:name="com.iesvjp.galeriadeswann.ui.list.ListFragment"
         android:label="Inventario de Arte"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_list" />
 
     <fragment
         android:id="@+id/nav_search"

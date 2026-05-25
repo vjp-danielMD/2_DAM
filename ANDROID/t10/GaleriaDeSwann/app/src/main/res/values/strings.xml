@@ -47,4 +47,15 @@
     <string name="a_adir_obra">Añadir obra</string>
     <string name="galer_a_de_charles_swann">Galería de Charles Swann</string>
     <string name="colecci_n_de_alta_sociedad">Colección de Alta Sociedad</string>
+
+    <string name="toast_rellena_datos">Por favor, rellena todos los datos</string>
+    <string name="toast_articulo_anadido">Artículo añadido con éxito</string>
+    <string name="toast_articulo_modificado">Artículo modificado con éxito</string>
+    <string name="toast_articulo_eliminado">Artículo eliminado con éxito</string>
+    <string name="toast_error_id_no_existe">Error: el ID introducido no existe</string>
+    <string name="toast_nombre_actualizado">Nombre actualizado con éxito</string>
+    <string name="toast_escribe_nombre">Por favor, escribe un nombre</string>
+    <string name="toast_valores_invalidos">Por favor, introduce valores numéricos válidos</string>
+    <string name="toast_id_invalido">Por favor, introduce un ID válido</string>
+    <string name="toast_error_guardar">Error al guardar: %1$s</string>
 </resources>
