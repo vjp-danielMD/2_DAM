@@ -1,0 +1,89 @@
+/* Configuración Base */
+.root-pane {
+    -fx-background-color: #f8f9fa;
+}
+
+/* Título */
+.main-title {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #b22222;
+}
+
+/* Paneles Contenedores tipo Tarjeta */
+.card-panel {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 8, 0, 0, 4);
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+}
+
+/* Etiquetas del configurador */
+.field-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a5568;
+    -fx-font-size: 13px;
+}
+
+/* Estilo para las Imágenes de Hamburguesas */
+.burger-image {
+    -fx-background-radius: 8px;
+    -fx-clip: true;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 5, 0, 0, 2);
+}
+
+/* Botones con estilo Flat Moderno */
+.button {
+    -fx-font-family: 'Segoe UI', Helvetica, sans-serif;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-text-fill: white;
+}
+
+.btn-primary {
+    -fx-background-color: #3182ce;
+}
+.btn-primary:hover { -fx-background-color: #2b6cb0; }
+
+.btn-danger {
+    -fx-background-color: #e53e3e;
+}
+.btn-danger:hover { -fx-background-color: #c53030; }
+
+.btn-success {
+    -fx-background-color: #38a169;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 22px;
+}
+.btn-success:hover { -fx-background-color: #2f855a; }
+
+.btn-cobrar {
+    -fx-background-color: #2d3748;
+}
+.btn-cobrar:hover { -fx-background-color: #1a202c; }
+
+/* Tabla de Pedidos */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #cbd5e0;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+.table-view .column-header {
+    -fx-background-color: #edf2f7;
+    -fx-text-fill: #2d3748;
+    -fx-font-weight: bold;
+}
+.table-view .table-row-cell:selected {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #000000;
+}
+.placeholder-label {
+    -fx-text-fill: #a0aec0;
+    -fx-font-style: italic;
+}

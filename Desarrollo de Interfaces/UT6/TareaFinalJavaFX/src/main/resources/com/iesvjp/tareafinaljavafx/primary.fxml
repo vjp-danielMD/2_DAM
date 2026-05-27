@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://fxml.com/fxml/1" fx:controller="com.iesvjp.tareafinaljavafx.PrimaryController" styleClass="root-pane" spacing="10" alignment="TOP_CENTER">
+    <children>
+        
+        <Label text="Bocatería Valle del Jerte" styleClass="main-title">
+            <VBox.margin>
+                <Insets top="15" bottom="15"/>
+            </VBox.margin>
+        </Label>
+        
+        <HBox spacing="25" alignment="CENTER">
+            <padding>
+                <Insets left="20" right="20" bottom="25"/>
+            </padding>
+            <children>
+                
+                <VBox spacing="15" styleClass="card-panel" prefWidth="380" alignment="TOP_CENTER">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <children>
+                        <ImageView fx:id="imgHamburguesa" fitWidth="220" fitHeight="140" pickOnBounds="true" preserveRatio="false" styleClass="burger-image"/>
+                        
+                        <GridPane hgap="10" vgap="12">
+                            <columnConstraints>
+                                <ColumnConstraints minWidth="100" halignment="RIGHT"/>
+                                <ColumnConstraints minWidth="180"/>
+                            </columnConstraints>
+                            <children>
+                                <Label text="Hamburguesa:" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="field-label"/>
+                                <ComboBox fx:id="comboHamburguesa" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                                
+                                <Label text="Tipo de Pan:" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="field-label"/>
+                                <VBox spacing="6" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                                    <children>
+                                        <RadioButton fx:id="radioNormal" text="Pan Normal" selected="true"/>
+                                        <RadioButton fx:id="radioIntegral" text="Pan Integral"/>
+                                        <RadioButton fx:id="radioMollete" text="Mollete"/>
+                                    </children>
+                                </VBox>
+                                
+                                <Label text="Extras:" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="field-label"/>
+                                <VBox spacing="6" GridPane.rowIndex="2" GridPane.columnIndex="1">
+                                    <children>
+                                        <CheckBox fx:id="checkQueso" text="Queso (1,00 €)"/>
+                                        <CheckBox fx:id="checkBacon" text="Bacon (1,50 €)"/>
+                                        <CheckBox fx:id="checkHuevo" text="Huevo (2,00 €)"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </GridPane>
+                        
+                        <Button text="Añadir al pedido" onAction="#handleAnadir" styleClass="btn-primary" prefWidth="200"/>
+                    </children>
+                </VBox>
+                
+                <VBox spacing="15" prefWidth="460">
+                    <children>
+                        <TableView fx:id="tablaPedido" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="colHamburguesa" text="Hamburguesa" prefWidth="120"/>
+                                <TableColumn fx:id="colPan" text="Pan" prefWidth="100"/>
+                                <TableColumn fx:id="colExtras" text="Extras" prefWidth="130"/>
+                                <TableColumn fx:id="colPrecio" text="Precio" prefWidth="90"/>
+                            </columns>
+                            <placeholder>
+                                <Label text="Ningún artículo añadido al pedido actual" styleClass="placeholder-label"/>
+                            </placeholder>
+                        </TableView>
+                        
+                        <HBox spacing="20" alignment="CENTER_RIGHT">
+                            <children>
+                                <Button text="Eliminar del pedido" onAction="#handleEliminar" styleClass="btn-danger"/>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Button text="Cobrar Cuenta" onAction="#handleCobrar" styleClass="btn-success"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                
+            </children>
+        </HBox>
+    </children>
+</VBox>
