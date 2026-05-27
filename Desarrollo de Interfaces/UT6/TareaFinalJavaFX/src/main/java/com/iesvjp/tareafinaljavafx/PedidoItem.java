@@ -1,5 +1,8 @@
 package com.iesvjp.tareafinaljavafx;
-
+/**
+ * 
+ * @author alumno
+ */
 public class PedidoItem {
 
     private String hamburguesa;

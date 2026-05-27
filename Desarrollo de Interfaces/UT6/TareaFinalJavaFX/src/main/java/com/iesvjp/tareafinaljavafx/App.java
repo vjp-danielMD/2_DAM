@@ -17,7 +17,7 @@ public class App extends Application {
         
         scene.getStylesheets().add(App.class.getResource("styles.css").toExternalForm());
         
-        stage.setTitle("Bocatería Valle del Jerte - TPV");
+        stage.setTitle("Bocatería Valle del Jerte");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
