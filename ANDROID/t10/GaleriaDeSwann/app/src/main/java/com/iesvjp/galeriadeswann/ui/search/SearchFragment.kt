@@ -9,21 +9,19 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.iesvjp.galeriadeswann.R
 import com.iesvjp.galeriadeswann.databinding.FragmentSearchBinding
-import com.iesvjp.galeriadeswann.controlador.ArticuloController
+import com.iesvjp.galeriadeswann.modelo.AppDatabase
 import kotlinx.coroutines.launch
 
 class SearchFragment : Fragment() {
 
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
-    private lateinit var articuloController: ArticuloController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
-        articuloController = ArticuloController(requireContext())
 
         binding.btnBuscar.setOnClickListener {
             realizarBusqueda()
@@ -45,8 +43,9 @@ class SearchFragment : Fragment() {
         val idBuscar = idStr.toInt()
 
         // buscar articulo en bg
-        viewLifecycleOwner.lifecycleScope.launch {
-            val articulo = articuloController.obtenerPorId(idBuscar)
+        lifecycleScope.launch {
+            val db = AppDatabase.getDatabase(requireContext())
+            val articulo = db.articuloDao().obtenerPorId(idBuscar)
 
             if (articulo != null) {
                 // mostrar datos
