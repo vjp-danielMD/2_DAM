@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.iesvjp.galeriadeswann.R
 import com.iesvjp.galeriadeswann.databinding.FragmentUpdateBinding
-import com.iesvjp.galeriadeswann.controlador.ArticuloController
+import com.iesvjp.galeriadeswann.modelo.AppDatabase
 import com.iesvjp.galeriadeswann.modelo.Articulo
 import kotlinx.coroutines.launch
 
@@ -18,14 +18,12 @@ class UpdateFragment : Fragment() {
     private var _binding: FragmentUpdateBinding? = null
     private val binding get() = _binding!!
     private var articuloActual: Articulo? = null
-    private lateinit var articuloController: ArticuloController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentUpdateBinding.inflate(inflater, container, false)
-        articuloController = ArticuloController(requireContext())
 
         // preparar busqueda
         binding.btnBuscarUpdate.setOnClickListener {
@@ -48,8 +46,9 @@ class UpdateFragment : Fragment() {
             return
         }
 
-        viewLifecycleOwner.lifecycleScope.launch {
-            val articulo = articuloController.obtenerPorId(idStr.toInt())
+        lifecycleScope.launch {
+            val db = AppDatabase.getDatabase(requireContext())
+            val articulo = db.articuloDao().obtenerPorId(idStr.toInt())
 
             if (articulo != null) {
                 articuloActual = articulo
@@ -74,7 +73,8 @@ class UpdateFragment : Fragment() {
             return
         }
 
-        viewLifecycleOwner.lifecycleScope.launch {
+        lifecycleScope.launch {
+            val db = AppDatabase.getDatabase(requireContext())
             val articuloModificado = Articulo(
                 id = articuloActual!!.id,
                 nombre = nombre,
@@ -82,7 +82,7 @@ class UpdateFragment : Fragment() {
                 unidades = unidadesStr.toInt()
             )
 
-            articuloController.actualizar(articuloModificado)
+            db.articuloDao().actualizar(articuloModificado)
             Toast.makeText(requireContext(), getString(R.string.toast_articulo_modificado), Toast.LENGTH_SHORT).show()
 
             binding.layoutFormularioUpdate.visibility = View.GONE

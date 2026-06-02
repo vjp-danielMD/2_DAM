@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.iesvjp.galeriadeswann.R
 import com.iesvjp.galeriadeswann.databinding.FragmentGalleryBinding
-import com.iesvjp.galeriadeswann.controlador.ArticuloController
+import com.iesvjp.galeriadeswann.modelo.AppDatabase
 import com.iesvjp.galeriadeswann.modelo.Articulo
 import kotlinx.coroutines.launch
 
@@ -17,14 +17,12 @@ class GalleryFragment : Fragment() {
 
     private var _binding: FragmentGalleryBinding? = null
     private val binding get() = _binding!!
-    private lateinit var articuloController: ArticuloController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
-        articuloController = ArticuloController(requireContext())
 
         binding.btnGuardarArticulo.setOnClickListener {
             validarYGuardar()
@@ -55,7 +53,8 @@ class GalleryFragment : Fragment() {
 
         lifecycleScope.launch {
             try {
-                articuloController.insertar(nuevoArticulo)
+                val db = AppDatabase.getDatabase(requireContext())
+                db.articuloDao().insertar(nuevoArticulo)
 
                 Toast.makeText(requireContext(), getString(R.string.toast_articulo_anadido), Toast.LENGTH_SHORT).show()
 
