@@ -1,0 +1,189 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+/*
+ * Estilo CSS para JavaFX - Paleta Verde Agua / Turquesa Moderno
+ * Diseñado para interfaces limpias, profesionales y legibles.
+ */
+
+/* Raíz y variables de color */
+.root {
+    -fx-background-color: #f2f7f7; /* Fondo general muy claro con un toque verde agua */
+    
+    /* Paleta de colores */
+    -fx-aquamarine-main: #20b2aa;     /* Verde agua principal (Light Sea Green) */
+    -fx-aquamarine-dark: #178580;     /* Verde agua oscuro para selecciones o estados presionados */
+    -fx-aquamarine-light: #e0f2f1;    /* Verde agua muy claro para fondos secundarios */
+    -fx-aquamarine-accent: #008080;   /* Teal / Azul verdoso para acentos importantes */
+    
+    /* Colores neutrales */
+    -fx-text-dark: #2c3e50;           /* Texto principal oscuro */
+    -fx-text-light: #ffffff;          /* Texto claro */
+    -fx-border-color-default: #b2dfdb;/* Bordes suaves */
+    
+    /* Fuentes */
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* Etiquetas (Labels) */
+.label {
+    -fx-text-fill: -fx-text-dark;
+}
+
+.label-header {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-aquamarine-accent;
+}
+
+/* Botones (Buttons) */
+.button {
+    -fx-background-color: -fx-aquamarine-main;
+    -fx-text-fill: -fx-text-light;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-transition: 0.2s;
+}
+
+.button:hover {
+    -fx-background-color: -fx-aquamarine-dark;
+}
+
+.button:pressed {
+    -fx-background-color: #0e5a57;
+}
+
+/* Botón Secundario / Cancelar */
+.button-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-aquamarine-accent;
+    -fx-border-color: -fx-aquamarine-main;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+.button-secondary:hover {
+    -fx-background-color: -fx-aquamarine-light;
+}
+
+/* Campos de Texto (TextFields y PasswordFields) */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 4px;
+    -fx-border-color: -fx-border-color-default;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-padding: 6px 10px;
+    -fx-text-fill: -fx-text-dark;
+}
+
+.text-field:focused {
+    -fx-border-color: -fx-aquamarine-main;
+    -fx-background-color: #ffffff;
+    /* Efecto de enfoque sutil */
+    -fx-effect: dropshadow(three-pass-box, rgba(32, 178, 170, 0.3), 5, 0, 0, 0);
+}
+
+/* Listas, Tablas y Árboles (ListView, TableView, TreeView) */
+.list-view, .table-view, .tree-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: -fx-border-color-default;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+
+/* Filas de tablas y listas */
+.table-row-cell:odd {
+    -fx-background-color: #fafbfc;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #ffffff;
+}
+
+.table-row-cell:filled:hover, .list-cell:filled:hover {
+    -fx-background-color: -fx-aquamarine-light;
+    -fx-text-fill: -fx-text-dark;
+}
+
+.table-row-cell:filled:selected, .list-cell:filled:selected {
+    -fx-background-color: -fx-aquamarine-main;
+    -fx-text-fill: -fx-text-light;
+}
+
+/* Encabezados de Tablas */
+.table-view .column-header {
+    -fx-background-color: -fx-aquamarine-light;
+    -fx-border-color: transparent -fx-border-color-default transparent transparent;
+    -fx-padding: 8px;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-aquamarine-accent;
+}
+
+/* CheckBox y RadioButton */
+.check-box .box, .radio-button .radio {
+    -fx-background-color: #ffffff;
+    -fx-border-color: -fx-border-color-default;
+    -fx-border-radius: 3px;
+}
+
+.check-box:focused .box, .radio-button:focused .radio {
+    -fx-border-color: -fx-aquamarine-main;
+}
+
+.check-box:selected .mark, .radio-button:selected .dot {
+    -fx-background-color: -fx-aquamarine-main;
+}
+
+/* Barra de desplazamiento (Scrollbar) */
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -fx-border-color-default;
+    -fx-background-radius: 4px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: -fx-aquamarine-main;
+}
+
+/* Paneles de pestañas (TabPane) */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: -fx-aquamarine-light;
+}
+
+.tab {
+    -fx-background-color: transparent;
+    -fx-padding: 6px 12px;
+}
+
+.tab:hover {
+    -fx-background-color: rgba(32, 178, 170, 0.1);
+}
+
+.tab:selected {
+    -fx-background-color: -fx-background-color;
+    -fx-border-color: -fx-aquamarine-main transparent transparent transparent;
+    -fx-border-width: 3px 0px 0px 0px;
+}
+
+.tab .tab-label {
+    -fx-text-fill: -fx-text-dark;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: -fx-aquamarine-accent;
+    -fx-font-weight: bold;
+}

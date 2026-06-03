@@ -1,0 +1,97 @@
+/* 1. Panel Principal */
+.root {
+    -fx-background-color: #000000;
+    -fx-padding: 25px;
+    -fx-font-family: "Courier New", Monospace;
+    -fx-border-color: #00ff00;
+    -fx-border-width: 3px;
+}
+
+/* 2. Cinco estilos para Texto (Label) */
+.label-titulo {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00ff00;
+    -fx-underline: true;
+}
+
+.label-subtitulo {
+    -fx-font-size: 16px;
+    -fx-text-fill: #ff00ff;
+}
+
+.label-cuerpo {
+    -fx-font-size: 13px;
+    -fx-text-fill: #00ffff;
+}
+
+.label-alerta {
+    -fx-font-size: 13px;
+    -fx-text-fill: #ffff00;
+    -fx-blink: true; /* Efecto visual simulado */
+}
+
+.label-codigo {
+    -fx-font-size: 12px;
+    -fx-background-color: #111111;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 2px 5px;
+}
+
+/* 3. Cinco estilos para Botones */
+.btn-primario {
+    -fx-background-color: #00ff00;
+    -fx-text-fill: black;
+    -fx-background-radius: 0px;
+    -fx-font-weight: bold;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1px;
+}
+.btn-primario:hover { -fx-background-color: black; -fx-text-fill: #00ff00; }
+
+.btn-secundario {
+    -fx-background-color: black;
+    -fx-text-fill: #ff00ff;
+    -fx-border-color: #ff00ff;
+    -fx-border-width: 2px;
+    -fx-background-radius: 0px;
+}
+.btn-secundario:hover { -fx-background-color: #ff00ff; -fx-text-fill: black; }
+
+.btn-sistema {
+    -fx-background-color: #333333;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 0px;
+}
+.btn-sistema:hover { -fx-background-color: #555555; }
+
+.btn-emergencia {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 0px;
+}
+
+.btn-terminal {
+    -fx-background-color: transparent;
+    -fx-text-fill: #00ff00;
+    -fx-alignment: center-left;
+    -fx-background-radius: 0px;
+}
+.btn-terminal:hover { -fx-underline: true; }
+
+/* 4. Estilos extra */
+.scroll-bar {
+    -fx-background-color: #111111;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #00ff00;
+    -fx-background-radius: 0px;
+}
+
+.consola-caja {
+    -fx-border-color: #00ffff;
+    -fx-border-style: dashed;
+    -fx-border-width: 2px;
+    -fx-padding: 10px;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pruebaexamen.ParejasController">
+   <children>
+      <Label layoutX="371.0" layoutY="51.0" styleClass="titulo-ventana" text="Generador de parejas" />
+      <TableView fx:id="tablaOro" layoutX="96.0" layoutY="201.0" prefHeight="327.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="oroAlias" prefWidth="196.0" text="ALIAS" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tablaMaster" layoutX="400.0" layoutY="201.0" prefHeight="327.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="masterAlias" prefWidth="196.0" text="ALIAS" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tablaChampion" layoutX="716.0" layoutY="201.0" prefHeight="327.0" prefWidth="200.0">
+         <columns>
+            <TableColumn fx:id="champAlias" prefWidth="196.0" text="ALIAS" />
+         </columns>
+      </TableView>
+      <Label layoutX="163.0" layoutY="131.0" text="ORO" />
+      <Label layoutX="454.0" layoutY="131.0" text="MASTER" />
+      <Label layoutX="751.0" layoutY="131.0" text="CHAMPION" />
+      <Button layoutX="460.0" layoutY="940.0" mnemonicParsing="false" onAction="#cerrar" text="CERRAR" />
+      <TableView fx:id="tablaVs" layoutX="96.0" layoutY="552.0" prefHeight="372.0" prefWidth="823.0">
+         <columns>
+            <TableColumn fx:id="vsAliasUno" prefWidth="414.0" text="Alias" />
+            <TableColumn fx:id="vsAlias2" prefWidth="407.0" text="Alias" />
+         </columns>
+      </TableView>
+   </children>
+</Pane>

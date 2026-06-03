@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="981.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ut7.tareafinal.bocadillos.PrimaryController">
+   <children>
+      <Label layoutX="95.0" layoutY="29.0" style="-fx-font-size: 48;" text="Bocatería Valle del Jerte" textFill="RED">
+         <font>
+            <Font size="75.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgBocadillo" fitHeight="148.0" fitWidth="243.0" layoutX="41.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://cdn.pixabay.com/photo/2017/04/23/09/02/hamburger-2253345_1280.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="47.0" layoutY="249.0" text="Hamburguesa:" />
+      <Label layoutX="41.0" layoutY="341.0" text="Tipo de pan:" />
+      <RadioButton fx:id="radioIntegral" layoutX="40.0" layoutY="369.0" mnemonicParsing="false" text="Integral">
+         <toggleGroup>
+            <ToggleGroup fx:id="pan" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioNormal" layoutX="40.0" layoutY="409.0" mnemonicParsing="false" selected="true" text="Normal" toggleGroup="$pan" />
+      <RadioButton fx:id="radioMollete" layoutX="39.0" layoutY="450.0" mnemonicParsing="false" text="Mollete" toggleGroup="$pan" />
+      <Label layoutX="179.0" layoutY="341.0" text="Extras:" />
+      <CheckBox fx:id="chQueso" layoutX="163.0" layoutY="369.0" mnemonicParsing="false" text="Queso +1€" />
+      <CheckBox fx:id="chBacon" layoutX="163.0" layoutY="409.0" mnemonicParsing="false" text="Bacon +1.5€" />
+      <CheckBox fx:id="chHuevo" layoutX="163.0" layoutY="450.0" mnemonicParsing="false" text="Huevo +2€" />
+      <ComboBox fx:id="listaHamburguesas" layoutX="48.0" layoutY="283.0" onAction="#pnerImg" prefHeight="29.0" prefWidth="276.0" />
+      <Button layoutX="112.0" layoutY="535.0" mnemonicParsing="false" onAction="#addPedido" text="Añadir al pedido" />
+      <TableView fx:id="tabla" layoutX="336.0" layoutY="144.0" prefHeight="371.0" prefWidth="626.0">
+         <columns>
+            <TableColumn fx:id="colHamburguesa" prefWidth="186.4000244140625" text="Hamburgesa" />
+            <TableColumn fx:id="colPan" prefWidth="91.199951171875" text="Pan" />
+            <TableColumn fx:id="colExtras" prefWidth="237.60003662109375" text="Extras" />
+            <TableColumn fx:id="colPercio" minWidth="0.0" prefWidth="110.39996337890625" text="Precio" />
+         </columns>
+      </TableView>
+      <Button layoutX="336.0" layoutY="535.0" mnemonicParsing="false" onAction="#eliminarPedido" text="Eliminar del pedido" />
+      <Button layoutX="572.0" layoutY="535.0" mnemonicParsing="false" onAction="#cobrar" text="Cobrar" />
+      <Label layoutX="682.0" layoutY="542.0" text="Precio final:" />
+      <TextField fx:id="campoPrecioFinal" editable="false" layoutX="778.0" layoutY="539.0" />
+   </children>
+</Pane>

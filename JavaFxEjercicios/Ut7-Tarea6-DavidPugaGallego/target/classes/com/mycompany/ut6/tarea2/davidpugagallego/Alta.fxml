@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ut6.tarea2.davidpugagallego.AltaController">
+   <children>
+      <Label layoutX="53.0" layoutY="66.0" text="Nombre" />
+      <Label layoutX="53.0" layoutY="148.0" text="Apellidos" />
+      <Label layoutX="53.0" layoutY="237.0" text="Edad" />
+      <Button fx:id="btnAdd" layoutX="184.0" layoutY="380.0" mnemonicParsing="false" onAction="#addPersona" text="Añadir" />
+      <TextField fx:id="txtNombre" layoutX="136.0" layoutY="62.0" />
+      <TextField fx:id="txtApellidos" layoutX="136.0" layoutY="144.0" />
+      <TextField fx:id="txtEdad" layoutX="136.0" layoutY="233.0" />
+   </children>
+</Pane>

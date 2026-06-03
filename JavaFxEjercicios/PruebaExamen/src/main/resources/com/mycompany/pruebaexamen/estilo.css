@@ -1,0 +1,156 @@
+/* Fichero: estilos.css */
+
+/* Fondo general de la ventana */
+.root {
+    -fx-background-color: #1e252b;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Etiquetas (Labels) */
+.label {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 24px;
+}
+
+/* Campos de texto (TextField) */
+.text-field {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 5;
+    -fx-padding: 8;
+    -fx-border-color: #34495e;
+    -fx-border-radius: 5;
+}
+.text-field:focused {
+    -fx-border-color: #3498db;
+    -fx-background-color: #34495e;
+}
+
+/* Desplegables (ComboBox) */
+.combo-box {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 5;
+    -fx-text-fill: #ffffff;
+}
+/* --- CORRECCIÓN DE CONTRASTE PARA COMBOBOX --- */
+
+/* Aplica el estilo a las celdas de la lista desplegable del ComboBox */
+.combo-box .list-cell {
+    -fx-background-color: #2c3e50; /* Fondo oscuro igual que el combo */
+    -fx-text-fill: #ffffff;        /* ¡Texto blanco para que se vea perfectamente! */
+    -fx-padding: 6 10 6 10;
+}
+
+/* Qué pasa cuando pasamos el ratón por encima de una opción del desplegable */
+.combo-box .list-cell:hover {
+    -fx-background-color: #3498db; /* Fondo azul brillante al seleccionar */
+    -fx-text-fill: #ffffff;        /* Texto blanco */
+}
+
+/* Estilo para la celda que está seleccionada dentro de la lista */
+.combo-box .list-cell:focused {
+
+    -fx-text-fill: #ffffff;
+}
+.combo-box .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Estilo para los Botones */
+.button {
+    -fx-background-color: #34495e;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15 8 15;
+    -fx-cursor: hand;
+}
+
+/* Efecto Hover para botones generales */
+.button:hover {
+    -fx-background-color: #415b76;
+}
+
+/* Botón específico para "Añadir / Inscribir" (Verde Geo) */
+.button-add {
+    -fx-background-color: #27ae60;
+}
+.button-add:hover {
+    -fx-background-color: #2ecc71;
+}
+
+/* Botón específico para "Eliminar" (Rojo) */
+.button-delete {
+    -fx-background-color: #c0392b;
+}
+.button-delete:hover {
+    -fx-background-color: #e74c3c;
+}
+
+/* --- ESTILOS DE LA TABLA (TableView) --- */
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #2c3e50;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+/* Cabecera de la tabla */
+.table-view .column-header-background {
+    -fx-background-color: #2c3e50;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 40;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #3498db;
+    -fx-font-weight: bold;
+}
+
+/* Filas de la tabla */
+.table-row-cell {
+    -fx-background-color: #1e252b;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-text-fill: #ffffff;
+}
+.table-row-cell:odd {
+    -fx-background-color: #252e36;
+}
+
+/* Fila seleccionada */
+.table-row-cell:filled:selected {
+    -fx-background-color: #3498db;
+}
+.table-row-cell:filled:selected .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Celdas individuales */
+.table-cell {
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8;
+    -fx-alignment: center-left;
+}
+
+/* --- ESTILOS PARA TÍTULOS Y SUBTÍTULOS --- */
+
+/* Título principal de la ventana (Ej: "GeoGuessr Tournament Tracker") */
+.titulo-ventana {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3498db; /* Azul brillante */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 1);
+    -fx-padding: 10 0 15 0;
+}
+
+/* Subtítulos de secciones (Ej: "Registro de Participantes", "Tabla de Clasificados") */
+.subtitulo-seccion {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2ecc71; /* Verde Geo para contrastar */
+    -fx-border-color: transparent transparent #34495e transparent; /* Línea sutil divisoria abajo */
+    -fx-border-width: 1;
+    -fx-padding: 0 0 5 0;
+}
