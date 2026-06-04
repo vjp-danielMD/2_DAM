@@ -1,0 +1,122 @@
+.mainFxmlClass {
+/* Estilos para Labels */
+.label-title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.label-subtitle {
+    -fx-font-size: 18px;
+    -fx-text-fill: #34495e;
+    -fx-font-style: italic;
+}
+
+.label-highlight {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-background-color: #e74c3c;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.label-info {
+    -fx-font-size: 14px;
+    -fx-text-fill: #16a085;
+}
+
+.label-warning {
+    -fx-font-size: 14px;
+    -fx-text-fill: #f39c12;
+}
+
+/* Estilos para Botones */
+.button-primary {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+}
+
+.button-primary:hover {
+    -fx-background-color: #2980b9;
+}
+
+.button-danger {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+}
+
+.button-danger:hover {
+    -fx-background-color: #c0392b;
+}
+
+.button-success {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+}
+
+.button-success:hover {
+    -fx-background-color: #27ae60;
+}
+
+.button-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: #3498db;
+    -fx-text-fill: #3498db;
+    -fx-padding: 10px 20px;
+}
+
+.button-outline:hover {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+/* Otros estilos generales */
+.shadow-effect {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+}
+
+.rounded-border {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.text-bold {
+    -fx-font-weight: bold;
+}
+
+.text-italic {
+    -fx-font-style: italic;
+}
+
+/* Estilos para Paneles */
+.panel-default {
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 10px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 5px;
+}
+
+.panel-primary {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+}
+
+.panel-warning {
+    -fx-background-color: #f1c40f;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+}
+
+}
